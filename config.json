@@ -1,0 +1,50 @@
+{
+  "searches": [
+    {
+      "label": "2024 Tesla Model 3",
+      "make": "tesla",
+      "model": "model-3",
+      "year_min": 2024,
+      "year_max": 2024,
+      "city": "union",
+      "state": "nj",
+      "zip": "07083",
+      "radius": 150
+    }
+  ],
+  "budget": 30000,
+  "tax_rate": 0.06625,
+  "basic_warranty_miles": 50000,
+  "suspicious_below": 21000,
+  "keep_gone_days": 14,
+  "links": [
+    {
+      "name": "AutoTempest (searches most sites at once)",
+      "url": "https://www.autotempest.com/results?make=tesla&model=model3&zip=07083&radius=150&minyear=2024&maxyear=2024"
+    },
+    {
+      "name": "CarGurus",
+      "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940"
+    },
+    {
+      "name": "Edmunds",
+      "url": "https://www.edmunds.com/used-tesla-model-3-staten-island-ny/"
+    },
+    {
+      "name": "Cars.com",
+      "url": "https://www.cars.com/shopping/results/?makes[]=tesla&models[]=tesla-model_3&year_min=2024&year_max=2024&zip=07083&maximum_distance=150&stock_type=used&sort=list_price"
+    },
+    {
+      "name": "Autotrader",
+      "url": "https://www.autotrader.com/cars-for-sale/tesla/model-3/union-nj"
+    },
+    {
+      "name": "TrueCar",
+      "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-union-nj/?searchRadius=150&sort[]=price_asc"
+    },
+    {
+      "name": "Tesla used inventory",
+      "url": "https://www.tesla.com/inventory/used/m3?zip=07083"
+    }
+  ]
+}

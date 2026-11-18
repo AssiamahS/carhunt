@@ -1,0 +1,548 @@
+{
+ "updated": "2026-11-18T22:54:11Z",
+ "errors": [],
+ "config": {
+  "budget": 30000,
+  "tax_rate": 0.06625,
+  "basic_warranty_miles": 50000,
+  "suspicious_below": 21000
+ },
+ "searches": [
+  {
+   "label": "2024 Tesla Model 3",
+   "make": "tesla",
+   "model": "model-3",
+   "year_min": 2024,
+   "year_max": 2024,
+   "city": "union",
+   "state": "nj",
+   "zip": "07083",
+   "radius": 150
+  }
+ ],
+ "links": [
+  {
+   "name": "AutoTempest (searches most sites at once)",
+   "url": "https://www.autotempest.com/results?make=tesla&model=model3&zip=07083&radius=150&minyear=2024&maxyear=2024"
+  },
+  {
+   "name": "CarGurus",
+   "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940"
+  },
+  {
+   "name": "Edmunds",
+   "url": "https://www.edmunds.com/used-tesla-model-3-staten-island-ny/"
+  },
+  {
+   "name": "Cars.com",
+   "url": "https://www.cars.com/shopping/results/?makes[]=tesla&models[]=tesla-model_3&year_min=2024&year_max=2024&zip=07083&maximum_distance=150&stock_type=used&sort=list_price"
+  },
+  {
+   "name": "Autotrader",
+   "url": "https://www.autotrader.com/cars-for-sale/tesla/model-3/union-nj"
+  },
+  {
+   "name": "TrueCar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-union-nj/?searchRadius=150&sort[]=price_asc"
+  },
+  {
+   "name": "Tesla used inventory",
+   "url": "https://www.tesla.com/inventory/used/m3?zip=07083"
+  }
+ ],
+ "listings": [
+  {
+   "source": "cargurus",
+   "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "price": 24110,
+   "miles": 79534,
+   "where": "Near Staten Island, NY",
+   "state": "NY",
+   "note": "Cheapest Highland nearby. Basic warranty gone, battery warranty still runs.",
+   "vin": "manual:https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940:24110",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     24110
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "source": "edmunds",
+   "url": "https://www.edmunds.com/used-tesla-model-3-staten-island-ny/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Base RWD",
+   "price": 26495,
+   "miles": 9542,
+   "where": "NY/NJ, town not shown",
+   "note": "Edmunds: great price, $2,328 below market. Best low-mileage buy.",
+   "vin": "manual:https://www.edmunds.com/used-tesla-model-3-staten-island-ny/:26495",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     26495
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "source": "edmunds",
+   "url": "https://www.edmunds.com/used-tesla-model-3-brooklyn-ny/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Base RWD",
+   "price": 29500,
+   "miles": 39204,
+   "where": "Brooklyn area, NY",
+   "state": "NY",
+   "vin": "manual:https://www.edmunds.com/used-tesla-model-3-brooklyn-ny/:29500",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     29500
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "source": "cars.com",
+   "url": "https://www.cars.com/shopping/tesla-model_3/new_haven-ct/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard Range",
+   "price": 29900,
+   "miles": 25000,
+   "dealer": "Imports Unlimited",
+   "where": "Wallingford, CT",
+   "state": "CT",
+   "vin": "manual:https://www.cars.com/shopping/tesla-model_3/new_haven-ct/:29900",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     29900
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "source": "autotrader",
+   "url": "https://www.autotrader.com/cars-for-sale/tesla/model-3/wallingford-ct",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "price": 29900,
+   "miles": 33000,
+   "dealer": "Autohaus Inc",
+   "where": "CT",
+   "state": "CT",
+   "note": "Base-car money for the bigger battery. Mileage approximate.",
+   "vin": "manual:https://www.autotrader.com/cars-for-sale/tesla/model-3/wallingford-ct:29900",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     29900
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "source": "cargurus",
+   "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "price": 29987,
+   "miles": 11712,
+   "where": "Near Staten Island, NY",
+   "state": "NY",
+   "vin": "manual:https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940:29987",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     29987
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "price": 31999,
+   "miles": 18268,
+   "dealer": "CarVision",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "manual_flags": [
+    "ask-buyback"
+   ],
+   "note": "Several Maple Shade listings say Tesla reacquired the car. Check the Carfax for a buyback brand.",
+   "vin": "manual:https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/:31999",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     31999
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "ask-buyback"
+   ]
+  },
+  {
+   "source": "edmunds",
+   "url": "https://www.edmunds.com/used-tesla-model-3-wilmington-de/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "price": 33590,
+   "miles": null,
+   "where": "Wilmington, DE area",
+   "state": "DE",
+   "vin": "manual:https://www.edmunds.com/used-tesla-model-3-wilmington-de/:33590",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     33590
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1EA2RF728357",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA2RF728357/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 33799,
+   "miles": 34935,
+   "color": "Gray",
+   "dealer": "CarVision Maple Shade",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-11-11",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": false,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/220075/57/83/5YJ3E1EA2RF728357/001_2026111112.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     33799
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "branded-title"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA0RF735680",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA0RF735680/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 33799,
+   "miles": 26149,
+   "color": "Solid Black",
+   "dealer": "CarVision Maple Shade",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-11-03",
+   "accidents": 2,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/220075/80/56/5YJ3E1EA0RF735680/001_2026110321.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     33799
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EB6RF807099",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EB6RF807099/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "drive": "AWD",
+   "price": 34793,
+   "miles": 27213,
+   "color": "Ultra Red",
+   "dealer": "Automotive Avenues LLC",
+   "where": "Wall Township, NJ",
+   "state": "NJ",
+   "distance": 34,
+   "listed": "2026-11-06",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/19520/99/70/5YJ3E1EB6RF807099/001_2026110621.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     34793
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1EA6RF847559",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA6RF847559/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range RWD",
+   "drive": "RWD",
+   "price": 37368,
+   "miles": 23137,
+   "color": "Stealth Grey",
+   "dealer": "Kia of Riverdale NJ",
+   "where": "Riverdale, NJ",
+   "state": "NJ",
+   "distance": 20,
+   "listed": "2026-10-14",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/273900/59/75/5YJ3E1EA6RF847559/001_2026101511.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     37368
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1EB8RF730591",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EB8RF730591/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "drive": "AWD",
+   "price": 39388,
+   "miles": 17647,
+   "color": "Pearl White Multi-Coat",
+   "dealer": "Hyundai of Trenton",
+   "where": "Ewing, NJ",
+   "state": "NJ",
+   "distance": 40,
+   "listed": "2026-10-22",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "GREAT",
+   "image": "https://listings-prod.tcimg.net/listings/302837/91/05/5YJ3E1EB8RF730591/001_2026110609.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     39388
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1ET6RF829581",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1ET6RF829581/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Performance AWD",
+   "drive": "AWD",
+   "price": 45579,
+   "miles": 15255,
+   "color": "Deep Blue Metallic",
+   "dealer": "Jaguar Land Rover West Chester",
+   "where": "West Chester, PA",
+   "state": "PA",
+   "distance": 88,
+   "listed": "2026-11-03",
+   "accidents": 1,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/38433/81/95/5YJ3E1ET6RF829581/001_2026111308.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     45579
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident"
+   ]
+  },
+  {
+   "vin": "5YJ3E1ETXRF867279",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1ETXRF867279/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Performance AWD",
+   "drive": "AWD",
+   "price": 47957,
+   "miles": 37235,
+   "color": "Gray",
+   "dealer": "Quakertown Mitsubishi",
+   "where": "Quakertown, PA",
+   "state": "PA",
+   "distance": 60,
+   "listed": "2026-11-09",
+   "accidents": 1,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "FAIR",
+   "image": "https://listings-prod.tcimg.net/listings/286675/79/72/5YJ3E1ETXRF867279/001_2026111121.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     47957
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident"
+   ]
+  },
+  {
+   "vin": "5YJ3E1ET6RF871331",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1ET6RF871331/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Performance AWD",
+   "drive": "AWD",
+   "price": 48599,
+   "miles": 8858,
+   "color": "Gray",
+   "dealer": "Space Auto Group NJ",
+   "where": "East Brunswick, NJ",
+   "state": "NJ",
+   "distance": 20,
+   "listed": "2026-11-12",
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/517072/31/13/5YJ3E1ET6RF871331/001_2026111206.jpg",
+   "search": "2024 Tesla Model 3",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     48599
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  }
+ ]
+}

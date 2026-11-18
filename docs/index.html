@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>carhunt</title>
+<style>
+:root {
+  --bg: #f6f5f1; --panel: #ffffff; --ink: #16181c; --muted: #6b7078; --line: #e3e1da;
+  --accent: #0b6e4f; --accent-ink: #ffffff; --warn: #a34a00; --warn-bg: #fdefdc;
+  --bad: #a3231c; --bad-bg: #fbe4e2; --good: #0b6e4f; --good-bg: #dff3ea;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111315; --panel: #1a1d20; --ink: #eceae4; --muted: #979ca4; --line: #2b2f34;
+    --accent: #4fd1a1; --accent-ink: #0c1a14; --warn: #f0b36b; --warn-bg: #3a2a14;
+    --bad: #f28b82; --bad-bg: #3b1c1a; --good: #4fd1a1; --good-bg: #14302a;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+h1 { font-size: 26px; letter-spacing: -0.02em; margin: 0; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 28px 0 10px; }
+.sub { color: var(--muted); font-size: 13px; }
+a { color: var(--accent); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 18px; }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.tile b { display: block; font-size: 24px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.tile span { color: var(--muted); font-size: 12px; }
+.alert { background: var(--bad-bg); color: var(--bad); border-radius: 10px; padding: 10px 14px; margin-top: 14px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+label { font-size: 12px; color: var(--muted); display: grid; gap: 4px; }
+input, select, button { font: inherit; color: var(--ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; }
+input[type=number] { width: 120px; }
+label.check { display: flex; align-items: center; gap: 6px; color: var(--ink); font-size: 14px; padding-bottom: 7px; }
+button { cursor: pointer; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.links a { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
+  text-decoration: none; font-size: 13px; }
+.wrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; margin-top: 12px; }
+table { border-collapse: collapse; width: 100%; min-width: 860px; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; white-space: nowrap; cursor: pointer; user-select: none; }
+th[aria-sort]::after { content: " \25B2"; font-size: 9px; }
+th[aria-sort=descending]::after { content: " \25BC"; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.price { font-weight: 700; }
+tr.gone td { opacity: 0.45; }
+.small { font-size: 12px; color: var(--muted); }
+.tag { display: inline-block; font-size: 11px; border-radius: 999px; padding: 1px 8px; margin: 2px 4px 0 0; white-space: nowrap; }
+.tag.bad { background: var(--bad-bg); color: var(--bad); }
+.tag.warn { background: var(--warn-bg); color: var(--warn); }
+.tag.good { background: var(--good-bg); color: var(--good); }
+.tag.src { border: 1px solid var(--line); color: var(--muted); }
+form.add { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+form.add input[name=url] { width: min(100%, 320px); }
+.x { border: 0; background: none; color: var(--muted); padding: 0 4px; }
+.empty { padding: 28px; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>carhunt</h1>
+    <span class="sub" id="what"></span>
+    <span class="sub" id="updated"></span>
+  </header>
+  <div id="alert"></div>
+  <div class="tiles" id="tiles"></div>
+
+  <h2>Search the other sites</h2>
+  <div class="links" id="links"></div>
+
+  <h2>Listings</h2>
+  <div class="controls">
+    <label>Max price <input type="number" id="maxPrice" step="500" min="0"></label>
+    <label>Max miles <input type="number" id="maxMiles" step="5000" min="0"></label>
+    <label>Trim <select id="trim"><option value="">Any</option></select></label>
+    <label>State <select id="state"><option value="">Any</option></select></label>
+    <label class="check"><input type="checkbox" id="hideFlagged"> Hide flagged</label>
+    <label class="check"><input type="checkbox" id="showGone"> Show sold</label>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <div class="wrap">
+    <table>
+      <thead><tr>
+        <th data-key="price" class="num">Price</th>
+        <th data-key="otd" class="num">With NJ tax</th>
+        <th data-key="miles" class="num">Miles</th>
+        <th data-key="trim">Trim</th>
+        <th data-key="where">Where</th>
+        <th data-key="distance" class="num">Away</th>
+        <th data-key="first_seen">Seen</th>
+        <th>Notes</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>No cars match these filters.</div>
+  </div>
+
+  <h2>Add a car you found</h2>
+  <form class="add" id="add">
+    <label>Link <input name="url" type="url" required placeholder="https://www.cargurus.com/..."></label>
+    <label>Price <input name="price" type="number" required min="1"></label>
+    <label>Miles <input name="miles" type="number" min="0"></label>
+    <label>Trim <input name="trim" placeholder="Long Range AWD"></label>
+    <label>Where <input name="where" placeholder="Union, NJ"></label>
+    <button class="primary">Add</button>
+  </form>
+  <p class="small">Cars added here are saved in this browser only. To keep one for good, add it to <code>manual.json</code> in the repo.</p>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const money = (n) => n == null ? "" : "$" + Math.round(n).toLocaleString("en-US");
+const STORE = "carhunt.mine";
+const FLAGS = {
+  "branded-title": ["bad", "branded title"],
+  "too-cheap": ["bad", "too cheap, likely salvage or scam"],
+  "accident": ["warn", "accident reported"],
+  "ask-buyback": ["warn", "ask about buyback"],
+  "no-basic-warranty": ["warn", "basic warranty expired"],
+};
+let data = { listings: [], config: {}, links: [] };
+let sort = { key: "price", dir: 1 };
+
+function el(tag, props, ...kids) {
+  const node = Object.assign(document.createElement(tag), props || {});
+  for (const kid of kids) if (kid != null) node.append(kid);
+  return node;
+}
+function safeUrl(url) {
+  try { const u = new URL(url); return /^https?:$/.test(u.protocol) ? u.href : null; } catch { return null; }
+}
+function mine() {
+  try { return JSON.parse(localStorage.getItem(STORE) || "[]"); } catch { return []; }
+}
+function saveMine(rows) {
+  try { localStorage.setItem(STORE, JSON.stringify(rows)); } catch { /* private window */ }
+}
+function all() {
+  const cfg = data.config;
+  const own = mine().map((r) => {
+    const flags = [];
+    if (r.price < (cfg.suspicious_below || 0)) flags.push("too-cheap");
+    if ((r.miles || 0) > (cfg.basic_warranty_miles || Infinity)) flags.push("no-basic-warranty");
+    return { ...r, source: "mine", flags, gone: false, mine: true };
+  });
+  return data.listings.concat(own).map((r) => ({ ...r, otd: r.price * (1 + (cfg.tax_rate || 0)) }));
+}
+function visible() {
+  const maxPrice = +$("maxPrice").value || Infinity, maxMiles = +$("maxMiles").value || Infinity;
+  const trim = $("trim").value, state = $("state").value;
+  return all().filter((r) =>
+    r.price <= maxPrice && (r.miles || 0) <= maxMiles &&
+    (!trim || r.trim === trim) && (!state || r.state === state) &&
+    (!$("hideFlagged").checked || !r.flags.length) && ($("showGone").checked || !r.gone)
+  ).sort((a, b) => {
+    const x = a[sort.key], y = b[sort.key];
+    if (x == null) return 1;
+    if (y == null) return -1;
+    return (x > y ? 1 : x < y ? -1 : 0) * sort.dir;
+  });
+}
+function notes(r) {
+  const cell = el("td");
+  cell.append(el("span", { className: "tag src", textContent: r.source }));
+  if (r.price_change < 0) cell.append(el("span", { className: "tag good", textContent: "dropped " + money(-r.price_change) }));
+  if (r.price_change > 0) cell.append(el("span", { className: "tag warn", textContent: "raised " + money(r.price_change) }));
+  if (r.gone) cell.append(el("span", { className: "tag src", textContent: "sold or delisted" }));
+  for (const flag of r.flags) {
+    const [kind, text] = FLAGS[flag] || ["warn", flag];
+    cell.append(el("span", { className: "tag " + kind, textContent: text }));
+  }
+  const facts = [];
+  if (r.clean_title === true) facts.push("clean title");
+  if (r.owners) facts.push(r.owners + (r.owners === 1 ? " owner" : " owners"));
+  if (r.color) facts.push(r.color);
+  if (r.note) facts.push(r.note);
+  if (facts.length) cell.append(el("div", { className: "small", textContent: facts.join(" · ") }));
+  if (r.mine) {
+    const remove = el("button", { className: "x", type: "button", textContent: "remove", title: "Remove this car" });
+    remove.onclick = () => { saveMine(mine().filter((m) => m.id !== r.id)); render(); };
+    cell.append(remove);
+  }
+  return cell;
+}
+function render() {
+  const rows = visible(), body = $("rows");
+  body.replaceChildren();
+  for (const r of rows) {
+    const url = safeUrl(r.url);
+    const trim = [r.year, r.trim || r.model].filter(Boolean).join(" ") || "View listing";
+    const title = url ? el("a", { href: url, target: "_blank", rel: "noopener", textContent: trim }) : trim;
+    body.append(el("tr", { className: r.gone ? "gone" : "" },
+      el("td", { className: "num price", textContent: money(r.price) }),
+      el("td", { className: "num", textContent: money(r.otd) }),
+      el("td", { className: "num", textContent: r.miles == null ? "?" : r.miles.toLocaleString("en-US") }),
+      el("td", null, title),
+      el("td", null, r.where || "", r.dealer ? el("div", { className: "small", textContent: r.dealer }) : null),
+      el("td", { className: "num", textContent: r.distance == null ? "" : r.distance + " mi" }),
+      el("td", { className: "small", textContent: r.first_seen || "" }),
+      notes(r)));
+  }
+  $("empty").hidden = rows.length > 0;
+  document.querySelectorAll("th[data-key]").forEach((th) => {
+    if (th.dataset.key === sort.key) th.setAttribute("aria-sort", sort.dir > 0 ? "ascending" : "descending");
+    else th.removeAttribute("aria-sort");
+  });
+  const active = all().filter((r) => !r.gone), clean = active.filter((r) => !r.flags.length);
+  const budget = data.config.budget;
+  const cheapest = clean.reduce((best, r) => !best || r.price < best.price ? r : best, null);
+  $("tiles").replaceChildren(
+    tile(active.length, "cars tracked"),
+    tile(cheapest ? money(cheapest.price) : "none", "cheapest with no flags"),
+    tile(active.filter((r) => r.price <= budget).length, "at or under " + money(budget)),
+    tile(active.filter((r) => r.price_change < 0).length, "price drops"));
+}
+function tile(value, label) {
+  return el("div", { className: "tile" }, el("b", { textContent: value }), el("span", { textContent: label }));
+}
+function options(select, values) {
+  for (const v of [...new Set(values.filter(Boolean))].sort()) select.append(el("option", { value: v, textContent: v }));
+}
+
+for (const id of ["maxPrice", "maxMiles", "trim", "state", "hideFlagged", "showGone"]) $(id).addEventListener("input", render);
+$("reset").onclick = () => {
+  for (const id of ["maxPrice", "maxMiles", "trim", "state"]) $(id).value = "";
+  $("hideFlagged").checked = $("showGone").checked = false;
+  render();
+};
+document.querySelectorAll("th[data-key]").forEach((th) => th.onclick = () => {
+  sort = { key: th.dataset.key, dir: sort.key === th.dataset.key ? -sort.dir : 1 };
+  render();
+});
+$("add").onsubmit = (event) => {
+  event.preventDefault();
+  const f = new FormData(event.target);
+  saveMine(mine().concat({
+    id: Date.now(), url: f.get("url"), price: +f.get("price"),
+    miles: f.get("miles") ? +f.get("miles") : null, trim: f.get("trim") || null, where: f.get("where") || null,
+    first_seen: new Date().toISOString().slice(0, 10),
+  }));
+  event.target.reset();
+  render();
+};
+
+fetch("data/listings.json", { cache: "no-store" })
+  .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then((json) => {
+    data = json;
+    $("what").textContent = (json.searches || []).map((s) => s.label + ", " + s.radius + " mi of " + s.zip).join(" · ");
+    $("updated").textContent = "updated " + new Date(json.updated).toLocaleString();
+    if (json.errors && json.errors.length) {
+      $("alert").replaceChildren(el("div", { className: "alert", textContent: "Last refresh had a problem, showing the last good data: " + json.errors.join("; ") }));
+    }
+    for (const link of json.links || []) {
+      const url = safeUrl(link.url);
+      if (url) $("links").append(el("a", { href: url, target: "_blank", rel: "noopener", textContent: link.name }));
+    }
+    options($("trim"), all().map((r) => r.trim));
+    options($("state"), all().map((r) => r.state));
+    render();
+  })
+  .catch((err) => {
+    $("alert").replaceChildren(el("div", { className: "alert", textContent: "Could not load listings: " + err.message }));
+  });
+</script>
+</body>
+</html>
