@@ -3,6 +3,12 @@
 One page for the cars I'm shopping for. Listings are pulled every 6 hours and
 published with GitHub Pages from `docs/`.
 
+Live: https://assiamahs.github.io/carhunt/
+
+The refresh runs from my Mac (`refresh.sh` under launchd, `com.sly.carhunt`).
+`.github/workflows/refresh.yml` does the same job on Actions and is disabled
+for now.
+
 ## Where the data comes from
 
 | Source | How |
