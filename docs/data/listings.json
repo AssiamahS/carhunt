@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T05:44:32Z",
+ "updated": "2026-11-19T08:16:43Z",
  "errors": [],
  "config": {
   "budget": 30000,
@@ -140,7 +140,7 @@
    "model": "Model S",
    "trim": "75D",
    "drive": "AWD",
-   "price": 25969,
+   "price": 25569,
    "miles": 50526,
    "color": "Black",
    "dealer": "BMW of Mt. Laurel",
@@ -161,9 +161,13 @@
     [
      "2026-11-19",
      25969
+    ],
+    [
+     "2026-11-19",
+     25569
     ]
    ],
-   "price_change": 0,
+   "price_change": -400,
    "gone": false,
    "flags": [
     "accident",
@@ -286,6 +290,44 @@
    ]
   },
   {
+   "vin": "5YJ3E1EA2RF860261",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA2RF860261/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 30863,
+   "miles": 103259,
+   "color": "Pearl White Multi-Coat",
+   "dealer": "Audi Wynnewood",
+   "where": "Wynnewood, PA",
+   "state": "PA",
+   "distance": 71,
+   "listed": "2026-11-18",
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://static.tcimg.net/vehicles/primary/2a23293cd2e2f669/2024-Tesla-Model_3-white-full_color-driver_side_front_quarter.png",
+   "search": "2024 Tesla Model 3",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     30863
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
    "vin": "5YJSA1E24KF306046",
    "source": "truecar",
    "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E24KF306046/",
@@ -325,44 +367,6 @@
    ]
   },
   {
-   "vin": "5YJ3E1EA2RF728357",
-   "source": "truecar",
-   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA2RF728357/",
-   "year": 2024,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "RWD",
-   "drive": "RWD",
-   "price": 33799,
-   "miles": 34935,
-   "color": "Gray",
-   "dealer": "CarVision Maple Shade",
-   "where": "Maple Shade, NJ",
-   "state": "NJ",
-   "distance": 64,
-   "listed": "2026-11-11",
-   "accidents": 0,
-   "owners": 1,
-   "clean_title": false,
-   "deal": "HIGH",
-   "image": "https://listings-prod.tcimg.net/listings/220075/57/83/5YJ3E1EA2RF728357/001_2026111112.jpg",
-   "search": "2024 Tesla Model 3",
-   "juniper": null,
-   "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
-   "price_history": [
-    [
-     "2026-11-18",
-     33799
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "branded-title"
-   ]
-  },
-  {
    "vin": "5YJ3E1EA0RF735680",
    "source": "truecar",
    "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA0RF735680/",
@@ -398,6 +402,44 @@
    "gone": false,
    "flags": [
     "accident"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA2RF728357",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA2RF728357/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 33799,
+   "miles": 34935,
+   "color": "Gray",
+   "dealer": "CarVision Maple Shade",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-11-11",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": false,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/220075/57/83/5YJ3E1EA2RF728357/001_2026111112.jpg",
+   "search": "2024 Tesla Model 3",
+   "juniper": null,
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-18",
+     33799
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "branded-title"
    ]
   },
   {
@@ -508,6 +550,44 @@
    "gone": false,
    "flags": [
     "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EB9RF791965",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EB9RF791965/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "drive": "AWD",
+   "price": 36999,
+   "miles": 14207,
+   "color": "Deep Blue Metallic",
+   "dealer": "CarVision of Trooper",
+   "where": "Trooper, PA",
+   "state": "PA",
+   "distance": 70,
+   "listed": "2026-11-19",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": false,
+   "deal": "FAIR",
+   "image": "https://listings-prod.tcimg.net/listings/48120/65/19/5YJ3E1EB9RF791965/001_2026111904.jpg",
+   "search": "2024 Tesla Model 3",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     36999
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "branded-title"
    ]
   },
   {
@@ -695,6 +775,42 @@
    "flags": []
   },
   {
+   "vin": "7SAYGAEE0SF292040",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGAEE0SF292040/",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Long Range AWD",
+   "drive": "AWD",
+   "price": 42993,
+   "miles": 12282,
+   "color": "Solid Black",
+   "dealer": "Automotive Avenues LLC",
+   "where": "Wall Township, NJ",
+   "state": "NJ",
+   "distance": 34,
+   "listed": "2026-11-19",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "FAIR",
+   "image": "https://listings-prod.tcimg.net/listings/19520/40/20/7SAYGAEE0SF292040/001_2026111903.jpg",
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "check",
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     42993
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
    "vin": "7SAYGDED9TF523804",
    "source": "truecar",
    "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGDED9TF523804/",
@@ -768,44 +884,6 @@
    "gone": false,
    "flags": [
     "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1ET6RF829581",
-   "source": "truecar",
-   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1ET6RF829581/",
-   "year": 2024,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Performance AWD",
-   "drive": "AWD",
-   "price": 45579,
-   "miles": 15255,
-   "color": "Deep Blue Metallic",
-   "dealer": "Jaguar Land Rover West Chester",
-   "where": "West Chester, PA",
-   "state": "PA",
-   "distance": 88,
-   "listed": "2026-11-03",
-   "accidents": 1,
-   "owners": 1,
-   "clean_title": true,
-   "deal": "EXCELLENT",
-   "image": "https://listings-prod.tcimg.net/listings/38433/81/95/5YJ3E1ET6RF829581/001_2026111308.jpg",
-   "search": "2024 Tesla Model 3",
-   "juniper": null,
-   "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
-   "price_history": [
-    [
-     "2026-11-18",
-     45579
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "accident"
    ]
   },
   {
@@ -911,6 +989,44 @@
    "gone": true,
    "flags": [
     "ask-buyback"
+   ]
+  },
+  {
+   "vin": "5YJ3E1ET6RF829581",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1ET6RF829581/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Performance AWD",
+   "drive": "AWD",
+   "price": 45579,
+   "miles": 15255,
+   "color": "Deep Blue Metallic",
+   "dealer": "Jaguar Land Rover West Chester",
+   "where": "West Chester, PA",
+   "state": "PA",
+   "distance": 88,
+   "listed": "2026-11-03",
+   "accidents": 1,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/38433/81/95/5YJ3E1ET6RF829581/001_2026111308.jpg",
+   "search": "2024 Tesla Model 3",
+   "juniper": null,
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-18",
+     45579
+    ]
+   ],
+   "price_change": 0,
+   "gone": true,
+   "flags": [
+    "accident"
    ]
   }
  ]
