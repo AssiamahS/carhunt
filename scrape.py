@@ -133,19 +133,51 @@ def within_radius(rows, radius):
     return [r for r in rows if r.get("distance") is None or r["distance"] <= radius]
 
 
+def within_limits(rows, search):
+    """Drop cars over the search's optional price_max or miles_max."""
+    price_max, miles_max = search.get("price_max"), search.get("miles_max")
+    return [
+        r for r in rows
+        if (not price_max or r["price"] <= price_max)
+        and (not miles_max or (r.get("miles") or 0) <= miles_max)
+    ]
+
+
+def juniper_status(row):
+    """Model Y only: is this the 2025 "Juniper" redesign?
+
+    Every 2026 is, and so is the 2025 Launch Series. Other 2025 cars were built
+    in both bodies under the same trim names, so those say "check".
+    """
+    if "model y" not in (row.get("model") or "").lower():
+        return None
+    year = row.get("year") or 0
+    if year >= 2026 or "launch" in (row.get("trim") or "").lower():
+        return "yes"
+    return "check" if year == 2025 else "no"
+
+
 def scrape_truecar(search):
     rows = {}
+    price_max = search.get("price_max")
     for page in range(1, MAX_PAGES + 1):
         found, total, has_next = parse_truecar(fetch(truecar_url(search, page)))
         for row in found:
             row["search"] = search["label"]
+            row["juniper"] = juniper_status(row)
             rows.setdefault(row["vin"], row)
         if not found or not has_next or len(rows) >= total:
+            break
+        # Results come cheapest first, so a whole page over the cap means the rest are too.
+        if price_max and min(r["price"] for r in found) > price_max:
             break
         time.sleep(2)
     if not rows:
         raise SourceError("truecar: zero listings for %s" % search["label"])
-    return within_radius(list(rows.values()), search["radius"])
+    kept = within_limits(within_radius(list(rows.values()), search["radius"]), search)
+    if search.get("juniper_only"):
+        kept = [r for r in kept if r["juniper"] in ("yes", "check")]
+    return kept
 
 
 def load_manual():
@@ -157,6 +189,7 @@ def load_manual():
         row = dict(item)
         row.setdefault("source", "manual")
         row.setdefault("vin", "manual:%s:%s" % (row.get("url", ""), row.get("price", "")))
+        row.setdefault("juniper", juniper_status(row))
         rows.append(row)
     return rows
 

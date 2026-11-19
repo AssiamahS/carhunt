@@ -10,6 +10,32 @@
       "state": "nj",
       "zip": "07083",
       "radius": 150
+    },
+    {
+      "label": "2017-2023 Tesla Model S",
+      "make": "tesla",
+      "model": "model-s",
+      "year_min": 2017,
+      "year_max": 2023,
+      "city": "union",
+      "state": "nj",
+      "zip": "07083",
+      "radius": 150,
+      "price_max": 40000,
+      "miles_max": 100000
+    },
+    {
+      "label": "Tesla Model Y Juniper (2025-2026)",
+      "make": "tesla",
+      "model": "model-y",
+      "year_min": 2025,
+      "year_max": 2026,
+      "city": "union",
+      "state": "nj",
+      "zip": "07083",
+      "radius": 150,
+      "price_max": 45000,
+      "juniper_only": true
     }
   ],
   "budget": 30000,
@@ -45,6 +71,22 @@
     {
       "name": "Tesla used inventory",
       "url": "https://www.tesla.com/inventory/used/m3?zip=07083"
+    },
+    {
+      "name": "AutoTempest: Model S",
+      "url": "https://www.autotempest.com/results?make=tesla&model=models&zip=07083&radius=150&minyear=2017&maxyear=2023"
+    },
+    {
+      "name": "AutoTempest: Model Y 2025-2026",
+      "url": "https://www.autotempest.com/results?make=tesla&model=modely&zip=07083&radius=150&minyear=2025&maxyear=2026"
+    },
+    {
+      "name": "Tesla used inventory: Model S",
+      "url": "https://www.tesla.com/inventory/used/ms?zip=07083"
+    },
+    {
+      "name": "Tesla used inventory: Model Y",
+      "url": "https://www.tesla.com/inventory/used/my?zip=07083"
     }
   ]
 }

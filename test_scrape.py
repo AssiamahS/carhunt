@@ -79,6 +79,47 @@ class ParseTest(unittest.TestCase):
             scrape.parse_truecar("<html>Access Denied</html>")
 
 
+class SearchLimitTest(unittest.TestCase):
+    def test_price_and_mileage_caps(self):
+        rows = [
+            {"vin": "OK", "price": 29000, "miles": 80000},
+            {"vin": "PRICEY", "price": 41000, "miles": 20000},
+            {"vin": "WORN", "price": 22000, "miles": 120000},
+            {"vin": "NOMILES", "price": 25000, "miles": None},
+        ]
+        kept = [r["vin"] for r in scrape.within_limits(rows, {"price_max": 40000, "miles_max": 100000})]
+        self.assertEqual(kept, ["OK", "NOMILES"])
+        self.assertEqual(len(scrape.within_limits(rows, {})), 4)
+
+    def test_juniper_status(self):
+        status = scrape.juniper_status
+        self.assertEqual(status({"model": "Model Y", "year": 2026, "trim": "Premium RWD"}), "yes")
+        self.assertEqual(status({"model": "Model Y", "year": 2025, "trim": "Long Range Launch Series"}), "yes")
+        self.assertEqual(status({"model": "Model Y", "year": 2025, "trim": "Long Range RWD"}), "check")
+        self.assertEqual(status({"model": "Model Y", "year": 2023, "trim": "Long Range AWD"}), "no")
+        self.assertIsNone(status({"model": "Model 3", "year": 2026, "trim": "RWD"}))
+
+    def test_search_applies_caps_and_stops_paging_past_the_price_cap(self):
+        pages = [
+            page([{"vin": "CHEAP", "price": 30000, "miles": 50000}], total=90, has_next=True),
+            page([{"vin": "OVER", "price": 46000, "miles": 10000}], total=90, has_next=True),
+            page([{"vin": "NEVER", "price": 20000, "miles": 10}], total=90, has_next=False),
+        ]
+        calls = []
+        real_fetch, real_sleep = scrape.fetch, scrape.time.sleep
+        scrape.fetch = lambda url: calls.append(url) or pages[len(calls) - 1]
+        scrape.time.sleep = lambda seconds: None
+        try:
+            search = {"label": "Test", "make": "tesla", "model": "model-s", "year_min": 2017, "year_max": 2023,
+                      "city": "union", "state": "nj", "radius": 150, "price_max": 45000}
+            rows = scrape.scrape_truecar(search)
+        finally:
+            scrape.fetch, scrape.time.sleep = real_fetch, real_sleep
+        self.assertEqual([r["vin"] for r in rows], ["CHEAP"])
+        self.assertEqual(len(calls), 2)
+        self.assertIn("/tesla/model-s/year-2017-2023/", calls[0])
+
+
 class FlagTest(unittest.TestCase):
     def rows(self):
         return [

@@ -29,10 +29,18 @@ python3 -m unittest -q       # tests
 python3 -m http.server -d docs 8000   # preview
 ```
 
-- Change the car, area, radius or budget in `config.json`.
+- Change the cars, area, radius or budget in `config.json`. Each entry in
+  `searches` is one model. Optional per search: `price_max`, `miles_max`, and
+  `juniper_only` (Model Y: keep 2026 cars, the 2025 Launch Series, and other
+  2025 cars marked "confirm it's the Juniper body").
+- TrueCar's data does not say whether a car has FSD. Set `"fsd": true` on a
+  car in `manual.json`, or tick the box in the form on the page.
 - Add a car you found elsewhere to `manual.json` (`url`, `price`, `miles`, `trim`, `where`).
 - Each run keeps price history per VIN, so drops show up on the page. Cars that
   disappear are kept as "sold or delisted" for 14 days.
+
+A car with no title or accident data (everything added by hand) shows
+"History not verified" and never counts as "verified clean".
 
 ## Flags
 
