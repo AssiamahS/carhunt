@@ -5,9 +5,9 @@ published with GitHub Pages from `docs/`.
 
 Live: https://assiamahs.github.io/carhunt/
 
-The refresh runs from my Mac (`refresh.sh` under launchd, `com.sly.carhunt`).
-`.github/workflows/refresh.yml` does the same job on Actions and is disabled
-for now.
+The refresh runs on GitHub Actions (`.github/workflows/refresh-listings.yml`),
+every 6 hours and on any change to the config or scraper. `refresh.sh` does the
+same job from a Mac under launchd (`com.sly.carhunt`); run only one of the two.
 
 ## Where the data comes from
 

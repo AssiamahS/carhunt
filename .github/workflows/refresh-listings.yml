@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [config.json, manual.json, scrape.py]
+    paths: [config.json, manual.json, scrape.py, .github/workflows/refresh-listings.yml]
 
 permissions:
   contents: write
