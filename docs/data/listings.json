@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T01:50:07Z",
+ "updated": "2026-11-19T05:44:32Z",
  "errors": [],
  "config": {
   "budget": 30000,
@@ -18,6 +18,32 @@
    "state": "nj",
    "zip": "07083",
    "radius": 150
+  },
+  {
+   "label": "2017-2023 Tesla Model S",
+   "make": "tesla",
+   "model": "model-s",
+   "year_min": 2017,
+   "year_max": 2023,
+   "city": "union",
+   "state": "nj",
+   "zip": "07083",
+   "radius": 150,
+   "price_max": 40000,
+   "miles_max": 100000
+  },
+  {
+   "label": "Tesla Model Y Juniper (2025-2026)",
+   "make": "tesla",
+   "model": "model-y",
+   "year_min": 2025,
+   "year_max": 2026,
+   "city": "union",
+   "state": "nj",
+   "zip": "07083",
+   "radius": 150,
+   "price_max": 45000,
+   "juniper_only": true
   }
  ],
  "links": [
@@ -48,9 +74,256 @@
   {
    "name": "Tesla used inventory",
    "url": "https://www.tesla.com/inventory/used/m3?zip=07083"
+  },
+  {
+   "name": "AutoTempest: Model S",
+   "url": "https://www.autotempest.com/results?make=tesla&model=models&zip=07083&radius=150&minyear=2017&maxyear=2023"
+  },
+  {
+   "name": "AutoTempest: Model Y 2025-2026",
+   "url": "https://www.autotempest.com/results?make=tesla&model=modely&zip=07083&radius=150&minyear=2025&maxyear=2026"
+  },
+  {
+   "name": "Tesla used inventory: Model S",
+   "url": "https://www.tesla.com/inventory/used/ms?zip=07083"
+  },
+  {
+   "name": "Tesla used inventory: Model Y",
+   "url": "https://www.tesla.com/inventory/used/my?zip=07083"
   }
  ],
  "listings": [
+  {
+   "vin": "5YJSA1E1XHF194479",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E1XHF194479/",
+   "year": 2017,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "60 RWD",
+   "drive": "RWD",
+   "price": 22794,
+   "miles": 68022,
+   "color": "Deep Blue Metallic",
+   "dealer": "Automotive Avenues of Sewell",
+   "where": "Sewell, NJ",
+   "state": "NJ",
+   "distance": 79,
+   "listed": "2026-11-17",
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/569169/79/44/5YJSA1E1XHF194479/001_2026111721.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     22794
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E29JF274743",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E29JF274743/",
+   "year": 2018,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "75D",
+   "drive": "AWD",
+   "price": 25969,
+   "miles": 50526,
+   "color": "Black",
+   "dealer": "BMW of Mt. Laurel",
+   "where": "Mount Laurel, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-10-17",
+   "accidents": 2,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/22023/43/47/5YJSA1E29JF274743/001_2026103007.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     25969
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident",
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E49HF229524",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E49HF229524/",
+   "year": 2017,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "P100D AWD",
+   "drive": "AWD",
+   "price": 27394,
+   "miles": 76618,
+   "color": "Red Multi-Coat",
+   "dealer": "Kia of Riverdale NJ",
+   "where": "Riverdale, NJ",
+   "state": "NJ",
+   "distance": 20,
+   "listed": "2026-11-12",
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/273900/24/95/5YJSA1E49HF229524/001_2026111309.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     27394
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E23MF424334",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E23MF424334/",
+   "year": 2021,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Long Range",
+   "drive": "AWD",
+   "price": 29550,
+   "miles": 91223,
+   "color": "Gray",
+   "dealer": "J&S Autohaus - Mount Holly",
+   "where": "Westampton, NJ",
+   "state": "NJ",
+   "distance": 55,
+   "listed": "2026-08-04",
+   "accidents": 0,
+   "owners": 3,
+   "clean_title": true,
+   "deal": "GREAT",
+   "image": "https://listings-prod.tcimg.net/listings/55212/34/43/5YJSA1E23MF424334/001_2026102311.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     29550
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E43LF357668",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E43LF357668/",
+   "year": 2020,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Performance",
+   "drive": "AWD",
+   "price": 29999,
+   "miles": 81636,
+   "color": "Pearl White Multi-Coat",
+   "dealer": "CarVision Maple Shade",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-10-31",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": false,
+   "deal": "FAIR",
+   "image": "https://listings-prod.tcimg.net/listings/220075/68/76/5YJSA1E43LF357668/001_2026103104.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     29999
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "branded-title",
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E24KF306046",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E24KF306046/",
+   "year": 2019,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "100D",
+   "drive": "AWD",
+   "price": 30894,
+   "miles": 65897,
+   "color": "Deep Blue Metallic",
+   "dealer": "Hyundai of Trenton",
+   "where": "Ewing, NJ",
+   "state": "NJ",
+   "distance": 40,
+   "listed": "2026-11-18",
+   "accidents": 1,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "FAIR",
+   "image": null,
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     30894
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident",
+    "no-basic-warranty"
+   ]
+  },
   {
    "vin": "5YJ3E1EA2RF728357",
    "source": "truecar",
@@ -74,6 +347,7 @@
    "deal": "HIGH",
    "image": "https://listings-prod.tcimg.net/listings/220075/57/83/5YJ3E1EA2RF728357/001_2026111112.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -111,6 +385,7 @@
    "deal": "HIGH",
    "image": "https://listings-prod.tcimg.net/listings/220075/80/56/5YJ3E1EA0RF735680/001_2026110321.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -124,6 +399,42 @@
    "flags": [
     "accident"
    ]
+  },
+  {
+   "vin": "5YJSA1E26LF349384",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E26LF349384/",
+   "year": 2020,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Long Range",
+   "drive": "AWD",
+   "price": 33994,
+   "miles": 44181,
+   "color": "Pearl White Multi-Coat",
+   "dealer": "Automotive Avenues of Sewell",
+   "where": "Sewell, NJ",
+   "state": "NJ",
+   "distance": 79,
+   "listed": "2026-10-07",
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "FAIR",
+   "image": "https://listings-prod.tcimg.net/listings/569169/84/93/5YJSA1E26LF349384/001_2026100704.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     33994
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
   },
   {
    "vin": "5YJ3E1EB6RF807099",
@@ -148,6 +459,7 @@
    "deal": "EXCELLENT",
    "image": "https://listings-prod.tcimg.net/listings/19520/99/70/5YJ3E1EB6RF807099/001_2026110621.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -159,6 +471,44 @@
    "price_change": 0,
    "gone": false,
    "flags": []
+  },
+  {
+   "vin": "7SAYGDED3SF253404",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGDED3SF253404/",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Long Range RWD",
+   "drive": "RWD",
+   "price": 35998,
+   "miles": 73000,
+   "color": "Solid Black",
+   "dealer": "Carmax Mechanicsburg",
+   "where": "Mechanicsburg, PA",
+   "state": "PA",
+   "distance": 148,
+   "listed": "2026-11-18",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/27188/04/34/7SAYGDED3SF253404/001_2026111804.jpg",
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "check",
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     35998
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
   },
   {
    "vin": "5YJ3E1EA6RF847559",
@@ -183,6 +533,7 @@
    "deal": "HIGH",
    "image": "https://listings-prod.tcimg.net/listings/273900/59/75/5YJ3E1EA6RF847559/001_2026101511.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -194,6 +545,82 @@
    "price_change": 0,
    "gone": false,
    "flags": []
+  },
+  {
+   "vin": "5YJSA1E50NF467668",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E50NF467668/",
+   "year": 2022,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Long Range",
+   "drive": "AWD",
+   "price": 37600,
+   "miles": 94778,
+   "color": "Unknown",
+   "dealer": "Mercedes-Benz of Doylestown",
+   "where": "Doylestown, PA",
+   "state": "PA",
+   "distance": 52,
+   "listed": "2026-11-16",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/361761/68/76/5YJSA1E50NF467668/001_2026111708.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     37600
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E55NF464085",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJSA1E55NF464085/",
+   "year": 2022,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Long Range",
+   "drive": "AWD",
+   "price": 38999,
+   "miles": 45751,
+   "color": "Red Multi-Coat",
+   "dealer": "CarVision Maple Shade",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-09-20",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": false,
+   "deal": "GREAT",
+   "image": "https://listings-prod.tcimg.net/listings/220075/85/40/5YJSA1E55NF464085/001_2026092806.jpg",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     38999
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "branded-title"
+   ]
   },
   {
    "vin": "5YJ3E1EB8RF730591",
@@ -218,6 +645,7 @@
    "deal": "GREAT",
    "image": "https://listings-prod.tcimg.net/listings/302837/91/05/5YJ3E1EB8RF730591/001_2026110609.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -229,6 +657,118 @@
    "price_change": 0,
    "gone": false,
    "flags": []
+  },
+  {
+   "vin": "7SAYGDEDXTA469877",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGDEDXTA469877/",
+   "year": 2026,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Premium RWD",
+   "drive": "RWD",
+   "price": 42794,
+   "miles": 11395,
+   "color": "Stealth Grey",
+   "dealer": "Automotive Avenues of Sewell",
+   "where": "Sewell, NJ",
+   "state": "NJ",
+   "distance": 79,
+   "listed": "2026-10-22",
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/569169/77/98/7SAYGDEDXTA469877/001_2026102203.jpg",
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "yes",
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     42794
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "7SAYGDED9TF523804",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGDED9TF523804/",
+   "year": 2026,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 43999,
+   "miles": 14621,
+   "color": "Gray",
+   "dealer": "CarVision of Trooper",
+   "where": "Trooper, PA",
+   "state": "PA",
+   "distance": 70,
+   "listed": "2026-09-20",
+   "accidents": 0,
+   "owners": 0,
+   "clean_title": false,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/48120/04/38/7SAYGDED9TF523804/001_2026092509.jpg",
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "yes",
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     43999
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "branded-title"
+   ]
+  },
+  {
+   "vin": "7SAYGDEE5TA394174",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGDEE5TA394174/",
+   "year": 2026,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Long Range Launch Series",
+   "drive": "AWD",
+   "price": 44094,
+   "miles": 54200,
+   "color": "Pearl White Multi-Coat",
+   "dealer": "Convey Motors",
+   "where": "Hillside, NJ",
+   "state": "NJ",
+   "distance": 2,
+   "listed": "2026-10-03",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "GREAT",
+   "image": "https://listings-prod.tcimg.net/listings/609475/74/41/7SAYGDEE5TA394174/001_2026100310.png",
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "yes",
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "price_history": [
+    [
+     "2026-11-19",
+     44094
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
   },
   {
    "vin": "5YJ3E1ET6RF829581",
@@ -253,6 +793,7 @@
    "deal": "EXCELLENT",
    "image": "https://listings-prod.tcimg.net/listings/38433/81/95/5YJ3E1ET6RF829581/001_2026111308.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -290,6 +831,7 @@
    "deal": "FAIR",
    "image": "https://listings-prod.tcimg.net/listings/286675/79/72/5YJ3E1ETXRF867279/001_2026111121.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
@@ -327,6 +869,7 @@
    "deal": "HIGH",
    "image": "https://listings-prod.tcimg.net/listings/517072/31/13/5YJ3E1ET6RF871331/001_2026111206.jpg",
    "search": "2024 Tesla Model 3",
+   "juniper": null,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
    "price_history": [
