@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T22:56:55Z",
+ "updated": "2026-11-19T01:50:07Z",
  "errors": [],
  "config": {
   "budget": 30000,
@@ -63,9 +63,10 @@
    "where": "Near Staten Island, NY",
    "state": "NY",
    "note": "Cheapest Highland nearby. Basic warranty gone, battery warranty still runs.",
+   "exact": false,
    "vin": "manual:https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940:24110",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -89,9 +90,10 @@
    "miles": 9542,
    "where": "NY/NJ, town not shown",
    "note": "Edmunds: great price, $2,328 below market. Best low-mileage buy.",
+   "exact": false,
    "vin": "manual:https://www.edmunds.com/used-tesla-model-3-staten-island-ny/:26495",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -113,9 +115,10 @@
    "miles": 39204,
    "where": "Brooklyn area, NY",
    "state": "NY",
+   "exact": false,
    "vin": "manual:https://www.edmunds.com/used-tesla-model-3-brooklyn-ny/:29500",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -138,9 +141,10 @@
    "dealer": "Imports Unlimited",
    "where": "Wallingford, CT",
    "state": "CT",
+   "exact": false,
    "vin": "manual:https://www.cars.com/shopping/tesla-model_3/new_haven-ct/:29900",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -164,9 +168,10 @@
    "where": "CT",
    "state": "CT",
    "note": "Base-car money for the bigger battery. Mileage approximate.",
+   "exact": false,
    "vin": "manual:https://www.autotrader.com/cars-for-sale/tesla/model-3/wallingford-ct:29900",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -188,9 +193,10 @@
    "miles": 11712,
    "where": "Near Staten Island, NY",
    "state": "NY",
+   "exact": false,
    "vin": "manual:https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940:29987",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -200,37 +206,6 @@
    "price_change": 0,
    "gone": false,
    "flags": []
-  },
-  {
-   "source": "truecar",
-   "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/",
-   "year": 2024,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range AWD",
-   "price": 31999,
-   "miles": 18268,
-   "dealer": "CarVision",
-   "where": "Maple Shade, NJ",
-   "state": "NJ",
-   "manual_flags": [
-    "ask-buyback"
-   ],
-   "note": "Several Maple Shade listings say Tesla reacquired the car. Check the Carfax for a buyback brand.",
-   "vin": "manual:https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/:31999",
-   "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
-   "price_history": [
-    [
-     "2026-11-18",
-     31999
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "ask-buyback"
-   ]
   },
   {
    "source": "edmunds",
@@ -243,9 +218,10 @@
    "miles": null,
    "where": "Wilmington, DE area",
    "state": "DE",
+   "exact": false,
    "vin": "manual:https://www.edmunds.com/used-tesla-model-3-wilmington-de/:33590",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -280,7 +256,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/57/83/5YJ3E1EA2RF728357/001_2026111112.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -317,7 +293,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/80/56/5YJ3E1EA0RF735680/001_2026110321.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -354,7 +330,7 @@
    "image": "https://listings-prod.tcimg.net/listings/19520/99/70/5YJ3E1EB6RF807099/001_2026110621.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -389,7 +365,7 @@
    "image": "https://listings-prod.tcimg.net/listings/273900/59/75/5YJ3E1EA6RF847559/001_2026101511.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -424,7 +400,7 @@
    "image": "https://listings-prod.tcimg.net/listings/302837/91/05/5YJ3E1EB8RF730591/001_2026110609.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -459,7 +435,7 @@
    "image": "https://listings-prod.tcimg.net/listings/38433/81/95/5YJ3E1ET6RF829581/001_2026111308.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -496,7 +472,7 @@
    "image": "https://listings-prod.tcimg.net/listings/286675/79/72/5YJ3E1ETXRF867279/001_2026111121.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -533,7 +509,7 @@
    "image": "https://listings-prod.tcimg.net/listings/517072/31/13/5YJ3E1ET6RF871331/001_2026111206.jpg",
    "search": "2024 Tesla Model 3",
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-18",
+   "last_seen": "2026-11-19",
    "price_history": [
     [
      "2026-11-18",
@@ -543,6 +519,37 @@
    "price_change": 0,
    "gone": false,
    "flags": []
+  },
+  {
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "price": 31999,
+   "miles": 18268,
+   "dealer": "CarVision",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "manual_flags": [
+    "ask-buyback"
+   ],
+   "note": "Several Maple Shade listings say Tesla reacquired the car. Check the Carfax for a buyback brand.",
+   "vin": "manual:https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/:31999",
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-18",
+   "price_history": [
+    [
+     "2026-11-18",
+     31999
+    ]
+   ],
+   "price_change": 0,
+   "gone": true,
+   "flags": [
+    "ask-buyback"
+   ]
   }
  ]
 }

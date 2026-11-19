@@ -1,47 +1,97 @@
 [
   {
-    "source": "cargurus", "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Long Range AWD",
-    "price": 24110, "miles": 79534, "where": "Near Staten Island, NY", "state": "NY",
-    "note": "Cheapest Highland nearby. Basic warranty gone, battery warranty still runs."
+    "source": "cargurus",
+    "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range AWD",
+    "price": 24110,
+    "miles": 79534,
+    "where": "Near Staten Island, NY",
+    "state": "NY",
+    "note": "Cheapest Highland nearby. Basic warranty gone, battery warranty still runs.",
+    "exact": false
   },
   {
-    "source": "edmunds", "url": "https://www.edmunds.com/used-tesla-model-3-staten-island-ny/",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Base RWD",
-    "price": 26495, "miles": 9542, "where": "NY/NJ, town not shown",
-    "note": "Edmunds: great price, $2,328 below market. Best low-mileage buy."
+    "source": "edmunds",
+    "url": "https://www.edmunds.com/used-tesla-model-3-staten-island-ny/",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Base RWD",
+    "price": 26495,
+    "miles": 9542,
+    "where": "NY/NJ, town not shown",
+    "note": "Edmunds: great price, $2,328 below market. Best low-mileage buy.",
+    "exact": false
   },
   {
-    "source": "edmunds", "url": "https://www.edmunds.com/used-tesla-model-3-brooklyn-ny/",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Base RWD",
-    "price": 29500, "miles": 39204, "where": "Brooklyn area, NY", "state": "NY"
+    "source": "edmunds",
+    "url": "https://www.edmunds.com/used-tesla-model-3-brooklyn-ny/",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Base RWD",
+    "price": 29500,
+    "miles": 39204,
+    "where": "Brooklyn area, NY",
+    "state": "NY",
+    "exact": false
   },
   {
-    "source": "cars.com", "url": "https://www.cars.com/shopping/tesla-model_3/new_haven-ct/",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Standard Range",
-    "price": 29900, "miles": 25000, "dealer": "Imports Unlimited", "where": "Wallingford, CT", "state": "CT"
+    "source": "cars.com",
+    "url": "https://www.cars.com/shopping/tesla-model_3/new_haven-ct/",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Standard Range",
+    "price": 29900,
+    "miles": 25000,
+    "dealer": "Imports Unlimited",
+    "where": "Wallingford, CT",
+    "state": "CT",
+    "exact": false
   },
   {
-    "source": "autotrader", "url": "https://www.autotrader.com/cars-for-sale/tesla/model-3/wallingford-ct",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Long Range",
-    "price": 29900, "miles": 33000, "dealer": "Autohaus Inc", "where": "CT", "state": "CT",
-    "note": "Base-car money for the bigger battery. Mileage approximate."
+    "source": "autotrader",
+    "url": "https://www.autotrader.com/cars-for-sale/tesla/model-3/wallingford-ct",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range",
+    "price": 29900,
+    "miles": 33000,
+    "dealer": "Autohaus Inc",
+    "where": "CT",
+    "state": "CT",
+    "note": "Base-car money for the bigger battery. Mileage approximate.",
+    "exact": false
   },
   {
-    "source": "cargurus", "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "RWD",
-    "price": 29987, "miles": 11712, "where": "Near Staten Island, NY", "state": "NY"
+    "source": "cargurus",
+    "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "RWD",
+    "price": 29987,
+    "miles": 11712,
+    "where": "Near Staten Island, NY",
+    "state": "NY",
+    "exact": false
   },
   {
-    "source": "truecar", "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-philadelphia-pa/",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Long Range AWD",
-    "price": 31999, "miles": 18268, "dealer": "CarVision", "where": "Maple Shade, NJ", "state": "NJ",
-    "manual_flags": ["ask-buyback"],
-    "note": "Several Maple Shade listings say Tesla reacquired the car. Check the Carfax for a buyback brand."
-  },
-  {
-    "source": "edmunds", "url": "https://www.edmunds.com/used-tesla-model-3-wilmington-de/",
-    "year": 2024, "make": "Tesla", "model": "Model 3", "trim": "Long Range",
-    "price": 33590, "miles": null, "where": "Wilmington, DE area", "state": "DE"
+    "source": "edmunds",
+    "url": "https://www.edmunds.com/used-tesla-model-3-wilmington-de/",
+    "year": 2024,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range",
+    "price": 33590,
+    "miles": null,
+    "where": "Wilmington, DE area",
+    "state": "DE",
+    "exact": false
   }
 ]

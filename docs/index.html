@@ -83,6 +83,7 @@ a { color: inherit; }
 .badge.caution { background: var(--caution-bg); color: var(--caution); }
 .badge.go { background: var(--go-bg); color: var(--go); }
 .note { font-size: 14px; margin: 0; border-left: 3px solid var(--marker); padding-left: 10px; }
+.lead { font-size: 14px; margin: 0; color: var(--caution); background: var(--caution-bg); border-radius: 3px; padding: 6px 10px; }
 .open { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 6px; }
 .open a { font-weight: 600; }
 .remove { font: inherit; font-size: 14px; color: var(--mute); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
@@ -139,6 +140,7 @@ form button { grid-column: 1 / -1; justify-self: start; font: 600 16px var(--bod
     <button class="chip" id="fBudget" aria-pressed="false" type="button"></button>
     <button class="chip" id="fMiles" aria-pressed="false" type="button">Under 50,000 miles</button>
     <button class="chip" id="fClean" aria-pressed="false" type="button">No warnings</button>
+    <button class="chip" id="fDirect" aria-pressed="false" type="button">Direct links only</button>
     <button class="chip" id="fSold" aria-pressed="false" type="button" hidden>Show sold</button>
     <select id="trim" aria-label="Trim"><option value="">Every trim</option></select>
     <select id="sort" aria-label="Sort">
@@ -225,6 +227,7 @@ function shown() {
     (!pressed("fBudget") || r.price <= cfg.budget) &&
     (!pressed("fMiles") || (r.miles != null && r.miles < 50000)) &&
     (!pressed("fClean") || !r.flags.length) &&
+    (!pressed("fDirect") || r.exact !== false) &&
     (!trim || r.trim === trim)
   ).sort((a, b) => {
     const x = a[key], y = b[key];
@@ -245,7 +248,7 @@ function card(r) {
     photo = el("a", { className: "photo", href: url || "#", target: "_blank", rel: "noopener" }, img);
     img.onerror = () => { photo.className = "photo none"; photo.replaceChildren("Photos on " + site); };
   } else {
-    photo = el("a", { className: "photo none", href: url || "#", target: "_blank", rel: "noopener", textContent: "Photos on " + site });
+    photo = el("a", { className: "photo none", href: url || "#", target: "_blank", rel: "noopener", textContent: r.exact === false ? "Found on " + site + ", not linked to the exact car" : "Photos on " + site });
   }
   const facts = el("ul", { className: "facts" });
   const miles = r.miles == null ? "Mileage not listed" : r.miles.toLocaleString("en-US") + " miles";
@@ -269,7 +272,8 @@ function card(r) {
     badges.append(el("span", { className: "badge " + kind, textContent: text }));
   }
   const open = el("div", { className: "open" });
-  if (url) open.append(el("a", { href: url, target: "_blank", rel: "noopener", textContent: "See it on " + site }));
+  const lead = r.exact === false;
+  if (url) open.append(el("a", { href: url, target: "_blank", rel: "noopener", textContent: lead ? "Search " + site + " for it" : "See this car on " + site }));
   if (r.mine) {
     const remove = el("button", { className: "remove", type: "button", textContent: "Remove" });
     remove.onclick = () => { saveMine(mine().filter((m) => m.id !== r.id)); render(); };
@@ -286,6 +290,7 @@ function card(r) {
       facts,
       badges.children.length ? badges : null,
       r.note ? el("p", { className: "note", textContent: r.note }) : null,
+      r.exact === false ? el("p", { className: "lead", textContent: "No direct link yet. This opens the " + site + " search, so look for " + money(r.price) + (r.miles != null ? " with " + r.miles.toLocaleString("en-US") + " miles" : "") + ". It may already be sold." }) : null,
       open));
 }
 function plot(rows) {
@@ -356,7 +361,7 @@ function render() {
   if (!rows.length) grid.append(el("div", { className: "empty", textContent: "No " + model + " match. Turn a filter off to see more." }));
 }
 
-for (const id of ["fBudget", "fMiles", "fClean", "fSold"]) {
+for (const id of ["fBudget", "fMiles", "fClean", "fDirect", "fSold"]) {
   $(id).onclick = () => { $(id).setAttribute("aria-pressed", String(!pressed(id))); render(); };
 }
 $("trim").onchange = $("sort").onchange = render;
