@@ -120,6 +120,14 @@ class SearchLimitTest(unittest.TestCase):
         self.assertIn("/tesla/model-s/year-2017-2023/", calls[0])
 
 
+class DirectLinkTest(unittest.TestCase):
+    def test_only_cars_with_their_own_link_and_photo_count(self):
+        self.assertTrue(scrape.is_direct({"url": "https://x/vin/1", "image": "https://x/1.jpg"}))
+        self.assertFalse(scrape.is_direct({"url": "https://x/search", "image": "https://x/1.jpg", "exact": False}))
+        self.assertFalse(scrape.is_direct({"url": "https://x/vin/1"}))
+        self.assertFalse(scrape.is_direct({"image": "https://x/1.jpg"}))
+
+
 class FlagTest(unittest.TestCase):
     def rows(self):
         return [

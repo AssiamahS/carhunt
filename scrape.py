@@ -4,6 +4,7 @@
 Sources:
   truecar  - scraped (the only big listing site that answers a plain request)
   manual   - manual.json, cars you found yourself on CarGurus, Edmunds, etc.
+             Each needs the car's own listing url and an image url.
 
 Standard library only, so the GitHub Action needs no install step.
 
@@ -180,13 +181,26 @@ def scrape_truecar(search):
     return kept
 
 
+def is_direct(row):
+    """True when the row links to one car's own listing page and has a photo of it."""
+    return row.get("exact") is not False and bool(row.get("url")) and bool(row.get("image"))
+
+
 def load_manual():
-    """Cars added by hand. A row with no VIN is keyed by its link + price."""
+    """Cars added by hand. A row with no VIN is keyed by its link + price.
+
+    Every car on the page links to its own listing and shows its photo, so a
+    row that only points at a search page, or has no image, is left out.
+    """
     if not MANUAL.exists():
         return []
     rows = []
     for item in json.loads(MANUAL.read_text()):
         row = dict(item)
+        if not is_direct(row):
+            print("manual: skipped %s %s (needs a direct listing url and an image)"
+                  % (row.get("price"), row.get("url")), file=sys.stderr)
+            continue
         row.setdefault("source", "manual")
         row.setdefault("vin", "manual:%s:%s" % (row.get("url", ""), row.get("price", "")))
         row.setdefault("juniper", juniper_status(row))
@@ -252,7 +266,9 @@ def main():
     config = json.loads(CONFIG.read_text())
     today = dt.datetime.now(dt.timezone.utc).date().isoformat()
     previous = json.loads(OUT.read_text()) if OUT.exists() else {}
-    old = {row["vin"]: row for row in previous.get("listings", [])}
+    # Search-page leads from before the direct-link rule are dropped, not shown as sold.
+    old = {row["vin"]: row for row in previous.get("listings", [])
+           if row.get("source") == "truecar" or is_direct(row)}
 
     rows, errors, failed = [], [], set()
     for search in config["searches"]:

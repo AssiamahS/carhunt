@@ -14,7 +14,7 @@ for now.
 | Source | How |
 |---|---|
 | TrueCar | scraped by `scrape.py` (price, miles, trim, dealer, title, accidents, owners) |
-| CarGurus, Edmunds, Cars.com, Autotrader, anything else | added by hand in `manual.json`, or with the form on the page |
+| CarGurus, Edmunds, Cars.com, Autotrader, anything else | added by hand in `manual.json` (direct link and photo required), or with the form on the page |
 
 CarGurus, Edmunds, Cars.com, Autotrader, KBB, CarMax, Carvana, Carfax and
 Tesla all refuse plain requests, so they can't be scraped from an Action. The
@@ -33,9 +33,9 @@ python3 -m http.server -d docs 8000   # preview
   `searches` is one model. Optional per search: `price_max`, `miles_max`, and
   `juniper_only` (Model Y: keep 2026 cars, the 2025 Launch Series, and other
   2025 cars marked "confirm it's the Juniper body").
-- TrueCar's data does not say whether a car has FSD. Set `"fsd": true` on a
-  car in `manual.json`, or tick the box in the form on the page.
-- Add a car you found elsewhere to `manual.json` (`url`, `price`, `miles`, `trim`, `where`).
+- Add a car you found elsewhere to `manual.json` (`url`, `image`, `price`, `miles`, `model`, `trim`, `where`).
+  `url` must be the car's own listing page and `image` a photo of it. Rows
+  without both are skipped, so every car on the page is one link, one photo.
 - Each run keeps price history per VIN, so drops show up on the page. Cars that
   disappear are kept as "sold or delisted" for 14 days.
 
