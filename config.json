@@ -157,6 +157,16 @@
       "model": "Model Y",
       "name": "Tesla used inventory",
       "url": "https://www.tesla.com/inventory/used/my?zip=07083"
+    },
+    {
+      "model": "Lease instead",
+      "name": "Tesla lease offers (new)",
+      "url": "https://www.tesla.com/current-offers"
+    },
+    {
+      "model": "Lease instead",
+      "name": "Swapalease: Tesla takeovers",
+      "url": "https://www.swapalease.com/lease/Tesla/search.aspx"
     }
   ]
 }
