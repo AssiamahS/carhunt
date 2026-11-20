@@ -16,16 +16,29 @@ same job from a Mac under launchd (`com.sly.carhunt`); run only one of the two.
 | TrueCar | search pages: price, miles, trim, dealer, title, accidents, owners |
 | KBB (same inventory as Autotrader) | its listing feed: price, miles, KBB fair price, AutoCheck title/accident preview |
 | CarGurus | its search feed: price, miles, CarGurus market value. No history |
+| CarMax | its search page, fetched with `curl` (nearest stores first). No history |
+| Cars.com, Carvana | one results page per search, loaded in a real browser by `browser_fetch.mjs`. No history |
 | anything else | added by hand in `manual.json` (direct link and photo required), or with the form on the page |
 
 A car listed on more than one site is one card: the cheapest listing leads and
 the others show as "Also on" links. If two sites disagree about the title the
 card says so instead of picking one.
 
-Probed 2026-11-19 from a home connection: Cars.com, Edmunds, CarMax, Carvana,
-Carfax, Hertz, EchoPark, AutoNation, eBay, Autotrader's own pages and Tesla's
-inventory all refuse plain requests. The page links into their searches instead.
-All three scraped sources only answer from a residential IP.
+### Getting past the bot walls
+
+Three levels, tried 2026-11-19 from a home connection:
+
+1. Plain request (Python): TrueCar, KBB, CarGurus.
+2. `curl` with a full set of browser headers: CarMax. It rejects Python's TLS handshake, not the request.
+3. A real, visible Chrome parked off-screen, driven by [patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright)
+   (Playwright with the automation tells removed): Cars.com, Carvana. Headless Chrome is blocked, and
+   Cars.com answers a second page within a few seconds with a bot check, so it is one page per search.
+
+`browser_fetch.mjs` loads patchright from `~/.claude/mcp-servers/apartments/node_modules/`
+(override with `CARHUNT_PATCHRIGHT`). Without it those two sites are skipped and the rest still refresh.
+
+Still refusing even the real browser: Edmunds, eBay and Tesla's own inventory. Autotrader's pages
+block too, but KBB's feed is the same inventory. All of it only works from a residential IP.
 
 ## Use it
 

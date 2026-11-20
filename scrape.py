@@ -6,6 +6,9 @@ Sources:
   kbb      - KBB's listing feed, the same inventory Autotrader shows. Comes with
              KBB's fair price and an AutoCheck title/accident preview.
   cargurus - CarGurus' search feed. Has its market value, no history.
+  carmax   - CarMax's search page, fetched with curl (it turns Python away).
+  cars.com, carvana - search pages loaded in a real browser by browser_fetch.mjs,
+             one page per search, because they block everything else.
   manual   - manual.json, cars you found yourself anywhere else.
              Each needs the car's own listing url and an image url.
 
@@ -17,9 +20,13 @@ Standard library only, so the GitHub Action needs no install step.
     python3 scrape.py --dry-run  # print a summary, write nothing
 """
 import argparse
+import base64
 import datetime as dt
+import html
 import json
 import re
+import shutil
+import subprocess
 import sys
 import time
 import urllib.error
@@ -43,7 +50,9 @@ CARGURUS_MODELS = {"model-3": "d2475", "model-s": "d2039", "model-y": "d3044"}
 CARGURUS_DEALS = {"GREAT_PRICE": "EXCELLENT", "GOOD_PRICE": "GOOD", "FAIR_PRICE": "FAIR",
                   "POOR_PRICE": "HIGH", "OVERPRICED": "HIGH"}
 # When two sites list the same car at the same price, link to this one first.
-SOURCE_ORDER = ("truecar", "kbb", "cargurus")
+SOURCE_ORDER = ("truecar", "kbb", "cargurus", "carmax", "cars.com", "carvana")
+BROWSER_FETCH = ROOT / "browser_fetch.mjs"
+BROWSER_TIMEOUT = 9 * 60
 # A price this far under KBB's or CarGurus' value means damage, a salvage title or a scam.
 # A verified clean title earns more room before the warning.
 FAR_BELOW_MARKET = 0.75
@@ -73,6 +82,53 @@ def fetch(url, tries=3):
                 raise SourceError("%s for %s" % (err, url)) from err
         time.sleep(3 * attempt)
     raise SourceError("no response for %s" % url)
+
+
+def fetch_curl(url, cache={}):
+    """For sites that reject Python's TLS handshake but accept curl's. One fetch per URL per run."""
+    if url not in cache:
+        done = subprocess.run(
+            ["curl", "-s", "-g", "--http2", "--compressed", "-m", "45", "-w", "\n%{http_code}", url,
+             "-H", "User-Agent: " + USER_AGENT,
+             "-H", "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+             "-H", "Accept-Language: en-US,en;q=0.9",
+             # CarMax checks for the full set a real Chrome sends on a typed-in address.
+             "-H", 'sec-ch-ua: "Chromium";v="141", "Not?A_Brand";v="8"', "-H", "sec-ch-ua-mobile: ?0",
+             "-H", 'sec-ch-ua-platform: "macOS"', "-H", "Sec-Fetch-Dest: document", "-H", "Sec-Fetch-Mode: navigate",
+             "-H", "Sec-Fetch-Site: none", "-H", "Sec-Fetch-User: ?1", "-H", "Upgrade-Insecure-Requests: 1"],
+            capture_output=True, text=True, timeout=60, check=False)
+        body, _, code = done.stdout.rpartition("\n")
+        if code != "200":
+            raise SourceError("HTTP %s for %s" % (code or "error", url))
+        cache[url] = body
+    return cache[url]
+
+
+BROWSER_PAGES = {}
+
+
+def browser_load(urls):
+    """Load every url in one real-browser session and remember the pages. Empty on failure."""
+    urls = [url for url in dict.fromkeys(urls) if url not in BROWSER_PAGES]
+    if not urls:
+        return
+    try:
+        # launchd runs this with a bare PATH, so look in the usual install spots too.
+        node = shutil.which("node") or next((n for n in ("/usr/local/bin/node", "/opt/homebrew/bin/node") if Path(n).exists()), "node")
+        done = subprocess.run([node, str(BROWSER_FETCH)], input=json.dumps(urls), capture_output=True,
+                              text=True, timeout=BROWSER_TIMEOUT, check=False)
+        BROWSER_PAGES.update(json.loads(done.stdout))
+        if done.stderr.strip():
+            print(done.stderr.strip(), file=sys.stderr)
+    except (OSError, ValueError, subprocess.TimeoutExpired) as err:
+        print("browser: %s" % err, file=sys.stderr)
+
+
+def browser_page(url):
+    page = BROWSER_PAGES.get(url)
+    if not page:
+        raise SourceError("browser could not load %s" % url)
+    return page
 
 
 def truecar_url(search, page):
@@ -185,6 +241,11 @@ def finish(rows, search):
     if search.get("juniper_only"):
         kept = [r for r in kept if r["juniper"] == "yes"]
     return kept
+
+
+def in_years(rows, search):
+    """For sources whose search page cannot be narrowed to the search's years."""
+    return [r for r in rows if search["year_min"] <= (r.get("year") or 0) <= search["year_max"]]
 
 
 def whole(value):
@@ -342,7 +403,160 @@ def scrape_cargurus(search):
     return finish(list(rows.values()), search)
 
 
-SCRAPERS = (("truecar", scrape_truecar), ("kbb", scrape_kbb), ("cargurus", scrape_cargurus))
+def carmax_url(search):
+    return "https://www.carmax.com/cars/{make}/{model}".format(**search)
+
+
+def parse_carmax(page):
+    """Rows from CarMax's search page: the nearest stores' cars, any year."""
+    start = page.find("const cars = ")
+    if start < 0:
+        raise SourceError("carmax: no listing data (blocked or redesigned)")
+    try:
+        cars, _ = json.JSONDecoder().raw_decode(page, start + len("const cars = "))
+    except ValueError as err:
+        raise SourceError("carmax: listing data changed shape (%s)" % err) from err
+    rows = []
+    for item in cars:
+        vin, price = item.get("vin"), item.get("basePrice")
+        if not vin or not price or item.get("isSaleable") is False:
+            continue
+        distance = item.get("distance")
+        rows.append({
+            "vin": vin,
+            "source": "carmax",
+            "url": "https://www.carmax.com/car/%s" % item.get("stockNumber"),
+            "year": item.get("year"),
+            "make": item.get("make"),
+            "model": item.get("model"),
+            "trim": item.get("trim"),
+            "price": round(price),
+            "miles": whole(item.get("mileage")),
+            "color": item.get("exteriorColor"),
+            "dealer": "CarMax %s" % (item.get("storeName") or ""),
+            "where": ", ".join(p for p in (item.get("storeCity"), item.get("stateAbbreviation")) if p),
+            "state": item.get("stateAbbreviation"),
+            "distance": round(distance) if distance is not None else None,
+            "accidents": None,
+            "owners": None,
+            "clean_title": None,
+            "image": item.get("heroImageUrl"),
+        })
+    return rows
+
+
+def scrape_carmax(search):
+    return finish(in_years(parse_carmax(fetch_curl(carmax_url(search))), search), search)
+
+
+def carscom_url(search):
+    url = (
+        "https://www.cars.com/shopping/results/?makes[]={make}&models[]={make}-{slug}&zip={zip}"
+        "&maximum_distance={radius}&stock_type=used&sort=list_price&year_min={year_min}&year_max={year_max}"
+    ).format(**dict(search, slug=search["model"].replace("-", "_")))
+    return url + ("&list_price_max=%d" % search["price_max"] if search.get("price_max") else "")
+
+
+def parse_carscom(page):
+    """Rows from one Cars.com results page. It only searches inside the radius, and gives no distance."""
+    match = re.search(r'data-vehicle-array="([^"]*)"', page)
+    if not match:
+        raise SourceError("cars.com: no listing data (bot check or redesigned)")
+    try:
+        cars = json.loads(html.unescape(match.group(1)))
+    except ValueError as err:
+        raise SourceError("cars.com: listing data changed shape (%s)" % err) from err
+    rows = []
+    for item in cars:
+        vin, price = item.get("vin"), whole(item.get("price"))
+        if not vin or not price:
+            continue
+        seller = item.get("seller") or {}
+        rows.append({
+            "vin": vin,
+            "source": "cars.com",
+            "url": "https://www.cars.com/vehicledetail/%s/" % item.get("listingId"),
+            "year": whole(item.get("year")),
+            "make": item.get("make"),
+            "model": item.get("model"),
+            "trim": item.get("trim"),
+            "drive": item.get("drivetrain"),
+            "price": price,
+            "miles": whole(item.get("mileage")),
+            "color": (item.get("exteriorColor") or "").title() or None,
+            "dealer": seller.get("dealerName"),
+            "where": ", ".join(p for p in (seller.get("city"), seller.get("state")) if p),
+            "state": seller.get("state"),
+            "distance": None,
+            "accidents": None,
+            "owners": None,
+            "clean_title": None,
+            "image": item.get("primaryThumbnail"),
+        })
+    return rows
+
+
+def scrape_carscom(search):
+    return finish(in_years(parse_carscom(browser_page(carscom_url(search))), search), search)
+
+
+def carvana_url(search):
+    model = search["model"].replace("-", " ").title()
+    wanted = {"filters": {"makes": [{"name": search["make"].title(), "models": [{"name": model}]}],
+                          "year": {"min": search["year_min"], "max": search["year_max"]}},
+              "sortBy": "LowestPrice"}
+    packed = base64.urlsafe_b64encode(json.dumps(wanted, separators=(",", ":")).encode()).decode().rstrip("=")
+    return "https://www.carvana.com/cars/filters?cvnaid=" + packed
+
+
+def parse_carvana(page):
+    """Rows from one Carvana results page. Carvana delivers, so there is no lot and no distance."""
+    blocks = re.findall(r'<script type="application/ld\+json" data-testid="vehicle-ld"[^>]*>(.*?)</script>', page, re.S)
+    if not blocks:
+        raise SourceError("carvana: no listing data (bot check or redesigned)")
+    rows = []
+    for block in blocks:
+        try:
+            item = json.loads(block)
+        except ValueError:
+            continue
+        offer = item.get("offers") or {}
+        vin, price = item.get("vehicleIdentificationNumber"), offer.get("price")
+        if not vin or not price or not offer.get("url"):
+            continue
+        # "Used 2023 Tesla Model 3 Standard with 32238 miles - $28,990" -> "Standard"
+        trim = re.search(r"%s (.*?) with \d" % re.escape(item.get("model") or ""), item.get("description") or "")
+        rows.append({
+            "vin": vin,
+            "source": "carvana",
+            "url": offer["url"],
+            "year": whole(item.get("modelDate")),
+            "make": item.get("manufacturer"),
+            "model": item.get("model"),
+            "trim": trim.group(1) if trim else None,
+            "price": round(price),
+            "miles": whole(item.get("mileageFromOdometer")),
+            "color": item.get("color"),
+            "dealer": "Carvana",
+            "where": "Delivered by Carvana",
+            "state": None,
+            "distance": None,
+            "accidents": None,
+            "owners": None,
+            "clean_title": None,
+            "image": item.get("image"),
+        })
+    return rows
+
+
+def scrape_carvana(search):
+    return finish(in_years(parse_carvana(browser_page(carvana_url(search))), search), search)
+
+
+SCRAPERS = (
+    ("truecar", scrape_truecar), ("kbb", scrape_kbb), ("cargurus", scrape_cargurus),
+    ("carmax", scrape_carmax), ("cars.com", scrape_carscom), ("carvana", scrape_carvana),
+)
 
 
 def combine(rows):
@@ -467,6 +681,9 @@ def main():
     # Search-page leads from before the direct-link rule are dropped, not shown as sold.
     old = {row["vin"]: row for row in previous.get("listings", [])
            if row.get("source") == "truecar" or is_direct(row)}
+
+    # One browser session for every page that needs one. Alternating sites keeps each one slow.
+    browser_load([make_url(search) for search in config["searches"] for make_url in (carscom_url, carvana_url)])
 
     rows, errors, failed = [], [], set()
     for search in config["searches"]:

@@ -218,6 +218,59 @@ class OtherSourcesTest(unittest.TestCase):
         self.assertEqual((row["where"], row["distance"], row["deal"], row["deal_by"]), ("Ewing, NJ", 25, "GOOD", "CarGurus"))
         self.assertIsNone(row["clean_title"])
 
+    def test_parses_carmax_and_skips_cars_that_cannot_be_bought(self):
+        cars = [{"stockNumber": 70336313, "vin": "5YJ3E1EA1PF557517", "year": 2023, "make": "Tesla", "model": "Model 3",
+                 "trim": None, "basePrice": 27998.0, "mileage": 42532, "storeName": "Edison", "storeCity": "Edison",
+                 "stateAbbreviation": "NJ", "distance": 0.4, "exteriorColor": "White", "isSaleable": True,
+                 "heroImageUrl": "https://img.example/hero.jpg"},
+                {"stockNumber": 1, "vin": "RESERVED", "basePrice": 1.0, "isSaleable": False}]
+        rows = scrape.parse_carmax("<script>const cars = %s;</script>" % json.dumps(cars))
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual((row["url"], row["price"], row["miles"]), ("https://www.carmax.com/car/70336313", 27998, 42532))
+        self.assertEqual((row["dealer"], row["where"], row["distance"]), ("CarMax Edison", "Edison, NJ", 0))
+
+    def test_parses_carscom(self):
+        cars = [{"vin": "5YJ3E1EA4MF854793", "trim": "Standard Range Plus", "model": "Model 3", "make": "Tesla",
+                 "price": "10949", "year": "2021", "mileage": "170726", "exteriorColor": "white",
+                 "listingId": "2a391b72", "primaryThumbnail": "https://img.example/c.jpg",
+                 "seller": {"state": "NJ", "city": "Paterson", "dealerName": "Auto Market Street"}}]
+        import html as html_lib
+        page_html = '<search-provider data-vehicle-array="%s"></search-provider>' % html_lib.escape(json.dumps(cars))
+        row = scrape.parse_carscom(page_html)[0]
+        self.assertEqual(row["url"], "https://www.cars.com/vehicledetail/2a391b72/")
+        self.assertEqual((row["year"], row["price"], row["miles"], row["color"]), (2021, 10949, 170726, "White"))
+        self.assertEqual((row["where"], row["distance"]), ("Paterson, NJ", None))
+
+    def test_parses_carvana(self):
+        car = {"@type": "Vehicle", "modelDate": 2023, "manufacturer": "Tesla", "model": "Model 3", "color": "White",
+               "image": "https://img.example/v.jpg", "mileageFromOdometer": 32238,
+               "description": "Used 2023 Tesla Model 3 Standard with 32238 miles - $28,990",
+               "vehicleIdentificationNumber": "5YJ3E1EA0PF575667",
+               "offers": {"price": 28990, "url": "https://www.carvana.com/vehicle/4825793"}}
+        page_html = '<script type="application/ld+json" data-testid="vehicle-ld">%s</script>' % json.dumps(car)
+        row = scrape.parse_carvana(page_html)[0]
+        self.assertEqual((row["url"], row["price"], row["trim"]), ("https://www.carvana.com/vehicle/4825793", 28990, "Standard"))
+        self.assertEqual((row["year"], row["miles"], row["distance"]), (2023, 32238, None))
+
+    def test_browser_and_curl_sources_raise_on_a_bot_wall(self):
+        for parse in (scrape.parse_carmax, scrape.parse_carscom, scrape.parse_carvana):
+            with self.assertRaises(scrape.SourceError):
+                parse("<html><title>Just a moment...</title></html>")
+        with self.assertRaises(scrape.SourceError):
+            scrape.browser_page("https://never-loaded.example/")
+
+    def test_years_outside_the_search_are_dropped(self):
+        rows = [{"vin": "A", "year": 2020}, {"vin": "B", "year": 2022}, {"vin": "C", "year": None}]
+        self.assertEqual([r["vin"] for r in scrape.in_years(rows, {"year_min": 2021, "year_max": 2023})], ["B"])
+
+    def test_carvana_url_carries_the_search(self):
+        url = scrape.carvana_url({"make": "tesla", "model": "model-y", "year_min": 2026, "year_max": 2026})
+        packed = url.split("cvnaid=")[1]
+        wanted = json.loads(__import__("base64").urlsafe_b64decode(packed + "=" * (-len(packed) % 4)))
+        self.assertEqual(wanted["filters"]["makes"], [{"name": "Tesla", "models": [{"name": "Model Y"}]}])
+        self.assertEqual(wanted["filters"]["year"], {"min": 2026, "max": 2026})
+
     def test_a_blocked_source_raises(self):
         with self.assertRaises(scrape.SourceError):
             scrape.parse_kbb("<html>captcha</html>")
