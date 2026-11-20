@@ -51,6 +51,10 @@ CARGURUS_DEALS = {"GREAT_PRICE": "EXCELLENT", "GOOD_PRICE": "GOOD", "FAIR_PRICE"
                   "POOR_PRICE": "HIGH", "OVERPRICED": "HIGH"}
 # When two sites list the same car at the same price, link to this one first.
 SOURCE_ORDER = ("truecar", "kbb", "cargurus", "carmax", "cars.com", "carvana")
+# These show one page out of a much longer list, so a car missing from it has not sold.
+# It stays for a couple of days in case it comes back, then leaves without a "sold" label.
+SAMPLED_SOURCES = {"carmax", "cars.com", "carvana"}
+SAMPLED_KEEP_DAYS = 2
 BROWSER_FETCH = ROOT / "browser_fetch.mjs"
 BROWSER_TIMEOUT = 9 * 60
 # A price this far under KBB's or CarGurus' value means damage, a salvage title or a scam.
@@ -660,9 +664,15 @@ def merge(old, new_rows, today, keep_gone_days, failed_sources=()):
         if vin in seen:
             continue
         row = dict(row)
-        if set(row.get("sources") or [row.get("source")]) & set(failed_sources):
+        sources = set(row.get("sources") or [row.get("source")])
+        last_seen = dt.date.fromisoformat(row.get("last_seen", today))
+        if sources & set(failed_sources):
             row["gone"] = False  # the source failed, the car did not sell
-        elif dt.date.fromisoformat(row.get("last_seen", today)) < cutoff:
+        elif sources <= SAMPLED_SOURCES:
+            if (dt.date.fromisoformat(today) - last_seen).days > SAMPLED_KEEP_DAYS:
+                continue
+            row["gone"] = False
+        elif last_seen < cutoff:
             continue
         else:
             row["gone"] = True

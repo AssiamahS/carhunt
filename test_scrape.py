@@ -307,6 +307,19 @@ class OtherSourcesTest(unittest.TestCase):
         self.assertEqual(rows[0]["flags"], ["too-cheap"])
         self.assertEqual(rows[1]["flags"], [])
 
+    def test_car_missing_from_a_one_page_sample_is_not_called_sold(self):
+        def old_car(last_seen, sources):
+            return {"vin": "A", "price": 30000, "source": sources[0], "sources": sources, "first_seen": "2026-11-01",
+                    "last_seen": last_seen, "price_history": [["2026-11-01", 30000]]}
+        # Carvana shows one page of a few hundred cars: dropping off that page is not a sale.
+        fresh = scrape.merge({"A": old_car("2026-11-17", ["carvana"])}, [], "2026-11-18", keep_gone_days=14)
+        self.assertFalse(fresh[0]["gone"])
+        stale = scrape.merge({"A": old_car("2026-11-14", ["carvana"])}, [], "2026-11-18", keep_gone_days=14)
+        self.assertEqual(stale, [])
+        # A site searched in full does know: the car left it.
+        full = scrape.merge({"A": old_car("2026-11-17", ["carvana", "kbb"])}, [], "2026-11-18", keep_gone_days=14)
+        self.assertTrue(full[0]["gone"])
+
     def test_car_from_a_failed_second_source_is_not_marked_gone(self):
         old = {"A": {"vin": "A", "price": 30000, "source": "truecar", "sources": ["truecar", "kbb"],
                      "first_seen": "2026-11-01", "last_seen": "2026-11-17", "price_history": [["2026-11-01", 30000]]}}
