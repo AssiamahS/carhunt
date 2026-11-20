@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T08:16:43Z",
+ "updated": "2026-11-20T01:28:22Z",
  "errors": [],
  "config": {
   "budget": 30000,
@@ -118,7 +118,7 @@
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -156,7 +156,7 @@
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -195,11 +195,11 @@
    "owners": 2,
    "clean_title": true,
    "deal": "EXCELLENT",
-   "image": "https://listings-prod.tcimg.net/listings/273900/24/95/5YJSA1E49HF229524/001_2026111309.jpg",
+   "image": "https://listings-prod.tcimg.net/listings/273900/24/95/5YJSA1E49HF229524/001_2026111911.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -232,12 +232,12 @@
    "accidents": 0,
    "owners": 3,
    "clean_title": true,
-   "deal": "GREAT",
+   "deal": "EXCELLENT",
    "image": "https://listings-prod.tcimg.net/listings/55212/34/43/5YJSA1E23MF424334/001_2026102311.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -270,12 +270,12 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": false,
-   "deal": "FAIR",
+   "deal": "GREAT",
    "image": "https://listings-prod.tcimg.net/listings/220075/68/76/5YJSA1E43LF357668/001_2026103104.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -314,7 +314,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -347,12 +347,12 @@
    "accidents": 1,
    "owners": 2,
    "clean_title": true,
-   "deal": "FAIR",
-   "image": null,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/302837/46/60/5YJSA1E24KF306046/001_2026111913.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -391,7 +391,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
@@ -429,7 +429,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
@@ -467,7 +467,7 @@
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -503,7 +503,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
@@ -513,6 +513,44 @@
    "price_change": 0,
    "gone": false,
    "flags": []
+  },
+  {
+   "vin": "7SAYGAEE3SF290251",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGAEE3SF290251/",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Long Range AWD",
+   "drive": "AWD",
+   "price": 35493,
+   "miles": 51122,
+   "color": "Deep Blue Metallic",
+   "dealer": "Automotive Avenues LLC",
+   "where": "Wall Township, NJ",
+   "state": "NJ",
+   "distance": 34,
+   "listed": "2026-11-19",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "image": "https://listings-prod.tcimg.net/listings/19520/51/02/7SAYGAEE3SF290251/001_2026111921.jpg",
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "check",
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-20",
+   "price_history": [
+    [
+     "2026-11-20",
+     35493
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
   },
   {
    "vin": "7SAYGDED3SF253404",
@@ -534,12 +572,12 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "deal": "HIGH",
-   "image": "https://listings-prod.tcimg.net/listings/27188/04/34/7SAYGDED3SF253404/001_2026111804.jpg",
+   "deal": "FAIR",
+   "image": "https://listings-prod.tcimg.net/listings/27188/04/34/7SAYGDED3SF253404/001_2026111910.jpg",
    "search": "Tesla Model Y Juniper (2025-2026)",
    "juniper": "check",
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -577,7 +615,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -615,7 +653,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
@@ -646,12 +684,12 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "deal": "EXCELLENT",
+   "deal": "FAIR",
    "image": "https://listings-prod.tcimg.net/listings/361761/68/76/5YJSA1E50NF467668/001_2026111708.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -689,7 +727,7 @@
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -727,7 +765,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
@@ -763,7 +801,7 @@
    "search": "Tesla Model Y Juniper (2025-2026)",
    "juniper": "yes",
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -799,7 +837,7 @@
    "search": "Tesla Model Y Juniper (2025-2026)",
    "juniper": "check",
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -835,7 +873,7 @@
    "search": "Tesla Model Y Juniper (2025-2026)",
    "juniper": "yes",
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -873,7 +911,7 @@
    "search": "Tesla Model Y Juniper (2025-2026)",
    "juniper": "yes",
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-19",
@@ -885,6 +923,42 @@
    "flags": [
     "no-basic-warranty"
    ]
+  },
+  {
+   "vin": "7SAYGDEE6SA361053",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/7SAYGDEE6SA361053/",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Long Range AWD",
+   "drive": "AWD",
+   "price": 44585,
+   "miles": 6189,
+   "color": "Pearl White Multi-Coat",
+   "dealer": "Auto Spot of Mountain Lakes",
+   "where": "Mountain Lakes, NJ",
+   "state": "NJ",
+   "distance": 16,
+   "listed": "2026-11-19",
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": null,
+   "search": "Tesla Model Y Juniper (2025-2026)",
+   "juniper": "check",
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-20",
+   "price_history": [
+    [
+     "2026-11-20",
+     44585
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
   },
   {
    "vin": "5YJ3E1ETXRF867279",
@@ -911,7 +985,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
@@ -949,7 +1023,7 @@
    "search": "2024 Tesla Model 3",
    "juniper": null,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-20",
    "price_history": [
     [
      "2026-11-18",
