@@ -144,6 +144,7 @@ form button { grid-column: 1 / -1; justify-self: start; font: 600 16px var(--bod
     <button class="chip" id="fClean" aria-pressed="false" type="button">Verified clean</button>
     <button class="chip" id="fSold" aria-pressed="false" type="button" hidden>Show sold</button>
     <select id="model" aria-label="Model"><option value="">Every model</option></select>
+    <select id="year" aria-label="Year"><option value="">Every year</option></select>
     <select id="trim" aria-label="Trim"><option value="">Every trim</option></select>
     <select id="sort" aria-label="Sort">
       <option value="price">Cheapest first</option>
@@ -232,13 +233,14 @@ const verified = (r) => r.clean_title != null || r.accidents != null;
 const clean = (r) => verified(r) && !r.flags.length;
 const pressed = (id) => $(id).getAttribute("aria-pressed") === "true";
 function shown() {
-  const cfg = data.config, model = $("model").value, trim = $("trim").value, key = $("sort").value;
+  const cfg = data.config, model = $("model").value, year = $("year").value, trim = $("trim").value, key = $("sort").value;
   return all().filter((r) =>
     (pressed("fSold") || !r.gone) &&
     (!pressed("fBudget") || r.price <= cfg.budget) &&
     (!pressed("fMiles") || (r.miles != null && r.miles < 50000)) &&
     (!pressed("fClean") || clean(r)) &&
     (!model || r.model === model) &&
+    (!year || String(r.year) === year) &&
     (!trim || r.trim === trim)
   ).sort((a, b) => {
     const x = a[key], y = b[key];
@@ -381,7 +383,7 @@ function render() {
 for (const id of ["fBudget", "fMiles", "fClean", "fSold"]) {
   $(id).onclick = () => { $(id).setAttribute("aria-pressed", String(!pressed(id))); render(); };
 }
-$("model").onchange = $("trim").onchange = $("sort").onchange = render;
+$("model").onchange = $("year").onchange = $("trim").onchange = $("sort").onchange = render;
 $("add").onsubmit = (event) => {
   event.preventDefault();
   const f = new FormData(event.target);
@@ -396,11 +398,12 @@ $("add").onsubmit = (event) => {
   fillFilters();
   render();
 };
-// Rebuilt after every add, so a car you put in shows up in the model and trim filters.
+// Rebuilt after every add, so a car you put in shows up in the model, year and trim filters.
 function fillFilters() {
-  for (const key of ["model", "trim"]) {
+  for (const key of ["model", "year", "trim"]) {
     const select = $(key), current = select.value;
-    const values = [...new Set(all().map((r) => r[key]).filter(Boolean))].sort();
+    const values = [...new Set(all().map((r) => r[key]).filter(Boolean).map(String))].sort();
+    if (key === "year") values.reverse();
     select.replaceChildren(select.options[0], ...values.map((v) => el("option", { value: v, textContent: v })));
     select.value = values.includes(current) ? current : "";
   }
