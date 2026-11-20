@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T01:28:22Z",
+ "updated": "2026-11-20T01:34:35Z",
  "errors": [],
  "config": {
   "budget": 30000,
@@ -48,47 +48,98 @@
  ],
  "links": [
   {
-   "name": "AutoTempest (searches most sites at once)",
+   "model": "Model 3",
+   "name": "AutoTempest (most sites at once)",
    "url": "https://www.autotempest.com/results?make=tesla&model=model3&zip=07083&radius=150&minyear=2024&maxyear=2024"
   },
   {
+   "model": "Model 3",
    "name": "CarGurus",
    "url": "https://www.cargurus.com/Cars/l-Used-Tesla-Model-3-Staten-Island-d2475_L22940"
   },
   {
+   "model": "Model 3",
    "name": "Edmunds",
    "url": "https://www.edmunds.com/used-tesla-model-3-staten-island-ny/"
   },
   {
+   "model": "Model 3",
    "name": "Cars.com",
    "url": "https://www.cars.com/shopping/results/?makes[]=tesla&models[]=tesla-model_3&year_min=2024&year_max=2024&zip=07083&maximum_distance=150&stock_type=used&sort=list_price"
   },
   {
+   "model": "Model 3",
    "name": "Autotrader",
    "url": "https://www.autotrader.com/cars-for-sale/tesla/model-3/union-nj"
   },
   {
+   "model": "Model 3",
    "name": "TrueCar",
    "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-3/year-2024/location-union-nj/?searchRadius=150&sort[]=price_asc"
   },
   {
+   "model": "Model 3",
    "name": "Tesla used inventory",
    "url": "https://www.tesla.com/inventory/used/m3?zip=07083"
   },
   {
-   "name": "AutoTempest: Model S",
+   "model": "Model S",
+   "name": "AutoTempest (most sites at once)",
    "url": "https://www.autotempest.com/results?make=tesla&model=models&zip=07083&radius=150&minyear=2017&maxyear=2023"
   },
   {
-   "name": "AutoTempest: Model Y 2025-2026",
-   "url": "https://www.autotempest.com/results?make=tesla&model=modely&zip=07083&radius=150&minyear=2025&maxyear=2026"
+   "model": "Model S",
+   "name": "Edmunds",
+   "url": "https://www.edmunds.com/used-tesla-model-s-staten-island-ny/"
   },
   {
-   "name": "Tesla used inventory: Model S",
+   "model": "Model S",
+   "name": "Cars.com",
+   "url": "https://www.cars.com/shopping/results/?makes[]=tesla&models[]=tesla-model_s&year_min=2017&year_max=2023&zip=07083&maximum_distance=150&stock_type=used&sort=list_price&list_price_max=40000"
+  },
+  {
+   "model": "Model S",
+   "name": "Autotrader",
+   "url": "https://www.autotrader.com/cars-for-sale/tesla/model-s/union-nj"
+  },
+  {
+   "model": "Model S",
+   "name": "TrueCar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-s/year-2017-2023/location-union-nj/?searchRadius=150&sort[]=price_asc"
+  },
+  {
+   "model": "Model S",
+   "name": "Tesla used inventory",
    "url": "https://www.tesla.com/inventory/used/ms?zip=07083"
   },
   {
-   "name": "Tesla used inventory: Model Y",
+   "model": "Model Y",
+   "name": "AutoTempest (most sites at once)",
+   "url": "https://www.autotempest.com/results?make=tesla&model=modely&zip=07083&radius=150&minyear=2025&maxyear=2026"
+  },
+  {
+   "model": "Model Y",
+   "name": "Edmunds",
+   "url": "https://www.edmunds.com/used-tesla-model-y-staten-island-ny/"
+  },
+  {
+   "model": "Model Y",
+   "name": "Cars.com",
+   "url": "https://www.cars.com/shopping/results/?makes[]=tesla&models[]=tesla-model_y&year_min=2025&year_max=2026&zip=07083&maximum_distance=150&stock_type=used&sort=list_price&list_price_max=45000"
+  },
+  {
+   "model": "Model Y",
+   "name": "Autotrader",
+   "url": "https://www.autotrader.com/cars-for-sale/tesla/model-y/union-nj"
+  },
+  {
+   "model": "Model Y",
+   "name": "TrueCar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listings/tesla/model-y/year-2025-2026/location-union-nj/?searchRadius=150&sort[]=price_asc"
+  },
+  {
+   "model": "Model Y",
+   "name": "Tesla used inventory",
    "url": "https://www.tesla.com/inventory/used/my?zip=07083"
   }
  ],
@@ -367,44 +418,6 @@
    ]
   },
   {
-   "vin": "5YJ3E1EA0RF735680",
-   "source": "truecar",
-   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA0RF735680/",
-   "year": 2024,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "RWD",
-   "drive": "RWD",
-   "price": 33799,
-   "miles": 26149,
-   "color": "Solid Black",
-   "dealer": "CarVision Maple Shade",
-   "where": "Maple Shade, NJ",
-   "state": "NJ",
-   "distance": 64,
-   "listed": "2026-11-03",
-   "accidents": 2,
-   "owners": 1,
-   "clean_title": true,
-   "deal": "HIGH",
-   "image": "https://listings-prod.tcimg.net/listings/220075/80/56/5YJ3E1EA0RF735680/001_2026110321.jpg",
-   "search": "2024 Tesla Model 3",
-   "juniper": null,
-   "first_seen": "2026-11-18",
-   "last_seen": "2026-11-20",
-   "price_history": [
-    [
-     "2026-11-18",
-     33799
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "accident"
-   ]
-  },
-  {
    "vin": "5YJ3E1EA2RF728357",
    "source": "truecar",
    "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA2RF728357/",
@@ -440,6 +453,44 @@
    "gone": false,
    "flags": [
     "branded-title"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA0RF735680",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA0RF735680/",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 33799,
+   "miles": 26149,
+   "color": "Solid Black",
+   "dealer": "CarVision Maple Shade",
+   "where": "Maple Shade, NJ",
+   "state": "NJ",
+   "distance": 64,
+   "listed": "2026-11-03",
+   "accidents": 2,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/220075/80/56/5YJ3E1EA0RF735680/001_2026110321.jpg",
+   "search": "2024 Tesla Model 3",
+   "juniper": null,
+   "first_seen": "2026-11-18",
+   "last_seen": "2026-11-20",
+   "price_history": [
+    [
+     "2026-11-18",
+     33799
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident"
    ]
   },
   {
