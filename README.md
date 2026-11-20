@@ -13,12 +13,19 @@ same job from a Mac under launchd (`com.sly.carhunt`); run only one of the two.
 
 | Source | How |
 |---|---|
-| TrueCar | scraped by `scrape.py` (price, miles, trim, dealer, title, accidents, owners) |
-| CarGurus, Edmunds, Cars.com, Autotrader, anything else | added by hand in `manual.json` (direct link and photo required), or with the form on the page |
+| TrueCar | search pages: price, miles, trim, dealer, title, accidents, owners |
+| KBB (same inventory as Autotrader) | its listing feed: price, miles, KBB fair price, AutoCheck title/accident preview |
+| CarGurus | its search feed: price, miles, CarGurus market value. No history |
+| anything else | added by hand in `manual.json` (direct link and photo required), or with the form on the page |
 
-CarGurus, Edmunds, Cars.com, Autotrader, KBB, CarMax, Carvana, Carfax and
-Tesla all refuse plain requests, so they can't be scraped from an Action. The
-page links straight into each site's search instead.
+A car listed on more than one site is one card: the cheapest listing leads and
+the others show as "Also on" links. If two sites disagree about the title the
+card says so instead of picking one.
+
+Probed 2026-11-19 from a home connection: Cars.com, Edmunds, CarMax, Carvana,
+Carfax, Hertz, EchoPark, AutoNation, eBay, Autotrader's own pages and Tesla's
+inventory all refuse plain requests. The page links into their searches instead.
+All three scraped sources only answer from a residential IP.
 
 ## Use it
 
@@ -45,7 +52,9 @@ A car with no title or accident data (everything added by hand) shows
 ## Flags
 
 - **branded title** - the listing itself says the title is not clean
-- **too cheap** - under `suspicious_below` with no verified clean title
+- **far below market** - 25% or more under KBB's fair price or CarGurus' value (35% with a
+  verified clean title). With no value to compare: under `suspicious_below` and no verified clean title
+- **sites disagree on the title** - one site says clean, another says branded
 - **accident reported**
 - **basic warranty expired** - past `basic_warranty_miles`
 - **ask about buyback** - set by hand in `manual.json`

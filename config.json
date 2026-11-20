@@ -1,11 +1,11 @@
 {
   "searches": [
     {
-      "label": "2024 Tesla Model 3",
+      "label": "2024-2026 Tesla Model 3",
       "make": "tesla",
       "model": "model-3",
       "year_min": 2024,
-      "year_max": 2024,
+      "year_max": 2026,
       "city": "union",
       "state": "nj",
       "zip": "07083",

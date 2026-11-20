@@ -2,9 +2,14 @@
 """Pull used-car listings into docs/data/listings.json for the Pages site.
 
 Sources:
-  truecar  - scraped (the only big listing site that answers a plain request)
-  manual   - manual.json, cars you found yourself on CarGurus, Edmunds, etc.
+  truecar  - search pages (title, accident and owner history included)
+  kbb      - KBB's listing feed, the same inventory Autotrader shows. Comes with
+             KBB's fair price and an AutoCheck title/accident preview.
+  cargurus - CarGurus' search feed. Has its market value, no history.
+  manual   - manual.json, cars you found yourself anywhere else.
              Each needs the car's own listing url and an image url.
+
+A car listed on more than one site becomes one row with a link to each.
 
 Standard library only, so the GitHub Action needs no install step.
 
@@ -30,8 +35,19 @@ USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
 )
-PAGE_SIZE = 30
 MAX_PAGES = 10
+KBB_PAGE = 100
+CARGURUS_PAGE = 48  # the feed never returns more, whatever maxResults says
+KBB_MODELS = {"model-3": "TESMOD3", "model-s": "TESMODS", "model-y": "TESMODY"}
+CARGURUS_MODELS = {"model-3": "d2475", "model-s": "d2039", "model-y": "d3044"}
+CARGURUS_DEALS = {"GREAT_PRICE": "EXCELLENT", "GOOD_PRICE": "GOOD", "FAIR_PRICE": "FAIR",
+                  "POOR_PRICE": "HIGH", "OVERPRICED": "HIGH"}
+# When two sites list the same car at the same price, link to this one first.
+SOURCE_ORDER = ("truecar", "kbb", "cargurus")
+# A price this far under KBB's or CarGurus' value means damage, a salvage title or a scam.
+# A verified clean title earns more room before the warning.
+FAR_BELOW_MARKET = 0.75
+FAR_BELOW_MARKET_CLEAN = 0.65
 NEXT_DATA = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
 
 
@@ -42,7 +58,7 @@ class SourceError(Exception):
 def fetch(url, tries=3):
     request = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT,
-        "Accept": "text/html,application/xhtml+xml",
+        "Accept": "text/html,application/xhtml+xml,application/json",
         "Accept-Language": "en-US,en;q=0.9",
     })
     for attempt in range(1, tries + 1):
@@ -145,23 +161,36 @@ def within_limits(rows, search):
 
 
 def juniper_status(row):
-    """Model Y only: is this the 2025 "Juniper" redesign?
+    """Model Y only: is this the "Juniper" redesign?
 
-    Every 2026 is, and so is the 2025 Launch Series. Other 2025 cars were built
-    in both bodies under the same trim names, so a hand-added one says "check".
-
-    TrueCar is the exception: it files the redesign under 2026. All 49 of its
-    2025 cars nationwide (checked by photo, 2026-11-19) were the old body, and
-    nothing in the VIN, trim, range or colour tells the two apart.
+    US cars with the new body are model year 2026, plus anything sold as a
+    Launch Series. A 2025 is the old body: all 49 for sale nationwide on
+    2026-11-19 were, checked by photo, and nothing in a 2025's VIN, trim,
+    range or colour tells the two apart.
     """
     if "model y" not in (row.get("model") or "").lower():
         return None
     year = row.get("year") or 0
     if year >= 2026 or "launch" in (row.get("trim") or "").lower():
         return "yes"
-    if year == 2025 and row.get("source") != "truecar":
-        return "check"
     return "no"
+
+
+def finish(rows, search):
+    """Tag rows with their search and drop what falls outside it."""
+    for row in rows:
+        row["search"] = search["label"]
+        row["juniper"] = juniper_status(row)
+    kept = within_limits(within_radius(rows, search["radius"]), search)
+    if search.get("juniper_only"):
+        kept = [r for r in kept if r["juniper"] == "yes"]
+    return kept
+
+
+def whole(value):
+    """'41,535' or 41535.0 -> 41535. None when there is no number."""
+    digits = re.sub(r"[^\d.]", "", str(value if value is not None else ""))
+    return round(float(digits)) if digits else None
 
 
 def scrape_truecar(search):
@@ -170,8 +199,6 @@ def scrape_truecar(search):
     for page in range(1, MAX_PAGES + 1):
         found, total, has_next = parse_truecar(fetch(truecar_url(search, page)))
         for row in found:
-            row["search"] = search["label"]
-            row["juniper"] = juniper_status(row)
             rows.setdefault(row["vin"], row)
         if not found or not has_next or len(rows) >= total:
             break
@@ -181,10 +208,167 @@ def scrape_truecar(search):
         time.sleep(2)
     if not rows:
         raise SourceError("truecar: zero listings for %s" % search["label"])
-    kept = within_limits(within_radius(list(rows.values()), search["radius"]), search)
-    if search.get("juniper_only"):
-        kept = [r for r in kept if r["juniper"] in ("yes", "check")]
-    return kept
+    return finish(list(rows.values()), search)
+
+
+def kbb_url(search, first):
+    url = (
+        "https://www.kbb.com/rest/lsc/listing?makeCode={make}&modelCode={model}&zip={zip}"
+        "&searchRadius={radius}&listingType=USED&startYear={year_min}&endYear={year_max}"
+        "&sortBy=derivedpriceASC&numRecords={size}&firstRecord={first}"
+    ).format(**dict(search, make=search["make"].upper(), model=KBB_MODELS[search["model"]],
+                    size=KBB_PAGE, first=first))
+    return url + ("&maxPrice=%d" % search["price_max"] if search.get("price_max") else "")
+
+
+def parse_kbb(text):
+    """Return (rows, total_count) from one page of KBB's listing feed."""
+    try:
+        data = json.loads(text)
+    except ValueError as err:
+        raise SourceError("kbb: no listing data (blocked or redesigned)") from err
+    rows = []
+    for item in data.get("listings") or []:
+        pricing = item.get("pricingDetail") or {}
+        vin, price = item.get("vin"), pricing.get("salePrice")
+        if not vin or not price:
+            continue
+        owner = item.get("owner") or {}
+        address = (owner.get("location") or {}).get("address") or {}
+        # AutoCheck's free preview. A missing entry means not checked, not clean.
+        history = item.get("vhrPreview") or []
+        pictures = (item.get("images") or {}).get("sources") or []
+        picked = min((item.get("images") or {}).get("primary") or 0, len(pictures) - 1)
+        distance = owner.get("distanceFromSearch")
+        rows.append({
+            "vin": vin,
+            "source": "kbb",
+            "url": "https://www.kbb.com/cars-for-sale/vehicle/%s" % item.get("id"),
+            "year": item.get("year"),
+            "make": (item.get("make") or {}).get("name"),
+            "model": (item.get("model") or {}).get("name"),
+            "trim": (item.get("trim") or {}).get("name"),
+            "drive": (item.get("driveType") or {}).get("name"),
+            "price": round(price),
+            "miles": whole((item.get("mileage") or {}).get("value")),
+            "color": (item.get("color") or {}).get("exteriorColor"),
+            "dealer": "Private seller" if owner.get("privateSeller") else owner.get("name"),
+            "where": ", ".join(p for p in (address.get("city"), address.get("state")) if p),
+            "state": address.get("state"),
+            "distance": round(distance) if distance is not None else None,
+            "accidents": 1 if "ACCIDENTS_REPORTED" in history else 0 if "NO_ACCIDENTS_REPORTED" in history else None,
+            "owners": 1 if "ONE_OWNER" in history else None,
+            "clean_title": False if "SALVAGE_TITLE" in history else True if "NO_SALVAGE_TITLE" in history else None,
+            "kbb_fair": whole(pricing.get("kbbFppAmount")),
+            "image": pictures[picked].get("src") if pictures else None,
+        })
+    return rows, data.get("totalResultCount") or 0
+
+
+def scrape_kbb(search):
+    rows = {}
+    for page in range(MAX_PAGES):
+        found, total = parse_kbb(fetch(kbb_url(search, page * KBB_PAGE)))
+        for row in found:
+            rows.setdefault(row["vin"], row)
+        if len(found) < KBB_PAGE or len(rows) >= total:
+            break
+        time.sleep(2)
+    return finish(list(rows.values()), search)
+
+
+def cargurus_url(search, offset):
+    return (
+        "https://www.cargurus.com/Cars/searchResults.action?zip={zip}&distance={radius}"
+        "&inventorySearchWidgetType=AUTO&shopByTypes=MIX&sortDir=ASC&sortType=PRICE"
+        "&entitySelectingHelper.selectedEntity={model}&startYear={year_min}&endYear={year_max}"
+        "&maxResults={size}&offset={offset}"
+    ).format(**dict(search, model=CARGURUS_MODELS[search["model"]], size=CARGURUS_PAGE, offset=offset))
+
+
+def parse_cargurus(text):
+    """Return rows from one page of CarGurus' search feed. It carries no title or accident data."""
+    try:
+        data = json.loads(text)
+    except ValueError as err:
+        raise SourceError("cargurus: no listing data (blocked or redesigned)") from err
+    if not isinstance(data, list):
+        raise SourceError("cargurus: feed changed shape")
+    rows = []
+    for item in data:
+        vin, price = item.get("vin"), item.get("price")
+        if not vin or not price:
+            continue
+        distance = item.get("distance")
+        rows.append({
+            "vin": vin,
+            "source": "cargurus",
+            "url": "https://www.cargurus.com/details/%s" % item.get("id"),
+            "year": item.get("carYear"),
+            "make": item.get("makeName"),
+            "model": item.get("modelName"),
+            "trim": item.get("trimName"),
+            "drive": item.get("driveTrain"),
+            "price": round(price),
+            "miles": whole(item.get("mileage")),
+            "color": item.get("localizedExteriorColor"),
+            "dealer": item.get("serviceProviderName"),
+            "where": item.get("sellerCity"),
+            "state": item.get("sellerRegion"),
+            "distance": round(distance) if distance is not None else None,
+            "accidents": None,
+            "owners": None,
+            "clean_title": None,
+            "deal": CARGURUS_DEALS.get(item.get("dealRating")),
+            "deal_by": "CarGurus",
+            "cg_value": whole(item.get("expectedPrice")),
+            "image": (item.get("originalPictureData") or {}).get("url"),
+        })
+    return rows
+
+
+def scrape_cargurus(search):
+    rows = {}
+    price_max = search.get("price_max")
+    for page in range(MAX_PAGES):
+        found = parse_cargurus(fetch(cargurus_url(search, page * CARGURUS_PAGE)))
+        new = [row for row in found if row["vin"] not in rows]
+        for row in new:
+            rows[row["vin"]] = row
+        # Cheapest first, so a page with nothing under the cap ends the search.
+        if len(found) < CARGURUS_PAGE or not new or (price_max and min(r["price"] for r in found) > price_max):
+            break
+        time.sleep(2)
+    return finish(list(rows.values()), search)
+
+
+SCRAPERS = (("truecar", scrape_truecar), ("kbb", scrape_kbb), ("cargurus", scrape_cargurus))
+
+
+def combine(rows):
+    """One row per car. The cheapest listing leads; the rest fill its gaps and become extra links."""
+    by_vin = {}
+    for row in rows:
+        by_vin.setdefault(row["vin"], []).append(row)
+    order = {name: place for place, name in enumerate(SOURCE_ORDER)}
+    combined = []
+    for group in by_vin.values():
+        group.sort(key=lambda r: (r["price"], order.get(r.get("source"), len(order))))
+        lead = dict(group[0])
+        for other in group[1:]:
+            for key, value in other.items():
+                if lead.get(key) is None and value is not None:
+                    lead[key] = value
+        titles = {r["clean_title"] for r in group if r.get("clean_title") is not None}
+        if len(titles) > 1:
+            lead["clean_title"], lead["title_conflict"] = None, True
+        accidents = [r["accidents"] for r in group if r.get("accidents") is not None]
+        if accidents:
+            lead["accidents"] = max(accidents)
+        lead["sources"] = [r.get("source") for r in group]
+        lead["also"] = [{"source": r.get("source"), "url": r.get("url"), "price": r["price"]} for r in group[1:]]
+        combined.append(lead)
+    return combined
 
 
 def is_direct(row):
@@ -220,10 +404,18 @@ def add_flags(rows, config):
         flags = list(row.get("manual_flags", []))
         if row.get("clean_title") is False:
             flags.append("branded-title")
+        if row.get("title_conflict"):
+            flags.append("title-conflict")
         if row.get("accidents"):
             flags.append("accident")
-        # Far under market with no verified clean title usually means salvage or a scam.
-        if row.get("price") and row["price"] < config["suspicious_below"] and row.get("clean_title") is not True:
+        market = row.get("kbb_fair") or row.get("cg_value")
+        if market:
+            limit = FAR_BELOW_MARKET_CLEAN if row.get("clean_title") is True else FAR_BELOW_MARKET
+            too_cheap = row["price"] < limit * market
+        else:
+            # No market value to compare with: a low price and no verified clean title is the warning.
+            too_cheap = row["price"] < config["suspicious_below"] and row.get("clean_title") is not True
+        if row.get("price") and too_cheap:
             flags.append("too-cheap")
         if (row.get("miles") or 0) > config["basic_warranty_miles"]:
             flags.append("no-basic-warranty")
@@ -254,7 +446,7 @@ def merge(old, new_rows, today, keep_gone_days, failed_sources=()):
         if vin in seen:
             continue
         row = dict(row)
-        if row.get("source") in failed_sources:
+        if set(row.get("sources") or [row.get("source")]) & set(failed_sources):
             row["gone"] = False  # the source failed, the car did not sell
         elif dt.date.fromisoformat(row.get("last_seen", today)) < cutoff:
             continue
@@ -278,17 +470,20 @@ def main():
 
     rows, errors, failed = [], [], set()
     for search in config["searches"]:
-        try:
-            found = scrape_truecar(search)
-            rows.extend(found)
-            print("truecar: %d listings for %s" % (len(found), search["label"]))
-        except SourceError as err:
-            errors.append(str(err))
-            failed.add("truecar")
-            print("FAILED %s" % err, file=sys.stderr)
+        for name, scraper in SCRAPERS:
+            try:
+                found = scraper(search)
+                rows.extend(found)
+                print("%s: %d listings for %s" % (name, len(found), search["label"]))
+            except SourceError as err:
+                errors.append(str(err))
+                failed.add(name)
+                print("FAILED %s" % err, file=sys.stderr)
+    scraped = len(rows)
     manual = load_manual()
     rows.extend(manual)
     print("manual: %d listings" % len(manual))
+    rows = combine(rows)
 
     merged = add_flags(merge(old, rows, today, config["keep_gone_days"], failed), config)
     merged.sort(key=lambda r: (r.get("gone", False), r.get("price") or 0))
@@ -306,8 +501,9 @@ def main():
         OUT.parent.mkdir(parents=True, exist_ok=True)
         OUT.write_text(json.dumps(output, indent=1) + "\n")
         print("wrote %s" % OUT.relative_to(ROOT))
-    # Non-zero when a scraped source failed, so the Action goes red and the last good data stays live.
-    return 1 if errors else 0
+    # One site failing still publishes the others (the page names the site that failed).
+    # Non-zero only when nothing was scraped at all, so the last good data stays live.
+    return 1 if errors and not scraped else 0
 
 
 if __name__ == "__main__":

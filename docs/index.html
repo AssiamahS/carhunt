@@ -86,7 +86,9 @@ a { color: inherit; }
 .note { font-size: 14px; margin: 0; border-left: 3px solid var(--marker); padding-left: 10px; }
 .lead { font-size: 14px; margin: 0; color: var(--caution); background: var(--caution-bg); border-radius: 3px; padding: 6px 10px; }
 .open { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 6px; }
+.open { flex-wrap: wrap; }
 .open a { font-weight: 600; }
+.open a.also { font-weight: 400; font-size: 14px; color: var(--mute); }
 .remove { font: inherit; font-size: 14px; color: var(--mute); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 .empty { grid-column: 1 / -1; background: var(--paper); border: 1px dashed var(--line); border-radius: 6px; padding: 40px 20px; text-align: center; }
 
@@ -185,15 +187,16 @@ form button { grid-column: 1 / -1; justify-self: start; font: 600 16px var(--bod
 const $ = (id) => document.getElementById(id);
 const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
 const STORE = "carhunt.mine";
-const SITES = { cargurus: "CarGurus", edmunds: "Edmunds", "cars.com": "Cars.com", autotrader: "Autotrader", truecar: "TrueCar", mine: "the listing" };
+const SITES = { kbb: "KBB", cargurus: "CarGurus", edmunds: "Edmunds", "cars.com": "Cars.com", autotrader: "Autotrader", truecar: "TrueCar", mine: "the listing" };
 const FLAGS = {
   "branded-title": ["stop", "Branded title"],
-  "too-cheap": ["stop", "Too cheap, likely salvage or a scam"],
+  "too-cheap": ["stop", "Far below market: likely damage, salvage or a scam"],
+  "title-conflict": ["caution", "Sites disagree on the title: get the report"],
   "accident": ["caution", "Accident reported"],
   "ask-buyback": ["caution", "Ask if it's a buyback"],
   "no-basic-warranty": ["caution", "Basic warranty expired"],
 };
-const DEAL = { EXCELLENT: "an excellent price", GREAT: "a great price", FAIR: "a fair price", HIGH: "priced high" };
+const DEAL = { EXCELLENT: "an excellent price", GREAT: "a great price", GOOD: "a good price", FAIR: "a fair price", HIGH: "priced high" };
 let data = { listings: [], config: {}, links: [], searches: [] };
 
 function el(tag, props, ...kids) {
@@ -222,8 +225,8 @@ function all() {
     const flags = [];
     if (r.price < (cfg.suspicious_below || 0)) flags.push("too-cheap");
     if ((r.miles || 0) > (cfg.basic_warranty_miles || Infinity)) flags.push("no-basic-warranty");
-    // Same rule as juniper_status in scrape.py: every 2026 Model Y is the new body, a 2025 might be.
-    const juniper = r.model !== "Model Y" ? null : r.year >= 2026 ? "yes" : r.year === 2025 ? "check" : null;
+    // Same rule as juniper_status in scrape.py: the new body is model year 2026 and up.
+    const juniper = r.model === "Model Y" && r.year >= 2026 ? "yes" : null;
     return { ...r, vin: "mine:" + r.id, source: "mine", flags, juniper, gone: false, mine: true };
   });
   return data.listings.concat(own).map((r) => ({ ...r, taxed: r.price * (1 + (cfg.tax_rate || 0)) }));
@@ -257,7 +260,8 @@ function card(r) {
   const url = safeUrl(r.url), site = SITES[r.source] || r.source;
   let photo;
   if (r.image && safeUrl(r.image)) {
-    const img = el("img", { src: r.image + "?auto=format&fit=crop&w=720&h=450", alt: name(r), loading: "lazy", referrerPolicy: "no-referrer" });
+    const sized = /tcimg\.net/.test(r.image) ? r.image + "?auto=format&fit=crop&w=720&h=450" : r.image;
+    const img = el("img", { src: sized, alt: name(r), loading: "lazy", referrerPolicy: "no-referrer" });
     photo = el("a", { className: "photo", href: url || "#", target: "_blank", rel: "noopener" }, img);
     img.onerror = () => { photo.className = "photo none"; photo.replaceChildren("Photos on " + site); };
   } else {
@@ -274,7 +278,12 @@ function card(r) {
   if (r.owners) history.push(r.owners === 1 ? "1 owner" : r.owners + " owners");
   if (r.color) history.push(r.color);
   if (history.length) facts.append(el("li", { textContent: history.join(", ") }));
-  if (DEAL[r.deal]) facts.append(el("li", { textContent: "TrueCar calls it " + DEAL[r.deal] }));
+  if (DEAL[r.deal]) facts.append(el("li", { textContent: (r.deal_by || "TrueCar") + " calls it " + DEAL[r.deal] }));
+  const value = r.kbb_fair ? ["KBB fair price", r.kbb_fair] : r.cg_value ? ["CarGurus market value", r.cg_value] : null;
+  if (value) {
+    const gap = r.price - value[1];
+    facts.append(el("li", { textContent: value[0] + " " + money(value[1]) + (Math.abs(gap) < 250 ? ", right on it" : ", this is " + money(Math.abs(gap)) + (gap > 0 ? " over" : " under")) }));
+  }
 
   const badges = el("div", { className: "badges" });
   if (r.gone) badges.append(el("span", { className: "badge caution", textContent: "Sold or taken down" }));
@@ -286,10 +295,13 @@ function card(r) {
   }
   if (!verified(r)) badges.append(el("span", { className: "badge caution", textContent: "History not verified" }));
   if (r.juniper === "yes") badges.append(el("span", { className: "badge plain", textContent: "Juniper" }));
-  if (r.juniper === "check") badges.append(el("span", { className: "badge caution", textContent: "2025: confirm it's the Juniper body" }));
   const open = el("div", { className: "open" });
   const lead = r.exact === false;
   if (url) open.append(el("a", { href: url, target: "_blank", rel: "noopener", textContent: lead ? "Search " + site + " for it" : "See this car on " + site }));
+  for (const other of r.also || []) {
+    const link = safeUrl(other.url);
+    if (link) open.append(el("a", { className: "also", href: link, target: "_blank", rel: "noopener", textContent: "Also on " + (SITES[other.source] || other.source) + (other.price !== r.price ? " at " + money(other.price) : "") }));
+  }
   if (r.mine) {
     const remove = el("button", { className: "remove", type: "button", textContent: "Remove" });
     remove.onclick = () => { saveMine(mine().filter((m) => m.id !== r.id)); render(); };
@@ -425,7 +437,7 @@ fetch("data/listings.json", { cache: "no-store" })
     data = json;
     $("stamp").textContent = "Prices checked " + ago(json.updated);
     if (json.errors && json.errors.length) {
-      $("problem").replaceChildren(el("div", { className: "problem", textContent: "The last price check failed, so these are the last good numbers. " + json.errors.join("; ") }));
+      $("problem").replaceChildren(el("div", { className: "problem", textContent: "Some sites didn't answer on the last check, so their cars show the last price seen. " + json.errors.join("; ") }));
     }
     const groups = new Map();
     for (const link of json.links || []) {
