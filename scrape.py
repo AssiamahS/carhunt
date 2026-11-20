@@ -7,6 +7,7 @@ Sources:
              KBB's fair price and an AutoCheck title/accident preview.
   cargurus - CarGurus' search feed. Has its market value, no history.
   carmax   - CarMax's search page, fetched with curl (it turns Python away).
+  craigslist - its search page, then each posting for miles, title and VIN.
   cars.com, carvana - search pages loaded in a real browser by browser_fetch.mjs,
              one page per search, because they block everything else.
   manual   - manual.json, cars you found yourself anywhere else.
@@ -50,7 +51,11 @@ CARGURUS_MODELS = {"model-3": "d2475", "model-s": "d2039", "model-y": "d3044"}
 CARGURUS_DEALS = {"GREAT_PRICE": "EXCELLENT", "GOOD_PRICE": "GOOD", "FAIR_PRICE": "FAIR",
                   "POOR_PRICE": "HIGH", "OVERPRICED": "HIGH"}
 # When two sites list the same car at the same price, link to this one first.
-SOURCE_ORDER = ("truecar", "kbb", "cargurus", "carmax", "cars.com", "carvana")
+SOURCE_ORDER = ("truecar", "kbb", "cargurus", "carmax", "cars.com", "carvana", "craigslist")
+CRAIGSLIST_SITE = "newjersey"  # any regional site works: the search is by zip and radius
+CRAIGSLIST_MAX = 40            # postings opened per search
+CRAIGSLIST_MIN_PRICE = 3000    # below this it is a down payment or a parts car
+CRAIGSLIST_BAD_TITLES = ("salvage", "rebuilt", "parts only", "missing")
 # These show one page out of a much longer list, so a car missing from it has not sold.
 # It stays for a couple of days in case it comes back, then leaves without a "sold" label.
 SAMPLED_SOURCES = {"carmax", "cars.com", "carvana"}
@@ -250,6 +255,12 @@ def finish(rows, search):
 def in_years(rows, search):
     """For sources whose search page cannot be narrowed to the search's years."""
     return [r for r in rows if search["year_min"] <= (r.get("year") or 0) <= search["year_max"]]
+
+
+def same_model(rows, search):
+    """For sources whose search is fuzzy about the model."""
+    make, model = search["make"].lower(), search["model"].replace("-", " ").lower()
+    return [r for r in rows if (r.get("make") or "").lower() == make and (r.get("model") or "").lower() == model]
 
 
 def whole(value):
@@ -557,7 +568,96 @@ def scrape_carvana(search):
     return finish(in_years(parse_carvana(browser_page(carvana_url(search))), search), search)
 
 
+def craigslist_url(search):
+    url = (
+        "https://{site}.craigslist.org/search/cta?auto_make_model={make}%20{words}&postal={zip}"
+        "&search_distance={radius}&min_auto_year={year_min}&max_auto_year={year_max}&min_price={low}"
+    ).format(**dict(search, site=CRAIGSLIST_SITE, words=search["model"].replace("-", "%20"), low=CRAIGSLIST_MIN_PRICE))
+    return url + ("&max_price=%d" % search["price_max"] if search.get("price_max") else "")
+
+
+def parse_craigslist_search(page):
+    """The postings on a Craigslist search page: link, price, photo and town. The rest is on each posting."""
+    if "craigslist" not in page:
+        raise SourceError("craigslist: not a search page (blocked?)")
+    extras = []
+    data = re.search(r'<script[^>]*id="ld_searchpage_results"[^>]*>(.*?)</script>', page, re.S)
+    if data:
+        try:
+            extras = [entry.get("item") or {} for entry in json.loads(data.group(1)).get("itemListElement") or []]
+        except ValueError:
+            extras = []
+    cards = re.findall(
+        r'<li class="cl-static-search-result"[^>]*>\s*<a href="([^"]+)">.*?<div class="price">([^<]*)</div>', page, re.S)
+    found = []
+    for index, (url, price) in enumerate(cards):
+        price = whole(re.sub(r"[^0-9.]", "", price) or None)
+        if not price:
+            continue
+        extra = extras[index] if len(extras) == len(cards) else {}
+        address = ((extra.get("offers") or {}).get("availableAtOrFrom") or {}).get("address") or {}
+        found.append({
+            "url": url,
+            "price": price,
+            "image": (extra.get("image") or [None])[0],
+            "where": ", ".join(p for p in (address.get("addressLocality"), address.get("addressRegion")) if p),
+            "state": address.get("addressRegion") or None,
+        })
+    return found
+
+
+def parse_craigslist_listing(page, found):
+    """One row from a Craigslist posting, or None when the posting is gone or is not a car."""
+    def attr(name):
+        match = re.search(r'<div class="attr %s">.*?<span class="valu[^"]*">(.*?)</span>' % name, page, re.S)
+        return html.unescape(re.sub(r"<[^>]+>", "", match.group(1))).strip() if match else None
+
+    year = re.search(r'<span class="valu year">\s*(\d{4})', page)
+    name = re.search(r'<span class="valu makemodel">(.*?)</span>', page, re.S)
+    if not year or not name:
+        return None
+    words = html.unescape(re.sub(r"<[^>]+>", "", name.group(1))).split()
+    cut = 3 if len(words) > 2 and words[1].lower() == "model" else 2
+    title = (attr("auto_title_status") or "").lower()
+    return {
+        "vin": (attr("auto_vin") or "").upper() or "craigslist-" + found["url"].rstrip("/").rsplit("/", 1)[-1],
+        "source": "craigslist",
+        "url": found["url"],
+        "year": int(year.group(1)),
+        "make": words[0].title() if words else None,
+        "model": " ".join(words[1:cut]).title() or None,
+        "trim": " ".join(words[cut:]) or None,
+        "drive": attr("auto_drivetrain"),
+        "price": found["price"],
+        "miles": whole(re.sub(r"[^0-9]", "", attr("auto_miles") or "") or None),
+        "color": (attr("auto_paint") or "").title() or None,
+        "dealer": "Craigslist seller",
+        "where": found["where"],
+        "state": found["state"],
+        "distance": None,
+        "accidents": None,
+        "owners": None,
+        # A seller saying "clean" proves nothing; a seller admitting salvage does.
+        "clean_title": False if title in CRAIGSLIST_BAD_TITLES else None,
+        "image": found["image"],
+    }
+
+
+def scrape_craigslist(search):
+    rows = []
+    for found in parse_craigslist_search(fetch(craigslist_url(search)))[:CRAIGSLIST_MAX]:
+        try:
+            row = parse_craigslist_listing(fetch(found["url"]), found)
+        except SourceError:
+            continue  # one posting pulled mid-run should not sink the rest
+        if row:
+            rows.append(row)
+        time.sleep(1)
+    return finish(in_years(same_model(rows, search), search), search)
+
+
 SCRAPERS = (
+    ("craigslist", scrape_craigslist),
     ("truecar", scrape_truecar), ("kbb", scrape_kbb), ("cargurus", scrape_cargurus),
     ("carmax", scrape_carmax), ("cars.com", scrape_carscom), ("carvana", scrape_carvana),
 )

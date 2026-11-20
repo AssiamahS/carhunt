@@ -271,6 +271,51 @@ class OtherSourcesTest(unittest.TestCase):
         self.assertEqual(wanted["filters"]["makes"], [{"name": "Tesla", "models": [{"name": "Model Y"}]}])
         self.assertEqual(wanted["filters"]["year"], {"min": 2026, "max": 2026})
 
+    CRAIGSLIST_SEARCH = """<title>Cars for sale - craigslist</title>
+<script type="application/ld+json" id="ld_searchpage_results">{"itemListElement": [{"item": {
+ "image": ["https://images.craigslist.org/a_600x450.jpg"], "name": "2021 Tesla Dual Motor",
+ "offers": {"price": "29900.00", "availableAtOrFrom": {"address": {"addressRegion": "CT", "addressLocality": "Danbury"}}}}}]}</script>
+<li class="cl-static-search-result" title="2021 Tesla Dual Motor">
+ <a href="https://www.craigslist.org/view/d/danbury-2021-tesla/vn4C95pz">
+  <div class="title">2021 Tesla Dual Motor</div>
+  <div class="details"><div class="price">$29,900</div><div class="location"> Dandury </div></div></a></li>"""
+    CRAIGSLIST_LISTING = """<div class="attr important"><span class="valu year">2021</span>
+<span class="valu makemodel"> <a href="#">Tesla Model 3 Dual Motor LR AWD</a></span></div>
+<div class="attr auto_miles"><span class="labl">odometer:</span><span class="valu">29,500</span></div>
+<div class="attr auto_paint"><span class="labl">paint color:</span><span class="valu"> <a href="#">white</a></span></div>
+<div class="attr auto_title_status"><span class="labl">title status:</span><span class="valu"> <a href="#">%s</a></span></div>%s"""
+
+    def test_parses_a_craigslist_search(self):
+        found = scrape.parse_craigslist_search(self.CRAIGSLIST_SEARCH)
+        self.assertEqual(found, [{"url": "https://www.craigslist.org/view/d/danbury-2021-tesla/vn4C95pz", "price": 29900,
+                                  "image": "https://images.craigslist.org/a_600x450.jpg", "where": "Danbury, CT", "state": "CT"}])
+        self.assertEqual(scrape.parse_craigslist_search("<title>craigslist</title> no cars today"), [])
+        with self.assertRaises(scrape.SourceError):
+            scrape.parse_craigslist_search("<html>blocked</html>")
+
+    def test_parses_a_craigslist_listing(self):
+        found = scrape.parse_craigslist_search(self.CRAIGSLIST_SEARCH)[0]
+        row = scrape.parse_craigslist_listing(self.CRAIGSLIST_LISTING % ("clean", ""), found)
+        self.assertEqual((row["year"], row["make"], row["model"], row["trim"]), (2021, "Tesla", "Model 3", "Dual Motor LR AWD"))
+        self.assertEqual((row["miles"], row["price"], row["color"], row["where"]), (29500, 29900, "White", "Danbury, CT"))
+        # No VIN given: the posting id stands in. The seller's word on a clean title is not proof.
+        self.assertEqual((row["vin"], row["clean_title"], row["source"]), ("craigslist-vn4C95pz", None, "craigslist"))
+
+    def test_craigslist_vin_and_salvage_title_are_kept(self):
+        found = scrape.parse_craigslist_search(self.CRAIGSLIST_SEARCH)[0]
+        vin = '<div class="attr auto_vin"><span class="labl">VIN:</span><span class="valu">5YJ3E1EB1MF000001</span></div>'
+        row = scrape.parse_craigslist_listing(self.CRAIGSLIST_LISTING % ("salvage", vin), found)
+        self.assertEqual((row["vin"], row["clean_title"]), ("5YJ3E1EB1MF000001", False))
+
+    def test_craigslist_listing_for_another_model_is_dropped(self):
+        found = scrape.parse_craigslist_search(self.CRAIGSLIST_SEARCH)[0]
+        search = {"make": "tesla", "model": "model-3"}
+        mine = scrape.parse_craigslist_listing(self.CRAIGSLIST_LISTING % ("clean", ""), found)
+        other = scrape.parse_craigslist_listing(
+            self.CRAIGSLIST_LISTING.replace("Tesla Model 3 Dual Motor LR AWD", "Tesla Model Y Long Range") % ("clean", ""), found)
+        self.assertEqual(scrape.same_model([mine, other], search), [mine])
+        self.assertIsNone(scrape.parse_craigslist_listing("<html>This posting has been deleted</html>", found))
+
     def test_a_blocked_source_raises(self):
         with self.assertRaises(scrape.SourceError):
             scrape.parse_kbb("<html>captcha</html>")
