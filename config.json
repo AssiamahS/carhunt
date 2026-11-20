@@ -9,7 +9,21 @@
       "city": "union",
       "state": "nj",
       "zip": "07083",
-      "radius": 150
+      "radius": 150,
+      "miles_max": 100000
+    },
+    {
+      "label": "2021-2023 Tesla Model 3",
+      "make": "tesla",
+      "model": "model-3",
+      "year_min": 2021,
+      "year_max": 2023,
+      "city": "union",
+      "state": "nj",
+      "zip": "07083",
+      "radius": 150,
+      "miles_max": 100000,
+      "price_max": 30000
     },
     {
       "label": "2017-2023 Tesla Model S",
@@ -78,6 +92,11 @@
       "model": "Model 3",
       "name": "Tesla used inventory",
       "url": "https://www.tesla.com/inventory/used/m3?zip=07083"
+    },
+    {
+      "model": "Model 3",
+      "name": "AutoTempest: 2021-2023",
+      "url": "https://www.autotempest.com/results?make=tesla&model=model3&zip=07083&radius=150&minyear=2021&maxyear=2023&maxprice=30000"
     },
     {
       "model": "Model S",
