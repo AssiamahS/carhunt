@@ -97,6 +97,11 @@ class SearchLimitTest(unittest.TestCase):
         self.assertEqual(status({"model": "Model Y", "year": 2025, "trim": "Long Range Launch Series"}), "yes")
         self.assertEqual(status({"model": "Model Y", "year": 2025, "trim": "Long Range RWD"}), "check")
         self.assertEqual(status({"model": "Model Y", "year": 2023, "trim": "Long Range AWD"}), "no")
+        # TrueCar files the redesign under 2026, so its 2025 cars are the old body.
+        truecar = {"model": "Model Y", "source": "truecar"}
+        self.assertEqual(status(dict(truecar, year=2025, trim="Long Range AWD")), "no")
+        self.assertEqual(status(dict(truecar, year=2025, trim="Long Range Launch Series")), "yes")
+        self.assertEqual(status(dict(truecar, year=2026, trim="RWD")), "yes")
         self.assertIsNone(status({"model": "Model 3", "year": 2026, "trim": "RWD"}))
 
     def test_search_applies_caps_and_stops_paging_past_the_price_cap(self):

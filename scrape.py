@@ -148,14 +148,20 @@ def juniper_status(row):
     """Model Y only: is this the 2025 "Juniper" redesign?
 
     Every 2026 is, and so is the 2025 Launch Series. Other 2025 cars were built
-    in both bodies under the same trim names, so those say "check".
+    in both bodies under the same trim names, so a hand-added one says "check".
+
+    TrueCar is the exception: it files the redesign under 2026. All 49 of its
+    2025 cars nationwide (checked by photo, 2026-11-19) were the old body, and
+    nothing in the VIN, trim, range or colour tells the two apart.
     """
     if "model y" not in (row.get("model") or "").lower():
         return None
     year = row.get("year") or 0
     if year >= 2026 or "launch" in (row.get("trim") or "").lower():
         return "yes"
-    return "check" if year == 2025 else "no"
+    if year == 2025 and row.get("source") != "truecar":
+        return "check"
+    return "no"
 
 
 def scrape_truecar(search):

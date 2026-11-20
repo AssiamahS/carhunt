@@ -31,8 +31,8 @@ python3 -m http.server -d docs 8000   # preview
 
 - Change the cars, area, radius or budget in `config.json`. Each entry in
   `searches` is one model. Optional per search: `price_max`, `miles_max`, and
-  `juniper_only` (Model Y: keep 2026 cars, the 2025 Launch Series, and other
-  2025 cars marked "confirm it's the Juniper body").
+  `juniper_only` (Model Y: keep only the redesigned body. On TrueCar that is every
+  2026 and any Launch Series; its 2025 cars are the old body and are dropped).
 - Add a car you found elsewhere to `manual.json` (`url`, `image`, `price`, `miles`, `model`, `trim`, `where`).
   `url` must be the car's own listing page and `image` a photo of it. Rows
   without both are skipped, so every car on the page is one link, one photo.
