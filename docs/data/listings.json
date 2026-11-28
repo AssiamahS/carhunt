@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T19:10:01Z",
+ "updated": "2026-11-28T01:14:07Z",
  "errors": [],
  "config": {
   "budget": 30000,
@@ -182,7 +182,7 @@
    "model": "Model 3",
    "trim": "Standard Range Plus",
    "drive": "RWD",
-   "price": 16680,
+   "price": 16580,
    "miles": 59453,
    "color": "Pearl White Multi-coat",
    "dealer": "Power Motors NYC",
@@ -192,7 +192,7 @@
    "accidents": 0,
    "owners": 4,
    "clean_title": true,
-   "kbb_fair": 22510,
+   "kbb_fair": 22640,
    "image": "https://images.autotrader.com/hn/c/d8e97ec0478f43c5b63dd706e432c495.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -200,23 +200,23 @@
    "deal": "EXCELLENT",
    "sources": [
     "kbb",
-    "truecar",
-    "cars.com"
+    "cars.com",
+    "truecar"
    ],
    "also": [
+    {
+     "source": "cars.com",
+     "url": "https://www.cars.com/vehicledetail/c81f7dc4-d81a-462d-9bcf-692017d7085e/",
+     "price": 16755
+    },
     {
      "source": "truecar",
      "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA1MF851558/",
      "price": 16855
-    },
-    {
-     "source": "cars.com",
-     "url": "https://www.cars.com/vehicledetail/c81f7dc4-d81a-462d-9bcf-692017d7085e/",
-     "price": 16855
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -225,9 +225,13 @@
     [
      "2026-11-20",
      16680
+    ],
+    [
+     "2026-11-28",
+     16580
     ]
    ],
-   "price_change": -175,
+   "price_change": -275,
    "gone": false,
    "flags": [
     "no-basic-warranty"
@@ -263,7 +267,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -301,7 +305,7 @@
    "image": "https://static.cargurus.com/images/forsale/2026/11/02/16/08/2021_tesla_model_3-pic-7609876679471757363-1024x768.jpeg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 20550,
+   "kbb_fair": 20610,
    "sources": [
     "cargurus",
     "kbb"
@@ -314,7 +318,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -350,7 +354,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 21510,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/4d8443505b764e7c83cc8a6df185b2fd.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -382,7 +386,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -429,7 +433,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -465,7 +469,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 21690,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/140aff35926146f3bf4db51c25436719.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -497,7 +501,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -533,7 +537,7 @@
    "accidents": 1,
    "owners": 3,
    "clean_title": true,
-   "kbb_fair": 23670,
+   "kbb_fair": 23830,
    "image": "https://images.autotrader.com/hn/c/92fa9613f2b34d2eb2d54be2112a77ef.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -557,7 +561,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -620,7 +624,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -639,42 +643,42 @@
   },
   {
    "vin": "5YJ3E1EA5MF991483",
-   "source": "cars.com",
-   "url": "https://www.cars.com/vehicledetail/b0abfbd3-8f12-4ed1-8a46-510484dcf867/",
+   "source": "cargurus",
+   "url": "https://www.cargurus.com/details/461550753",
    "year": 2021,
    "make": "Tesla",
    "model": "Model 3",
-   "trim": "Standard Range Plus",
-   "drive": "Rear-wheel Drive",
+   "trim": "Standard Range Plus RWD",
+   "drive": "REAR_WHEEL_DRIVE",
    "price": 18999,
    "miles": 91669,
    "color": "Red",
    "dealer": "American Auto Bensalem Inc",
-   "where": "Cornwells Heights, PA",
+   "where": "Bensalem, PA",
    "state": "PA",
-   "distance": 52,
+   "distance": 55,
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://platform.cstatic-images.com/in/v2/c0838056-96d8-4190-a50e-42dc670c20ce/1bd6fa4a-da9b-4608-88db-329968978f01/ZzOTVtW8ldRVBpKyMup2qhpTSUY.jpg",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
    "deal": "GOOD",
    "deal_by": "CarGurus",
-   "cg_value": 20285,
+   "cg_value": 19650,
+   "image": "https://static.cargurus.com/images/forsale/2026/10/14/04/49/2021_tesla_model_3-pic-1602726807647956724-1024x768.jpeg",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
    "sources": [
-    "cars.com",
-    "cargurus"
+    "cargurus",
+    "cars.com"
    ],
    "also": [
     {
-     "source": "cargurus",
-     "url": "https://www.cargurus.com/details/461550753",
-     "price": 19999
+     "source": "cars.com",
+     "url": "https://www.cars.com/vehicledetail/b0abfbd3-8f12-4ed1-8a46-510484dcf867/",
+     "price": 18999
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -694,6 +698,65 @@
     ]
    ],
    "price_change": -1000,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EAXNF331523",
+   "source": "cargurus",
+   "url": "https://www.cargurus.com/details/464656583",
+   "year": 2022,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "REAR_WHEEL_DRIVE",
+   "price": 19793,
+   "miles": 85871,
+   "color": "Deep Blue Metallic",
+   "dealer": "Luxury Motor Cars",
+   "where": "Hillside, NJ",
+   "state": "NJ",
+   "distance": 2,
+   "accidents": 0,
+   "owners": 2,
+   "clean_title": true,
+   "deal": "EXCELLENT",
+   "deal_by": "CarGurus",
+   "cg_value": 20763,
+   "image": "https://static.tcimg.net/vehicles/primary/142e7fa963766eac/2022-Tesla-Model_3-blue-full_color-driver_side_front_quarter.png",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "listed": "2026-11-19",
+   "sources": [
+    "cargurus",
+    "truecar"
+   ],
+   "also": [
+    {
+     "source": "truecar",
+     "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EAXNF331523/",
+     "price": 21479
+    }
+   ],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     21479
+    ],
+    [
+     "2026-11-20",
+     20484
+    ],
+    [
+     "2026-11-28",
+     19793
+    ]
+   ],
+   "price_change": -1686,
    "gone": false,
    "flags": [
     "no-basic-warranty"
@@ -736,7 +799,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -776,7 +839,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -809,7 +872,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 20760,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/15413e6f974145daac8afd5248ddc4f7.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -834,7 +897,7 @@
     }
    ],
    "first_seen": "2026-11-22",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-22",
@@ -871,7 +934,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/27/06/5YJ3E1EA9MF100627/001_2026101807.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 19700,
    "deal_by": "CarGurus",
    "cg_value": 21142,
    "title_conflict": true,
@@ -899,7 +961,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -910,61 +972,6 @@
    "gone": false,
    "flags": [
     "title-conflict",
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EAXNF331523",
-   "source": "cargurus",
-   "url": "https://www.cargurus.com/details/464656583",
-   "year": 2022,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "RWD",
-   "drive": "REAR_WHEEL_DRIVE",
-   "price": 20484,
-   "miles": 85871,
-   "color": "Deep Blue Metallic",
-   "dealer": "Luxury Motor Cars",
-   "where": "Hillside, NJ",
-   "state": "NJ",
-   "distance": 2,
-   "accidents": 0,
-   "owners": 2,
-   "clean_title": true,
-   "deal": "GOOD",
-   "deal_by": "CarGurus",
-   "cg_value": 20763,
-   "image": "https://static.tcimg.net/vehicles/primary/142e7fa963766eac/2022-Tesla-Model_3-blue-full_color-driver_side_front_quarter.png",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "listed": "2026-11-19",
-   "sources": [
-    "cargurus",
-    "truecar"
-   ],
-   "also": [
-    {
-     "source": "truecar",
-     "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EAXNF331523/",
-     "price": 21479
-    }
-   ],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     21479
-    ],
-    [
-     "2026-11-20",
-     20484
-    ]
-   ],
-   "price_change": -995,
-   "gone": false,
-   "flags": [
     "no-basic-warranty"
    ]
   },
@@ -1035,7 +1042,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -1079,7 +1086,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1125,7 +1132,7 @@
    "image": "https://static.cargurus.com/images/forsale/2026/11/03/05/35/2021_tesla_model_3-pic-4231919015103916432-1024x768.jpeg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 19430,
+   "kbb_fair": 20090,
    "sources": [
     "cargurus",
     "kbb"
@@ -1138,7 +1145,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1180,7 +1187,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1273,7 +1280,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1311,7 +1318,7 @@
    "accidents": 1,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 21310,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/b4bd32cc9dff41a18d4fb8e730cec8f1.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -1328,7 +1335,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1361,7 +1368,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 23140,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/237d078477ca44dd85f3692722e1cca8.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -1387,7 +1394,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1435,7 +1442,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -1472,7 +1479,7 @@
    "image": "https://listings-prod.tcimg.net/listings/152669/19/74/5YJ3E1EA2NF287419/001_2026100504.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 21210,
+   "kbb_fair": 21700,
    "deal_by": "CarGurus",
    "cg_value": 22783,
    "sources": [
@@ -1493,7 +1500,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1536,7 +1543,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1565,7 +1572,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006986960/post-large/normalized/zoomcrop/3006986960-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006986960/post-large/normalized/zoomcrop/3006986960-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -1573,7 +1580,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1620,7 +1627,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1670,7 +1677,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1706,7 +1713,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 42860,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/fe907c4a285b4d39a5e9dee33ce842b5.jpg",
    "search": "Tesla Model Y Juniper",
    "juniper": "yes",
@@ -1715,7 +1722,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1724,9 +1731,7 @@
    ],
    "price_change": 0,
    "gone": false,
-   "flags": [
-    "too-cheap"
-   ]
+   "flags": []
   },
   {
    "vin": "5YJ3E1EA3MF906155",
@@ -1746,7 +1751,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006979768/post-large/normalized/zoomcrop/3006979768-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006979768/post-large/normalized/zoomcrop/3006979768-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -1754,7 +1759,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -1793,7 +1798,7 @@
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "listed": "2026-11-25",
-   "kbb_fair": 20580,
+   "kbb_fair": 20640,
    "sources": [
     "cargurus",
     "truecar",
@@ -1812,7 +1817,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -1844,7 +1849,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 20896,
+   "kbb_fair": 20980,
    "image": "https://images.autotrader.com/hn/c/eecc2bc6dd004aac9535b822303433df.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -1876,7 +1881,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -1912,7 +1917,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 21950,
+   "kbb_fair": 22440,
    "image": "https://images.autotrader.com/hn/c/a0e1ab5ed98d4e08a7292f4a50ff835a.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -1921,7 +1926,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -1974,7 +1979,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2011,7 +2016,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 23760,
+   "kbb_fair": 23920,
    "image": "https://images.autotrader.com/hn/c/27228cfe45d24da9a7f5ad261887b14a.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -2030,7 +2035,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2078,7 +2083,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2122,7 +2127,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -2159,7 +2164,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/81/27/5YJ3E1EAXMF092781/001_2026100705.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 23290,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -2179,7 +2183,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2194,6 +2198,92 @@
    "gone": false,
    "flags": [
     "accident",
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA5MF090341",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4919629",
+   "year": 2021,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard Range Plus",
+   "price": 22590,
+   "miles": 87826,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3007007955/post-large/normalized/zoomcrop/3007007955-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
+     22990
+    ],
+    [
+     "2026-11-28",
+     22590
+    ]
+   ],
+   "price_change": -400,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA6MF021027",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4906407",
+   "year": 2021,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard Range Plus",
+   "price": 22590,
+   "miles": 80858,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3007010630/post-large/normalized/zoomcrop/3007010630-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     22990
+    ],
+    [
+     "2026-11-21",
+     22590
+    ]
+   ],
+   "price_change": -400,
+   "gone": false,
+   "flags": [
     "no-basic-warranty"
    ]
   },
@@ -2215,7 +2305,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006947289/post-large/normalized/zoomcrop/3006947289-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006947289/post-large/normalized/zoomcrop/3006947289-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -2223,7 +2313,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2254,7 +2344,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006925678/post-large/normalized/zoomcrop/3006925678-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006925678/post-large/normalized/zoomcrop/3006925678-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -2262,7 +2352,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-22",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-22",
@@ -2270,49 +2360,6 @@
     ]
    ],
    "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA6MF021027",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4906407",
-   "year": 2021,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Standard Range Plus",
-   "price": 22590,
-   "miles": 80858,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007010630/post-large/normalized/zoomcrop/3007010630-edc-02.jpg?v=2026.11.27_13.3.7",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     22990
-    ],
-    [
-     "2026-11-21",
-     22590
-    ]
-   ],
-   "price_change": -400,
    "gone": false,
    "flags": [
     "no-basic-warranty"
@@ -2342,7 +2389,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/66/37/5YJ3E1EA6MF053766/001_2026112115.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 22360,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -2362,7 +2408,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -2395,7 +2441,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 25707,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/aa0f3417ccc74c2da1187d492d24a72f.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -2411,7 +2457,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2449,7 +2495,6 @@
    "image": "https://static.cargurus.com/images/forsale/2026/11/02/16/08/2023_tesla_model_3-pic-954123560657900125-1024x768.jpeg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 26380,
    "sources": [
     "cargurus",
     "kbb"
@@ -2462,7 +2507,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2502,7 +2547,7 @@
    "image": "https://static.cargurus.com/images/forsale/2026/11/02/16/14/2023_tesla_model_3-pic-1646736870731716411-1024x768.jpeg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 26780,
+   "kbb_fair": 26940,
    "sources": [
     "cargurus",
     "kbb"
@@ -2515,7 +2560,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2560,7 +2605,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -2590,7 +2635,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 21480,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/1c8f769fc4ed42e1be019b7fd7dc311e.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -2616,7 +2661,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2652,7 +2697,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 22640,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/3f148eba6fcf409c89076831bc8708e6.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -2678,7 +2723,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -2710,7 +2755,7 @@
    "accidents": 2,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 25280,
+   "kbb_fair": 25450,
    "image": "https://images.autotrader.com/hn/c/91f99d9ba3ac4b10a00711d290ea1e55.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -2736,7 +2781,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2772,7 +2817,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006988443/post-large/normalized/zoomcrop/3006988443-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006988443/post-large/normalized/zoomcrop/3006988443-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -2780,7 +2825,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -2815,7 +2860,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007068782/post-large/normalized/zoomcrop/3007068782-edc-02.jpg?v=2026.11.27_13.3.7",
+   "image": "https://cdnblob.fastly.carvana.io/3007068782/post-large/normalized/zoomcrop/3007068782-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -2823,46 +2868,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-26",
-     22990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA5MF090341",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4919629",
-   "year": 2021,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Standard Range Plus",
-   "price": 22990,
-   "miles": 87826,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007007955/post-large/normalized/zoomcrop/3007007955-edc-02.jpg?v=2026.11.27_13.3.7",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -2938,7 +2944,7 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/83/17/5YJ3E1EA9MF091783/001_2026112509.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 22790,
+   "kbb_fair": 22920,
    "deal_by": "CarGurus",
    "cg_value": 22592,
    "sources": [
@@ -2959,7 +2965,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -2995,7 +3001,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 26560,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/0194d4bdcf034e8a9563c70314c9215a.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3021,7 +3027,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3057,7 +3063,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 22050,
+   "kbb_fair": null,
    "image": "https://static.tcimg.net/vehicles/primary/f5a532b88d9deb75/2023-Tesla-Model_3-white-full_color-driver_side_front_quarter.png",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3083,7 +3089,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3124,7 +3130,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 25400,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/6fffd81c6867494296d589f356dd5f4b.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3143,7 +3149,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3173,7 +3179,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 21560,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/e6d326e774084aebb9bfb143f0610232.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3182,7 +3188,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -3217,7 +3223,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006736874/post-large/normalized/zoomcrop/3006736874-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006736874/post-large/normalized/zoomcrop/3006736874-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -3225,7 +3231,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -3256,7 +3262,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006831008/post-large/normalized/zoomcrop/3006831008-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006831008/post-large/normalized/zoomcrop/3006831008-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -3264,7 +3270,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3296,7 +3302,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": null,
+   "kbb_fair": 23720,
    "image": "https://assets.cai-media-management.com/ps-vehicle-media/2a391595-3fc8-47c6-aca4-61982d03726a.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3305,7 +3311,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3335,7 +3341,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 29030,
+   "kbb_fair": 29190,
    "image": "https://images.autotrader.com/hn/c/18b34090f16843648ceff9faeeb689c0.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3360,7 +3366,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -3397,7 +3403,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/72/56/5YJ3E1EA2NF245672/001_2026112608.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 24060,
    "deal_by": "CarGurus",
    "title_conflict": true,
    "sources": [
@@ -3418,7 +3423,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -3454,7 +3459,7 @@
    "accidents": 1,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 24150,
+   "kbb_fair": 24350,
    "image": "https://images.autotrader.com/hn/c/2faa1b06977d4ca2b3a9349f02696336.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3473,7 +3478,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3517,7 +3522,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3548,7 +3553,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006676134/post-large/normalized/zoomcrop/3006676134-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006676134/post-large/normalized/zoomcrop/3006676134-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -3556,7 +3561,46 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     23990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA0PF448093",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4898889",
+   "year": 2023,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard",
+   "price": 23990,
+   "miles": 90986,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006968053/post-large/normalized/zoomcrop/3006968053-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3587,7 +3631,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007073923/post-large/normalized/zoomcrop/3007073923-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3007073923/post-large/normalized/zoomcrop/3007073923-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -3595,7 +3639,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -3626,7 +3670,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007085252/post-large/normalized/zoomcrop/3007085252-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3007085252/post-large/normalized/zoomcrop/3007085252-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -3634,7 +3678,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-23",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-23",
@@ -3669,7 +3713,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007121300/post-large/normalized/zoomcrop/3007121300-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3007121300/post-large/normalized/zoomcrop/3007121300-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -3677,7 +3721,46 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
+     23990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA1NF360652",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4949217",
+   "year": 2022,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard",
+   "price": 23990,
+   "miles": 90831,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3007083769/post-large/normalized/zoomcrop/3007083769-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -3708,7 +3791,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007016648/post-large/normalized/zoomcrop/3007016648-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3007016648/post-large/normalized/zoomcrop/3007016648-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -3716,88 +3799,10 @@
    ],
    "also": [],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
-     23990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA0PF448093",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4898889",
-   "year": 2023,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Standard",
-   "price": 23990,
-   "miles": 90986,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006968053/post-large/normalized/zoomcrop/3006968053-edc-02.jpg?v=2026.11.27_13.3.7",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     23990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA1NF360652",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4949217",
-   "year": 2022,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Standard",
-   "price": 23990,
-   "miles": 90831,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007083769/post-large/normalized/zoomcrop/3007083769-edc-02.jpg?v=2026.11.27_13.3.7",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-26",
      23990
     ]
    ],
@@ -3865,7 +3870,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 22370,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/5483b75f32b141b18e68950f97ef7d93.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3884,7 +3889,7 @@
     }
    ],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -3916,7 +3921,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 26240,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/86e569e67d474b739720389f10a2c6c4.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -3942,7 +3947,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -3978,7 +3983,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 25020,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/c26e6d0c26d14a86838e1d0999bfa099.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -4004,7 +4009,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4058,7 +4063,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4094,7 +4099,7 @@
    "accidents": 0,
    "owners": 0,
    "clean_title": true,
-   "kbb_fair": 26180,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/c63c331c6a914c31bf7fbb8b33171740.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -4120,7 +4125,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4159,7 +4164,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/73/38/5YJ3E1EA2PF393873/001_2026111721.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 22470,
    "deal_by": "CarGurus",
    "cg_value": 23088,
    "sources": [
@@ -4180,7 +4184,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4227,7 +4231,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4265,7 +4269,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -4297,7 +4301,7 @@
    "accidents": 2,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 25420,
+   "kbb_fair": 24780,
    "image": "https://images.autotrader.com/hn/c/dca15314dd6a4b12ae4fd3556394c72b.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -4329,7 +4333,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -4374,7 +4378,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 27990,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/4b56111a6c3d40ab892fa357222e627d.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -4383,7 +4387,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4428,7 +4432,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4464,7 +4468,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 26150,
+   "kbb_fair": 26190,
    "image": "https://images.autotrader.com/hn/c/3b9b6107bef04e6d8fe2d824d4dde7fa.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -4483,11 +4487,171 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
      24495
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EB3MF860268",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4872253",
+   "year": 2021,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "price": 24590,
+   "miles": 93000,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006938551/post-large/normalized/zoomcrop/3006938551-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     24990
+    ],
+    [
+     "2026-11-20",
+     24590
+    ]
+   ],
+   "price_change": -400,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EB4NF199416",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4837474",
+   "year": 2022,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "price": 24590,
+   "miles": 92246,
+   "color": "Blue",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006852542/post-large/normalized/zoomcrop/3006852542-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-24",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-24",
+     24590
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA5PF503413",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4898780",
+   "year": 2023,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard",
+   "price": 24590,
+   "miles": 88199,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006995076/post-large/normalized/zoomcrop/3006995076-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
+     24590
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E21JF246015",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4850731",
+   "year": 2018,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "75D",
+   "price": 24590,
+   "miles": 62601,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006890780/post-large/normalized/zoomcrop/3006890780-edc-02.jpg?v=2026.11.28_1.11.19",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     24590
     ]
    ],
    "price_change": 0,
@@ -4540,166 +4704,6 @@
    ]
   },
   {
-   "vin": "5YJ3E1EB3MF860268",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4872253",
-   "year": 2021,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range",
-   "price": 24590,
-   "miles": 93000,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006938551/post-large/normalized/zoomcrop/3006938551-edc-02.jpg?v=2026.11.27_19.6.55",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     24990
-    ],
-    [
-     "2026-11-20",
-     24590
-    ]
-   ],
-   "price_change": -400,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA5PF503413",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4898780",
-   "year": 2023,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Standard",
-   "price": 24590,
-   "miles": 88199,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006995076/post-large/normalized/zoomcrop/3006995076-edc-02.jpg?v=2026.11.27_19.6.55",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-26",
-     24590
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EB4NF199416",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4837474",
-   "year": 2022,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range",
-   "price": 24590,
-   "miles": 92246,
-   "color": "Blue",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006852542/post-large/normalized/zoomcrop/3006852542-edc-02.jpg?v=2026.11.27_19.6.55",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-24",
-     24590
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJSA1E21JF246015",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4850731",
-   "year": 2018,
-   "make": "Tesla",
-   "model": "Model S",
-   "trim": "75D",
-   "price": 24590,
-   "miles": 62601,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006890780/post-large/normalized/zoomcrop/3006890780-edc-02.jpg?v=2026.11.27_19.7.23",
-   "search": "2017-2023 Tesla Model S",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     24590
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
    "vin": "5YJ3E1EBXMF915475",
    "source": "carvana",
    "url": "https://www.carvana.com/vehicle/4909234",
@@ -4743,6 +4747,53 @@
    ]
   },
   {
+   "vin": "5YJ3E1EB6NF101809",
+   "source": "cargurus",
+   "url": "https://www.cargurus.com/details/459986879",
+   "year": 2022,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range AWD",
+   "drive": "ALL_WHEEL_DRIVE",
+   "price": 24691,
+   "miles": 79636,
+   "color": "Midnight Silver Metallic",
+   "dealer": "Watertown Mitsubishi",
+   "where": "Watertown, CT",
+   "state": "CT",
+   "distance": 86,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "deal": "GOOD",
+   "deal_by": "CarGurus",
+   "cg_value": 25073,
+   "image": "https://static.cargurus.com/images/forsale/2026/11/27/15/37/2022_tesla_model_3-pic-1094920239217005608-1024x768.jpeg",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "cargurus"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     24991
+    ],
+    [
+     "2026-11-28",
+     24691
+    ]
+   ],
+   "price_change": -300,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
    "vin": "5YJ3E1EA2MF860477",
    "source": "kbb",
    "url": "https://www.kbb.com/cars-for-sale/vehicle/769787030",
@@ -4761,7 +4812,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 23340,
+   "kbb_fair": 23660,
    "image": "https://assets.cai-media-management.com/ps-vehicle-media/ea0b250c-c27b-47bf-b925-fe3765e69609.jpeg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -4770,7 +4821,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4802,7 +4853,7 @@
    "accidents": 1,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 26150,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/f623a813351d472a81a602a6b566214a.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -4828,7 +4879,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4875,7 +4926,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -4918,11 +4969,50 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
      24985
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA3PF438352",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4856317",
+   "year": 2023,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard",
+   "price": 24990,
+   "miles": 76207,
+   "color": "Gray",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006883769/post-large/normalized/zoomcrop/3006883769-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     24990
     ]
    ],
    "price_change": 0,
@@ -4949,7 +5039,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006842533/post-large/normalized/zoomcrop/3006842533-edc-02.jpg?v=2026.11.27_19.6.55",
+   "image": "https://cdnblob.fastly.carvana.io/3006842533/post-large/normalized/zoomcrop/3006842533-edc-02.jpg?v=2026.11.28_1.10.47",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -4957,10 +5047,49 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
+     24990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA5MF082269",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4846533",
+   "year": 2021,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard Range Plus",
+   "price": 24990,
+   "miles": 56057,
+   "color": "Black",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006879231/post-large/normalized/zoomcrop/3006879231-edc-02.jpg?v=2026.11.28_1.10.47",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
      24990
     ]
    ],
@@ -5166,118 +5295,48 @@
    ]
   },
   {
-   "vin": "5YJ3E1EA3PF438352",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4856317",
-   "year": 2023,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Standard",
-   "price": 24990,
-   "miles": 76207,
-   "color": "Gray",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006883769/post-large/normalized/zoomcrop/3006883769-edc-02.jpg?v=2026.11.26_15.11.8",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-26",
-   "price_history": [
-    [
-     "2026-11-20",
-     24990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA5MF082269",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4846533",
+   "vin": "5YJ3E1EA0MF028720",
+   "source": "kbb",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/797257622",
    "year": 2021,
    "make": "Tesla",
    "model": "Model 3",
    "trim": "Standard Range Plus",
-   "price": 24990,
-   "miles": 56057,
+   "drive": "RWD",
+   "price": 24995,
+   "miles": 63374,
    "color": "Black",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
+   "dealer": "Import Masters",
+   "where": "Great Neck, NY",
+   "state": "NY",
+   "distance": 29,
+   "accidents": 0,
    "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006879231/post-large/normalized/zoomcrop/3006879231-edc-02.jpg?v=2026.11.26_15.11.8",
+   "clean_title": true,
+   "kbb_fair": null,
+   "image": "https://images.autotrader.com/hn/c/5bd765c7711a43d6bf6724469bd575c5.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_history": [
-    [
-     "2026-11-26",
-     24990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EB6NF101809",
-   "source": "cargurus",
-   "url": "https://www.cargurus.com/details/459986879",
-   "year": 2022,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range AWD",
-   "drive": "ALL_WHEEL_DRIVE",
-   "price": 24991,
-   "miles": 79636,
-   "color": "Midnight Silver Metallic",
-   "dealer": "Watertown Mitsubishi",
-   "where": "Watertown, CT",
-   "state": "CT",
-   "distance": 86,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "deal": "FAIR",
+   "deal": "HIGH",
    "deal_by": "CarGurus",
-   "cg_value": 25073,
-   "image": "https://static.cargurus.com/images/forsale/2026/11/23/18/38/2022_tesla_model_3-pic-6024070044696448056-1024x768.jpeg",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
+   "cg_value": 21039,
    "sources": [
+    "kbb",
     "cargurus"
    ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "also": [
+    {
+     "source": "cargurus",
+     "url": "https://www.cargurus.com/details/465376901",
+     "price": 24995
+    }
+   ],
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
-     "2026-11-20",
-     24991
+     "2026-11-28",
+     24995
     ]
    ],
    "price_change": 0,
@@ -5311,7 +5370,7 @@
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "deal_by": "CarGurus",
-   "cg_value": 20890,
+   "cg_value": 19509,
    "sources": [
     "truecar",
     "cargurus",
@@ -5330,7 +5389,7 @@
     }
    ],
    "first_seen": "2026-11-22",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-22",
@@ -5370,7 +5429,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -5421,7 +5480,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5475,7 +5534,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5508,7 +5567,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 27600,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/287b24a58bd040bb8389af0f250a4ec6.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -5527,7 +5586,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5580,7 +5639,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5621,7 +5680,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/37/79/5YJ3E1EA8PF657937/001_2026112709.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 25750,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -5641,7 +5699,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5682,7 +5740,7 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/08/19/5YJ3E1EA0PF501908/001_2026111810.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 25490,
+   "kbb_fair": 25660,
    "deal_by": "CarGurus",
    "cg_value": 25247,
    "sources": [
@@ -5703,7 +5761,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5740,7 +5798,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/85/22/5YJ3E1EB0NF152285/001_2026112120.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 26090,
+   "kbb_fair": 26150,
    "deal_by": "CarGurus",
    "title_conflict": true,
    "sources": [
@@ -5761,7 +5819,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -5794,7 +5852,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 25610,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/086ef4b48e1e421e8e9e43ff579891d3.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -5813,7 +5871,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5856,7 +5914,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -5899,7 +5957,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -5931,7 +5989,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 31290,
+   "kbb_fair": 31780,
    "image": "https://images.autotrader.com/hn/c/446c6c5a2ba94d929df2295f12124cec.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -5956,7 +6014,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6007,7 +6065,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6044,7 +6102,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/37/44/5YJ3E1EC7MF914437/001_2026112510.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 28390,
+   "kbb_fair": 28220,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -6064,7 +6122,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -6134,7 +6192,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -6179,7 +6237,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/72/07/5YJ3E1EA0PF580772/001_2026111721.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 26320,
    "deal_by": "CarGurus",
    "cg_value": 25839,
    "sources": [
@@ -6200,7 +6257,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6245,7 +6302,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6286,7 +6343,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6335,7 +6392,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6371,7 +6428,7 @@
    "accidents": 2,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 29480,
+   "kbb_fair": 29620,
    "image": "https://images.autotrader.com/hn/c/f0abfc63c4bd402eabea39a49be2ae54.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -6396,7 +6453,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6432,7 +6489,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 27090,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/61426ea270ea4b059f8b35fb3c9e5700.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -6451,7 +6508,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6485,7 +6542,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 29480,
+   "kbb_fair": 29620,
    "image": "https://images.autotrader.com/hn/c/efecdfba94854073a51078f3f0cc849e.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -6511,7 +6568,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -6525,6 +6582,58 @@
    "price_change": -300,
    "gone": false,
    "flags": []
+  },
+  {
+   "vin": "5YJ3E1EA0PF427907",
+   "source": "kbb",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/797207944",
+   "year": 2023,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Standard Range",
+   "drive": "RWD",
+   "price": 26741,
+   "miles": 51425,
+   "color": "Gray",
+   "dealer": "Toyota of Hackensack",
+   "where": "Hackensack, NJ",
+   "state": "NJ",
+   "distance": 18,
+   "accidents": 1,
+   "owners": null,
+   "clean_title": true,
+   "kbb_fair": 25700,
+   "image": "https://static.cargurus.com/images/forsale/2026/11/26/18/10/2023_tesla_model_3-pic-8907415643626542600-1024x768.jpeg",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "deal": "HIGH",
+   "deal_by": "CarGurus",
+   "cg_value": 24336,
+   "sources": [
+    "kbb",
+    "cargurus"
+   ],
+   "also": [
+    {
+     "source": "cargurus",
+     "url": "https://www.cargurus.com/details/465343686",
+     "price": 26741
+    }
+   ],
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-28",
+     26741
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident",
+    "no-basic-warranty"
+   ]
   },
   {
    "vin": "5YJ3E1ECXMF070541",
@@ -6550,7 +6659,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/41/05/5YJ3E1ECXMF070541/001_2026112021.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 27860,
    "deal_by": "CarGurus",
    "title_conflict": true,
    "sources": [
@@ -6571,7 +6679,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6584,63 +6692,6 @@
     "title-conflict",
     "accident",
     "no-basic-warranty"
-   ]
-  },
-  {
-   "vin": "5YJ3E1EA5PF661671",
-   "source": "truecar",
-   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA5PF661671/",
-   "year": 2023,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "RWD",
-   "drive": "RWD",
-   "price": 26799,
-   "miles": 39146,
-   "color": "Gray",
-   "dealer": "CarVision of Trooper",
-   "where": "Trooper, PA",
-   "state": "PA",
-   "distance": 70,
-   "listed": "2026-11-25",
-   "accidents": 1,
-   "owners": 1,
-   "clean_title": true,
-   "deal": "HIGH",
-   "image": "https://listings-prod.tcimg.net/listings/48120/71/16/5YJ3E1EA5PF661671/001_2026112510.jpg",
-   "search": "2021-2023 Tesla Model 3",
-   "juniper": null,
-   "kbb_fair": 26560,
-   "deal_by": "CarGurus",
-   "sources": [
-    "truecar",
-    "kbb",
-    "cargurus"
-   ],
-   "also": [
-    {
-     "source": "kbb",
-     "url": "https://www.kbb.com/cars-for-sale/vehicle/797087454",
-     "price": 26799
-    },
-    {
-     "source": "cargurus",
-     "url": "https://www.cargurus.com/details/465210147",
-     "price": 26799
-    }
-   ],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-26",
-     26799
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "accident"
    ]
   },
   {
@@ -6667,7 +6718,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/25/10/5YJ3E1EA1PF651025/001_2026112207.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 27320,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -6687,7 +6737,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -6728,7 +6778,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/49/98/5YJ3E1EA6PF509849/001_2026111206.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 28070,
    "deal_by": "CarGurus",
    "cg_value": 27288,
    "sources": [
@@ -6749,10 +6798,67 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
+     26799
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "accident"
+   ]
+  },
+  {
+   "vin": "5YJ3E1EA5PF661671",
+   "source": "truecar",
+   "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EA5PF661671/",
+   "year": 2023,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "RWD",
+   "drive": "RWD",
+   "price": 26799,
+   "miles": 39146,
+   "color": "Gray",
+   "dealer": "CarVision of Trooper",
+   "where": "Trooper, PA",
+   "state": "PA",
+   "distance": 70,
+   "listed": "2026-11-25",
+   "accidents": 1,
+   "owners": 1,
+   "clean_title": true,
+   "deal": "HIGH",
+   "image": "https://listings-prod.tcimg.net/listings/48120/71/16/5YJ3E1EA5PF661671/001_2026112510.jpg",
+   "search": "2021-2023 Tesla Model 3",
+   "juniper": null,
+   "kbb_fair": 26720,
+   "deal_by": "CarGurus",
+   "sources": [
+    "truecar",
+    "kbb",
+    "cargurus"
+   ],
+   "also": [
+    {
+     "source": "kbb",
+     "url": "https://www.kbb.com/cars-for-sale/vehicle/797087454",
+     "price": 26799
+    },
+    {
+     "source": "cargurus",
+     "url": "https://www.cargurus.com/details/465210147",
+     "price": 26799
+    }
+   ],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
      26799
     ]
    ],
@@ -6786,7 +6892,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/62/39/5YJ3E1EA7PF543962/001_2026112421.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 27730,
+   "kbb_fair": 27910,
    "deal_by": "CarGurus",
    "title_conflict": true,
    "sources": [
@@ -6807,7 +6913,7 @@
     }
    ],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -6844,7 +6950,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/03/34/5YJ3E1EAXPF553403/001_2026111904.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 27780,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -6864,7 +6969,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6896,7 +7001,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 50340,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/860b3f4ad14742d988ea0c24eb8f075a.jpg",
    "search": "Tesla Model Y Juniper",
    "juniper": "yes",
@@ -6905,7 +7010,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -6916,8 +7021,7 @@
    "gone": false,
    "flags": [
     "branded-title",
-    "accident",
-    "too-cheap"
+    "accident"
    ]
   },
   {
@@ -6938,7 +7042,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007079151/post-large/normalized/zoomcrop/3007079151-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3007079151/post-large/normalized/zoomcrop/3007079151-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -6946,7 +7050,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -6978,7 +7082,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 27950,
+   "kbb_fair": 28000,
    "image": "https://images.autotrader.com/hn/c/c0cef93a583e439a8120c15d25be0b3d.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -6997,7 +7101,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7058,7 +7162,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -7102,7 +7206,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -7304,7 +7408,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7336,7 +7440,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 26760,
+   "kbb_fair": null,
    "image": "https://assets.cai-media-management.com/ps-vehicle-media/c4e62d02-ef26-4fb7-8803-5b857dd3590d.jpeg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -7345,7 +7449,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7375,7 +7479,7 @@
    "accidents": 1,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 25710,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/9df04010d8f241b78ed3f319c926befc.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -7394,7 +7498,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7445,7 +7549,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -7487,7 +7591,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7517,7 +7621,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 33960,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/44865823b11242e8976c2d0a5a1a9b05.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -7534,7 +7638,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7577,7 +7681,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-23",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-23",
@@ -7616,7 +7720,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7651,7 +7755,7 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/99/04/5YJ3E1EA2PF640499/001_2026112708.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 29090,
+   "kbb_fair": 29260,
    "deal_by": "CarGurus",
    "title_conflict": true,
    "sources": [
@@ -7672,7 +7776,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -7709,7 +7813,7 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/50/94/5YJ3E1EA4PF469450/001_2026112208.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 28390,
+   "kbb_fair": 28570,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -7729,7 +7833,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7761,7 +7865,7 @@
    "accidents": null,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 51070,
+   "kbb_fair": 52730,
    "image": "https://images.autotrader.com/hn/c/69ffe6bae47b43d498ea7ecb310f8780.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -7770,7 +7874,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7803,25 +7907,17 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 27090,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/7e33ea55499040e28150142f56e268fb.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "deal": "FAIR",
-   "deal_by": "CarGurus",
-   "cg_value": 27452,
    "listed": "2026-09-12",
+   "deal": "HIGH",
    "sources": [
     "kbb",
-    "cargurus",
     "truecar"
    ],
    "also": [
-    {
-     "source": "cargurus",
-     "url": "https://www.cargurus.com/details/458716692",
-     "price": 27900
-    },
     {
      "source": "truecar",
      "url": "https://www.truecar.com/used-cars-for-sale/listing/5YJ3E1EC2NF279368/",
@@ -7829,7 +7925,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7876,7 +7972,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7925,7 +8021,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -7958,7 +8054,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006966784/post-large/normalized/zoomcrop/3006966784-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006966784/post-large/normalized/zoomcrop/3006966784-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -7966,7 +8062,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8005,21 +8101,12 @@
    "image": "https://listings-prod.tcimg.net/listings/5561/88/43/5YJ3E1EB2NF124388/001_2026111209.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "deal_by": "CarGurus",
-   "cg_value": 28130,
    "sources": [
-    "truecar",
-    "cargurus"
+    "truecar"
    ],
-   "also": [
-    {
-     "source": "cargurus",
-     "url": "https://www.cargurus.com/details/461520352",
-     "price": 27998
-    }
-   ],
+   "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8095,7 +8182,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/57/41/5YJ3E1EB3NF194157/001_2026112108.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 27360,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -8115,7 +8201,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8159,7 +8245,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8200,7 +8286,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -8241,7 +8327,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8282,7 +8368,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8312,7 +8398,7 @@
    "accidents": 0,
    "owners": 3,
    "clean_title": true,
-   "kbb_fair": 30140,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/53ae6f79da774192a2ed587e00c0ddce.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -8344,7 +8430,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -8379,7 +8465,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006898004/post-large/normalized/zoomcrop/3006898004-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006898004/post-large/normalized/zoomcrop/3006898004-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -8387,7 +8473,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-23",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-23",
@@ -8470,7 +8556,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -8526,7 +8612,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8566,7 +8652,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 35490,
+   "kbb_fair": null,
    "image": "https://platform.cstatic-images.com/in/v2/242543b1-5aad-54e9-8abc-660ef56b00f5/56e08e5c-eadf-4016-bfa1-51e65a2bf64d/Nmyauy5QW4b6xgMsWkX5sHm-wyk.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -8582,7 +8668,7 @@
     }
    ],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -8624,7 +8710,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8677,7 +8763,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8716,7 +8802,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006849708/post-large/normalized/zoomcrop/3006849708-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006849708/post-large/normalized/zoomcrop/3006849708-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -8724,7 +8810,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8766,7 +8852,7 @@
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "deal_by": "CarGurus",
-   "cg_value": 28660,
+   "cg_value": 26995,
    "sources": [
     "truecar",
     "cargurus",
@@ -8785,7 +8871,7 @@
     }
    ],
    "first_seen": "2026-11-22",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-22",
@@ -8823,7 +8909,7 @@
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
    "deal_by": "CarGurus",
-   "cg_value": 29017,
+   "cg_value": 28050,
    "sources": [
     "truecar",
     "cargurus",
@@ -8842,7 +8928,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -8963,7 +9049,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9012,7 +9098,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9050,7 +9136,7 @@
    "accidents": 1,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 24730,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/d24fcf160b494fe1bdebb68c21ba4265.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -9082,7 +9168,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -9133,11 +9219,11 @@
     "cargurus"
    ],
    "also": [],
-   "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
-     "2026-11-27",
+     "2026-11-28",
      29678
     ]
    ],
@@ -9169,7 +9255,7 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/48/52/5YJ3E1EC6PF405248/001_2026112608.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 31750,
+   "kbb_fair": 32170,
    "deal_by": "CarGurus",
    "title_conflict": true,
    "sources": [
@@ -9190,7 +9276,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -9226,7 +9312,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 31740,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/6d69299cb30b4bd0b069add9458762ee.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -9235,7 +9321,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9273,7 +9359,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9303,7 +9389,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 31690,
+   "kbb_fair": 32210,
    "image": "https://images.autotrader.com/hn/c/a69e677bad664926910aee2c3445a55b.jpg",
    "search": "2021-2023 Tesla Model 3",
    "juniper": null,
@@ -9322,7 +9408,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -9333,6 +9419,49 @@
    "gone": false,
    "flags": [
     "accident"
+   ]
+  },
+  {
+   "vin": "5YJSA1E4XKF339554",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4748379",
+   "year": 2019,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Performance",
+   "price": 29990,
+   "miles": 96513,
+   "color": "Blue",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006623336/post-large/normalized/zoomcrop/3006623336-edc-02.jpg?v=2026.11.28_1.11.19",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     30590
+    ],
+    [
+     "2026-11-27",
+     29990
+    ]
+   ],
+   "price_change": -600,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
    ]
   },
   {
@@ -9375,49 +9504,6 @@
    ]
   },
   {
-   "vin": "5YJSA1E4XKF339554",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4748379",
-   "year": 2019,
-   "make": "Tesla",
-   "model": "Model S",
-   "trim": "Performance",
-   "price": 29990,
-   "miles": 96513,
-   "color": "Blue",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006623336/post-large/normalized/zoomcrop/3006623336-edc-02.jpg?v=2026.11.27_19.7.23",
-   "search": "2017-2023 Tesla Model S",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     30590
-    ],
-    [
-     "2026-11-27",
-     29990
-    ]
-   ],
-   "price_change": -600,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
    "vin": "5YJ3E1EA6PF698874",
    "source": "cargurus",
    "url": "https://www.cargurus.com/details/463909132",
@@ -9447,7 +9533,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9488,7 +9574,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9528,11 +9614,11 @@
     "cargurus"
    ],
    "also": [],
-   "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
-     "2026-11-27",
+     "2026-11-28",
      29996
     ]
    ],
@@ -9638,7 +9724,7 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/40/89/5YJSA1E49LF358940/001_2026112214.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
-   "kbb_fair": 34380,
+   "kbb_fair": 34390,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -9664,7 +9750,7 @@
     }
    ],
    "first_seen": "2026-11-22",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-22",
@@ -9679,6 +9765,45 @@
    "gone": false,
    "flags": [
     "branded-title",
+    "no-basic-warranty"
+   ]
+  },
+  {
+   "vin": "5YJSA1E22KF305901",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4873330",
+   "year": 2019,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "100D",
+   "price": 30590,
+   "miles": 69477,
+   "color": "Gray",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006882594/post-large/normalized/zoomcrop/3006882594-edc-02.jpg?v=2026.11.28_1.11.19",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-28",
+     30590
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
     "no-basic-warranty"
    ]
   },
@@ -9701,7 +9826,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 38460,
+   "kbb_fair": null,
    "image": "https://static.cargurus.com/images/forsale/2026/11/27/00/35/2025_tesla_model_3-pic-9042746215535901741-1024x768.jpeg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -9724,7 +9849,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -9756,7 +9881,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006937121/post-large/normalized/zoomcrop/3006937121-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006937121/post-large/normalized/zoomcrop/3006937121-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -9764,7 +9889,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -9797,7 +9922,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007023782/post-large/normalized/zoomcrop/3007023782-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3007023782/post-large/normalized/zoomcrop/3007023782-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -9805,7 +9930,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -9834,7 +9959,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006839789/post-large/normalized/zoomcrop/3006839789-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006839789/post-large/normalized/zoomcrop/3006839789-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -9842,7 +9967,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-23",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-23",
@@ -9872,7 +9997,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 31800,
+   "kbb_fair": 31940,
    "image": "https://static.tcimg.net/vehicles/primary/54c764c1f33b957c/2019-Tesla-Model_S-red-full_color-driver_side_front_quarter.png",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -9898,7 +10023,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -9930,7 +10055,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": false,
-   "kbb_fair": 41560,
+   "kbb_fair": null,
    "image": "https://assets.cai-media-management.com/dealership/ef02fe3b-a8d4-43ea-a989-bebde689e558.JPG",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -9946,7 +10071,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -10023,7 +10148,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/56/93/5YJSA1E52MF429356/001_2026112608.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
-   "kbb_fair": 39090,
+   "kbb_fair": 38970,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -10049,7 +10174,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -10086,7 +10211,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 26570,
+   "kbb_fair": 26600,
    "image": "https://images.autotrader.com/hn/c/d9979ca075404593bf10ffdbe8301df6.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -10118,7 +10243,7 @@
     }
    ],
    "first_seen": "2026-11-23",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-23",
@@ -10148,7 +10273,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 35250,
+   "kbb_fair": 34940,
    "image": "https://images.autotrader.com/hn/c/81fcea119db943398db725a7914c8c41.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -10180,7 +10305,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -10217,7 +10342,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006888783/post-large/normalized/zoomcrop/3006888783-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006888783/post-large/normalized/zoomcrop/3006888783-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -10225,7 +10350,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -10293,7 +10418,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006986288/post-large/normalized/zoomcrop/3006986288-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3006986288/post-large/normalized/zoomcrop/3006986288-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -10301,7 +10426,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -10332,7 +10457,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007016955/post-large/normalized/zoomcrop/3007016955-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3007016955/post-large/normalized/zoomcrop/3007016955-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -10340,7 +10465,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -10370,7 +10495,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 33010,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/d4d677e3fa954cae8daffb0b3ba799a3.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -10395,7 +10520,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -10433,7 +10558,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -10483,7 +10608,7 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -10513,7 +10638,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 32020,
+   "kbb_fair": 32010,
    "image": "https://images.autotrader.com/hn/c/d6a20ce669464219a944c0ae9265be00.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -10538,7 +10663,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -10569,7 +10694,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007062370/post-large/normalized/zoomcrop/3007062370-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3007062370/post-large/normalized/zoomcrop/3007062370-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -10577,7 +10702,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -10613,7 +10738,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": null,
-   "kbb_fair": 38100,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/67ae3cbb150e46439b7bbb47240b69e3.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -10646,7 +10771,7 @@
     }
    ],
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-18",
@@ -10687,7 +10812,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/57/83/5YJ3E1EA2RF728357/001_2026111112.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 33350,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -10713,7 +10837,7 @@
     }
    ],
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-18",
@@ -10821,7 +10945,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 34280,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/9123a179b9ba412599519725dd0d69d0.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -10840,7 +10964,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -10895,7 +11019,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -10926,7 +11050,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007106608/post-large/normalized/zoomcrop/3007106608-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/3007106608/post-large/normalized/zoomcrop/3007106608-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -10934,7 +11058,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -10998,7 +11122,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -11031,8 +11155,8 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 34060,
-   "image": "https://images.autotrader.com/hn/c/b6c6f98830f7424498b1e07ec5d98e2c.jpg",
+   "kbb_fair": null,
+   "image": "https://images.autotrader.com/hn/c/b012e4f3bdcc4deba2afed02fcdd1645.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "deal": "GOOD",
@@ -11057,7 +11181,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -11134,7 +11258,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 35630,
+   "kbb_fair": 35750,
    "image": "https://images.autotrader.com/hn/c/b70cae7baf8b44fbb5ff1758e06f62f2.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -11166,7 +11290,7 @@
     }
    ],
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-18",
@@ -11215,7 +11339,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -11263,7 +11387,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -11295,7 +11419,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 33810,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/aec925dbf0054b0abff7e7832e488247.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -11320,7 +11444,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -11336,6 +11460,65 @@
     ]
    ],
    "price_change": -558,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1EA4SF026045",
+   "source": "kbb",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/795431321",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "drive": "RWD",
+   "price": 36698,
+   "miles": 36339,
+   "color": "Pearl White Multi-coat",
+   "dealer": "Bright Bay Mazda",
+   "where": "Bay Shore, NY",
+   "state": "NY",
+   "distance": 53,
+   "accidents": 0,
+   "owners": 1,
+   "clean_title": true,
+   "kbb_fair": null,
+   "image": "https://images.autotrader.com/hn/c/bf00172fdd6046448320a7587fb69606.jpg",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
+   "deal": "FAIR",
+   "deal_by": "CarGurus",
+   "cg_value": 36610,
+   "sources": [
+    "kbb",
+    "cars.com",
+    "cargurus"
+   ],
+   "also": [
+    {
+     "source": "cars.com",
+     "url": "https://www.cars.com/vehicledetail/c9a35c4a-cf3e-4fde-84ea-f73a25820733/",
+     "price": 36873
+    },
+    {
+     "source": "cargurus",
+     "url": "https://www.cargurus.com/details/463437483",
+     "price": 36998
+    }
+   ],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     36998
+    ],
+    [
+     "2026-11-28",
+     36698
+    ]
+   ],
+   "price_change": -300,
    "gone": false,
    "flags": []
   },
@@ -11376,7 +11559,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -11386,6 +11569,45 @@
    "price_change": 0,
    "gone": false,
    "flags": []
+  },
+  {
+   "vin": "5YJ3E1ET4RF785256",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4926303",
+   "year": 2024,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Performance",
+   "price": 36990,
+   "miles": 92526,
+   "color": "Gray",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3007089244/post-large/normalized/zoomcrop/3007089244-edc-02.jpg?v=2026.11.28_1.10.19",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
+     36990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": [
+    "no-basic-warranty"
+   ]
   },
   {
    "vin": "5YJ3E1EA3RF845879",
@@ -11405,7 +11627,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007001457/post-large/normalized/zoomcrop/3007001457-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007001457/post-large/normalized/zoomcrop/3007001457-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -11413,10 +11635,47 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
+     36990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJSA1E49KF306948",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4741519",
+   "year": 2019,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "P100D",
+   "price": 36990,
+   "miles": 42025,
+   "color": "Black",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006514533/post-large/normalized/zoomcrop/3006514533-edc-02.jpg?v=2026.11.28_1.11.19",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-28",
      36990
     ]
    ],
@@ -11501,45 +11760,6 @@
    ]
   },
   {
-   "vin": "5YJ3E1ET4RF785256",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4926303",
-   "year": 2024,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Performance",
-   "price": 36990,
-   "miles": 92526,
-   "color": "Gray",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007089244/post-large/normalized/zoomcrop/3007089244-edc-02.jpg?v=2026.11.27_13.2.39",
-   "search": "2024-2026 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-26",
-     36990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": [
-    "no-basic-warranty"
-   ]
-  },
-  {
    "vin": "5YJ3E1EB7RF734485",
    "source": "kbb",
    "url": "https://www.kbb.com/cars-for-sale/vehicle/793824746",
@@ -11558,7 +11778,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 35850,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/5a37b62f0da14995b2b99f6d0b049906.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -11583,7 +11803,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -11599,61 +11819,6 @@
    "flags": [
     "accident"
    ]
-  },
-  {
-   "vin": "5YJ3E1EA4SF026045",
-   "source": "kbb",
-   "url": "https://www.kbb.com/cars-for-sale/vehicle/795431321",
-   "year": 2025,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range",
-   "drive": "RWD",
-   "price": 36998,
-   "miles": 36339,
-   "color": "Pearl White Multi-coat",
-   "dealer": "Bright Bay Mazda",
-   "where": "Bay Shore, NY",
-   "state": "NY",
-   "distance": 53,
-   "accidents": 0,
-   "owners": 1,
-   "clean_title": true,
-   "kbb_fair": 35510,
-   "image": "https://images.autotrader.com/hn/c/bf00172fdd6046448320a7587fb69606.jpg",
-   "search": "2024-2026 Tesla Model 3",
-   "juniper": null,
-   "deal": "FAIR",
-   "deal_by": "CarGurus",
-   "cg_value": 36610,
-   "sources": [
-    "kbb",
-    "cargurus",
-    "cars.com"
-   ],
-   "also": [
-    {
-     "source": "cargurus",
-     "url": "https://www.cargurus.com/details/463437483",
-     "price": 36998
-    },
-    {
-     "source": "cars.com",
-     "url": "https://www.cars.com/vehicledetail/c9a35c4a-cf3e-4fde-84ea-f73a25820733/",
-     "price": 37173
-    }
-   ],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     36998
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": []
   },
   {
    "vin": "5YJ3E1EB9RF791965",
@@ -11679,7 +11844,6 @@
    "image": "https://listings-prod.tcimg.net/listings/48120/65/19/5YJ3E1EB9RF791965/001_2026111904.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 40650,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -11705,7 +11869,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -11774,7 +11938,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 36520,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/d11096f5a44d4062852cf90afe7102d5.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -11783,7 +11947,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -11833,7 +11997,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -11879,7 +12043,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -11910,7 +12074,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007089819/post-large/normalized/zoomcrop/3007089819-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007089819/post-large/normalized/zoomcrop/3007089819-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -11918,10 +12082,47 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
+     37990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJSA1E23LF391284",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4897479",
+   "year": 2020,
+   "make": "Tesla",
+   "model": "Model S",
+   "trim": "Long Range Plus",
+   "price": 37990,
+   "miles": 49684,
+   "color": "White",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006990366/post-large/normalized/zoomcrop/3006990366-edc-02.jpg?v=2026.11.28_1.11.19",
+   "search": "2017-2023 Tesla Model S",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-24",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-24",
      37990
     ]
    ],
@@ -12008,43 +12209,6 @@
    ]
   },
   {
-   "vin": "5YJSA1E23LF391284",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4897479",
-   "year": 2020,
-   "make": "Tesla",
-   "model": "Model S",
-   "trim": "Long Range Plus",
-   "price": 37990,
-   "miles": 49684,
-   "color": "White",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006990366/post-large/normalized/zoomcrop/3006990366-edc-02.jpg?v=2026.11.27_13.3.35",
-   "search": "2017-2023 Tesla Model S",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-24",
-     37990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": []
-  },
-  {
    "vin": "5YJ3E1EB0RF797847",
    "source": "carvana",
    "url": "https://www.carvana.com/vehicle/4814491",
@@ -12100,7 +12264,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 39100,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/32b9e66ac9224be0b732afee088f60cb.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
@@ -12119,7 +12283,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12178,7 +12342,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12212,7 +12376,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 37760,
+   "kbb_fair": null,
    "image": "https://static.cargurus.com/images/forsale/2026/11/23/17/53/2024_tesla_model_3-pic-5048888129505343228-1024x768.jpeg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -12238,7 +12402,7 @@
     }
    ],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -12267,7 +12431,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007051289/post-large/normalized/zoomcrop/3007051289-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007051289/post-large/normalized/zoomcrop/3007051289-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12275,7 +12439,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -12304,7 +12468,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007056798/post-large/normalized/zoomcrop/3007056798-edc-02.jpg?v=2026.11.27_13.2.39",
+   "image": "https://cdnblob.fastly.carvana.io/3007056798/post-large/normalized/zoomcrop/3007056798-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12312,7 +12476,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12346,7 +12510,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 39660,
+   "kbb_fair": null,
    "image": "https://assets.cai-media-management.com/ps-vehicle-media/fa3dece3-32de-461d-88be-e5d0116c1808.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -12355,7 +12519,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12384,7 +12548,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007100274/post-large/normalized/zoomcrop/3007100274-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007100274/post-large/normalized/zoomcrop/3007100274-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12392,7 +12556,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -12580,7 +12744,6 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/85/40/5YJSA1E55NF464085/001_2026092806.jpg",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
-   "kbb_fair": 44790,
    "deal_by": "CarGurus",
    "sources": [
     "truecar",
@@ -12606,7 +12769,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -12649,7 +12812,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12693,7 +12856,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12722,7 +12885,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007088407/post-large/normalized/zoomcrop/3007088407-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007088407/post-large/normalized/zoomcrop/3007088407-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12730,7 +12893,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -12759,7 +12922,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007046654/post-large/normalized/zoomcrop/3007046654-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007046654/post-large/normalized/zoomcrop/3007046654-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12767,7 +12930,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12812,7 +12975,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12869,7 +13032,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -12898,7 +13061,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006905846/post-large/normalized/zoomcrop/3006905846-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3006905846/post-large/normalized/zoomcrop/3006905846-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12906,7 +13069,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -12935,7 +13098,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007094994/post-large/normalized/zoomcrop/3007094994-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007094994/post-large/normalized/zoomcrop/3007094994-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12943,7 +13106,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -12972,7 +13135,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007035055/post-large/normalized/zoomcrop/3007035055-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007035055/post-large/normalized/zoomcrop/3007035055-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -12980,7 +13143,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -13009,7 +13172,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/2005063410/post-large/normalized/zoomcrop/2005063410-edc-02.jpg?v=2026.11.27_19.7.23",
+   "image": "https://cdnblob.fastly.carvana.io/2005063410/post-large/normalized/zoomcrop/2005063410-edc-02.jpg?v=2026.11.28_1.11.19",
    "search": "2017-2023 Tesla Model S",
    "juniper": null,
    "sources": [
@@ -13017,7 +13180,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -13047,7 +13210,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 40050,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/fdb905c86c384cc194487f4bbbbedcae.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -13079,7 +13242,7 @@
     }
    ],
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-18",
@@ -13121,7 +13284,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 38160,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/f8bc514cdaf04c7b9ffe63c453cd3598.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -13137,7 +13300,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -13167,7 +13330,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 39420,
+   "kbb_fair": 39820,
    "image": "https://images.autotrader.com/hn/c/00c6d788a7154f78b04ad6976b6b6d42.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -13192,7 +13355,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -13222,7 +13385,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 38890,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/a771e19800d04b3d8e7ee7279dfd99a1.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -13247,7 +13410,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -13276,7 +13439,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006995921/post-large/normalized/zoomcrop/3006995921-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3006995921/post-large/normalized/zoomcrop/3006995921-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13284,7 +13447,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -13332,7 +13495,7 @@
     }
    ],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -13362,7 +13525,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 38780,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/0102b68a3bd345688df512604625cb02.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -13394,7 +13557,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -13406,6 +13569,43 @@
     ]
    ],
    "price_change": -705,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1EA1SF968229",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4881224",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "price": 40990,
+   "miles": 17247,
+   "color": "Black",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006953883/post-large/normalized/zoomcrop/3006953883-edc-02.jpg?v=2026.11.28_1.10.19",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-26",
+     40990
+    ]
+   ],
+   "price_change": 0,
    "gone": false,
    "flags": []
   },
@@ -13427,7 +13627,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007097258/post-large/normalized/zoomcrop/3007097258-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007097258/post-large/normalized/zoomcrop/3007097258-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13435,10 +13635,47 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
+     40990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1EA3SF081182",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4893234",
+   "year": 2025,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Long Range",
+   "price": 40990,
+   "miles": 17212,
+   "color": "Gray",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3006988670/post-large/normalized/zoomcrop/3006988670-edc-02.jpg?v=2026.11.28_1.10.19",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
      40990
     ]
    ],
@@ -13464,7 +13701,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007039255/post-large/normalized/zoomcrop/3007039255-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007039255/post-large/normalized/zoomcrop/3007039255-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13472,7 +13709,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -13521,80 +13758,6 @@
    "flags": []
   },
   {
-   "vin": "5YJ3E1EA1SF968229",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4881224",
-   "year": 2025,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range",
-   "price": 40990,
-   "miles": 17247,
-   "color": "Black",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006953883/post-large/normalized/zoomcrop/3006953883-edc-02.jpg?v=2026.11.27_13.2.39",
-   "search": "2024-2026 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-26",
-     40990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": []
-  },
-  {
-   "vin": "5YJ3E1EA3SF081182",
-   "source": "carvana",
-   "url": "https://www.carvana.com/vehicle/4893234",
-   "year": 2025,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Long Range",
-   "price": 40990,
-   "miles": 17212,
-   "color": "Gray",
-   "dealer": "Carvana",
-   "where": "Delivered by Carvana",
-   "state": null,
-   "distance": null,
-   "accidents": null,
-   "owners": null,
-   "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006988670/post-large/normalized/zoomcrop/3006988670-edc-02.jpg?v=2026.11.27_13.2.39",
-   "search": "2024-2026 Tesla Model 3",
-   "juniper": null,
-   "sources": [
-    "carvana"
-   ],
-   "also": [],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     40990
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": []
-  },
-  {
    "vin": "5YJ3E1EB9SF892591",
    "source": "kbb",
    "url": "https://www.kbb.com/cars-for-sale/vehicle/796614381",
@@ -13613,7 +13776,7 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 36410,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/7fae2219811b4a4ba40874671feb24c5.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -13632,7 +13795,7 @@
     }
    ],
    "first_seen": "2026-11-22",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-22",
@@ -13663,7 +13826,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007038672/post-large/normalized/zoomcrop/3007038672-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007038672/post-large/normalized/zoomcrop/3007038672-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13671,7 +13834,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -13704,7 +13867,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006981806/post-large/normalized/zoomcrop/3006981806-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3006981806/post-large/normalized/zoomcrop/3006981806-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13712,7 +13875,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -13741,7 +13904,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007118094/post-large/normalized/zoomcrop/3007118094-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007118094/post-large/normalized/zoomcrop/3007118094-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13749,7 +13912,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -13778,7 +13941,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007136618/post-large/normalized/zoomcrop/3007136618-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007136618/post-large/normalized/zoomcrop/3007136618-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13786,7 +13949,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -13815,7 +13978,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006940755/post-large/normalized/zoomcrop/3006940755-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3006940755/post-large/normalized/zoomcrop/3006940755-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13823,7 +13986,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -13963,7 +14126,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007118667/post-large/normalized/zoomcrop/3007118667-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007118667/post-large/normalized/zoomcrop/3007118667-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -13971,7 +14134,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -14000,7 +14163,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006846133/post-large/normalized/zoomcrop/3006846133-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3006846133/post-large/normalized/zoomcrop/3006846133-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -14008,7 +14171,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -14043,7 +14206,7 @@
    "image": "https://listings-prod.tcimg.net/listings/220075/91/60/5YJ3E1EA6TF146091/001_2026111721.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
-   "kbb_fair": 36330,
+   "kbb_fair": 36370,
    "deal_by": "CarGurus",
    "cg_value": 47893,
    "title_conflict": true,
@@ -14071,7 +14234,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14083,6 +14246,47 @@
    "flags": [
     "title-conflict"
    ]
+  },
+  {
+   "vin": "5YJ3E1EA1TF190225",
+   "source": "cargurus",
+   "url": "https://www.cargurus.com/details/465083845",
+   "year": 2026,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": null,
+   "drive": null,
+   "price": 42937,
+   "miles": 8733,
+   "color": "Diamond Black",
+   "dealer": "Lester Glenn Chrysler Dodge Jeep RAM FIAT",
+   "where": "Toms River, NJ",
+   "state": "NJ",
+   "distance": 49,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "deal": "EXCELLENT",
+   "deal_by": "CarGurus",
+   "cg_value": 47377,
+   "image": "https://static.cargurus.com/images/forsale/2026/11/27/15/59/2026_tesla_model_3-pic-8292081950209019815-1024x768.jpeg",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
+   "sources": [
+    "cargurus"
+   ],
+   "also": [],
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-28",
+     42937
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
   },
   {
    "vin": "5YJ3E1EA2SF887160",
@@ -14102,7 +14306,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3007090840/post-large/normalized/zoomcrop/3007090840-edc-02.jpg?v=2026.11.27_19.6.27",
+   "image": "https://cdnblob.fastly.carvana.io/3007090840/post-large/normalized/zoomcrop/3007090840-edc-02.jpg?v=2026.11.28_1.10.19",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "sources": [
@@ -14110,7 +14314,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-27",
@@ -14148,7 +14352,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -14240,7 +14444,7 @@
     }
    ],
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-19",
@@ -14284,7 +14488,7 @@
    "accidents": 0,
    "owners": null,
    "clean_title": true,
-   "kbb_fair": 35650,
+   "kbb_fair": 35690,
    "image": "https://images.autotrader.com/hn/c/1f735bc4ec234872926a1281f460a481.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -14303,7 +14507,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14320,16 +14524,16 @@
   },
   {
    "vin": "5YJ3E1ETXRF867279",
-   "source": "cargurus",
-   "url": "https://www.cargurus.com/details/463808382",
+   "source": "kbb",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/795793516",
    "year": 2024,
    "make": "Tesla",
    "model": "Model 3",
-   "trim": "Performance AWD",
-   "drive": "ALL_WHEEL_DRIVE",
+   "trim": "Performance",
+   "drive": "AWD4WD",
    "price": 43490,
    "miles": 37252,
-   "color": "Gray",
+   "color": "Stealth Gray",
    "dealer": "Quakertown Mitsubishi",
    "where": "Quakertown, PA",
    "state": "PA",
@@ -14337,30 +14541,30 @@
    "accidents": 1,
    "owners": 1,
    "clean_title": true,
+   "kbb_fair": null,
+   "image": "https://images.autotrader.com/hn/c/22a0ed03f05241beb2c9a85ec0598bf0.jpg",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
    "deal": "FAIR",
    "deal_by": "CarGurus",
    "cg_value": 43468,
-   "image": "https://static.cargurus.com/images/forsale/2026/11/21/14/49/2024_tesla_model_3-pic-5605342410981214507-1024x768.jpeg",
-   "search": "2024-2026 Tesla Model 3",
-   "juniper": null,
-   "kbb_fair": 43010,
    "listed": "2026-11-09",
    "sources": [
+    "kbb",
     "cargurus",
     "cars.com",
-    "kbb",
     "truecar"
    ],
    "also": [
     {
-     "source": "cars.com",
-     "url": "https://www.cars.com/vehicledetail/f1292960-99d0-4f6f-808d-16f97f91be6b/",
+     "source": "cargurus",
+     "url": "https://www.cargurus.com/details/463808382",
      "price": 43490
     },
     {
-     "source": "kbb",
-     "url": "https://www.kbb.com/cars-for-sale/vehicle/795793516",
-     "price": 43990
+     "source": "cars.com",
+     "url": "https://www.cars.com/vehicledetail/f1292960-99d0-4f6f-808d-16f97f91be6b/",
+     "price": 43490
     },
     {
      "source": "truecar",
@@ -14369,7 +14573,7 @@
     }
    ],
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-18",
@@ -14391,6 +14595,43 @@
    ]
   },
   {
+   "vin": "7SAYGDED0TA591163",
+   "source": "carvana",
+   "url": "https://www.carvana.com/vehicle/4913946",
+   "year": 2026,
+   "make": "Tesla",
+   "model": "Model Y",
+   "trim": "Standard",
+   "price": 43990,
+   "miles": 19382,
+   "color": "Gray",
+   "dealer": "Carvana",
+   "where": "Delivered by Carvana",
+   "state": null,
+   "distance": null,
+   "accidents": null,
+   "owners": null,
+   "clean_title": null,
+   "image": "https://cdnblob.fastly.carvana.io/3007048667/post-large/normalized/zoomcrop/3007048667-edc-02.jpg?v=2026.11.28_1.11.47",
+   "search": "Tesla Model Y Juniper",
+   "juniper": "yes",
+   "sources": [
+    "carvana"
+   ],
+   "also": [],
+   "first_seen": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-28",
+     43990
+    ]
+   ],
+   "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
    "vin": "7SAYGDED5TA597346",
    "source": "carvana",
    "url": "https://www.carvana.com/vehicle/4709134",
@@ -14408,7 +14649,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006507785/post-large/normalized/zoomcrop/3006507785-edc-02.jpg?v=2026.11.27_19.7.51",
+   "image": "https://cdnblob.fastly.carvana.io/3006507785/post-large/normalized/zoomcrop/3006507785-edc-02.jpg?v=2026.11.28_1.11.47",
    "search": "Tesla Model Y Juniper",
    "juniper": "yes",
    "sources": [
@@ -14416,7 +14657,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14446,7 +14687,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": null,
-   "kbb_fair": 47470,
+   "kbb_fair": 47410,
    "image": "https://images.autotrader.com/hn/c/8cd3efd94add4fc9b92746b09b6b9e6d.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -14472,7 +14713,7 @@
     }
    ],
    "first_seen": "2026-11-24",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-24",
@@ -14552,7 +14793,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14585,7 +14826,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006881121/post-large/normalized/zoomcrop/3006881121-edc-02.jpg?v=2026.11.27_19.7.51",
+   "image": "https://cdnblob.fastly.carvana.io/3006881121/post-large/normalized/zoomcrop/3006881121-edc-02.jpg?v=2026.11.28_1.11.47",
    "search": "Tesla Model Y Juniper",
    "juniper": "yes",
    "sources": [
@@ -14593,7 +14834,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14638,7 +14879,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14683,7 +14924,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14716,7 +14957,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006721095/post-large/normalized/zoomcrop/3006721095-edc-02.jpg?v=2026.11.27_19.7.51",
+   "image": "https://cdnblob.fastly.carvana.io/3006721095/post-large/normalized/zoomcrop/3006721095-edc-02.jpg?v=2026.11.28_1.11.47",
    "search": "Tesla Model Y Juniper",
    "juniper": "yes",
    "sources": [
@@ -14724,7 +14965,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -14753,7 +14994,7 @@
    "accidents": null,
    "owners": null,
    "clean_title": null,
-   "image": "https://cdnblob.fastly.carvana.io/3006937063/post-large/normalized/zoomcrop/3006937063-edc-02.jpg?v=2026.11.27_19.7.51",
+   "image": "https://cdnblob.fastly.carvana.io/3006937063/post-large/normalized/zoomcrop/3006937063-edc-02.jpg?v=2026.11.28_1.11.47",
    "search": "Tesla Model Y Juniper",
    "juniper": "yes",
    "sources": [
@@ -14761,7 +15002,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
@@ -14791,7 +15032,7 @@
    "accidents": 0,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 46090,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/5ba814e1b95c474fa21deeb23c6c6ff1.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -14817,7 +15058,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14870,7 +15111,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -14913,7 +15154,7 @@
    ],
    "also": [],
    "first_seen": "2026-11-26",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-26",
@@ -14945,7 +15186,7 @@
    "accidents": 1,
    "owners": 2,
    "clean_title": true,
-   "kbb_fair": 46720,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/dd46abb3203b498eae6f2311e83044a0.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -14970,7 +15211,7 @@
     }
    ],
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-18",
@@ -15006,7 +15247,7 @@
    "accidents": 0,
    "owners": 1,
    "clean_title": true,
-   "kbb_fair": 46160,
+   "kbb_fair": null,
    "image": "https://images.autotrader.com/hn/c/31121e8ac05b42a59a87451b891fea23.jpg",
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
@@ -15025,7 +15266,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -15033,6 +15274,58 @@
     ]
    ],
    "price_change": 0,
+   "gone": false,
+   "flags": []
+  },
+  {
+   "vin": "5YJ3E1ET3TF164422",
+   "source": "kbb",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/796001060",
+   "year": 2026,
+   "make": "Tesla",
+   "model": "Model 3",
+   "trim": "Performance",
+   "drive": "AWD4WD",
+   "price": 53995,
+   "miles": 10275,
+   "color": "Black",
+   "dealer": "J & S Autohaus",
+   "where": "Ewing, NJ",
+   "state": "NJ",
+   "distance": 41,
+   "accidents": 0,
+   "owners": null,
+   "clean_title": true,
+   "kbb_fair": 52930,
+   "image": "https://images.autotrader.com/hn/c/1d74df90a4e34e7c95db5bcc764f9aab.jpg",
+   "search": "2024-2026 Tesla Model 3",
+   "juniper": null,
+   "deal_by": "CarGurus",
+   "cg_value": 51229,
+   "sources": [
+    "kbb",
+    "cargurus"
+   ],
+   "also": [
+    {
+     "source": "cargurus",
+     "url": "https://www.cargurus.com/details/464076425",
+     "price": 59995
+    }
+   ],
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-28",
+   "price_history": [
+    [
+     "2026-11-20",
+     59995
+    ],
+    [
+     "2026-11-28",
+     53995
+    ]
+   ],
+   "price_change": -6000,
    "gone": false,
    "flags": []
   },
@@ -15061,7 +15354,7 @@
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "deal_by": "CarGurus",
-   "cg_value": 54489,
+   "cg_value": 52842,
    "sources": [
     "truecar",
     "cargurus",
@@ -15080,7 +15373,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -15129,7 +15422,7 @@
     }
    ],
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-20",
@@ -15165,7 +15458,7 @@
    "search": "2024-2026 Tesla Model 3",
    "juniper": null,
    "deal_by": "CarGurus",
-   "cg_value": 54903,
+   "cg_value": 53305,
    "sources": [
     "truecar",
     "cargurus",
@@ -15184,59 +15477,11 @@
     }
    ],
    "first_seen": "2026-11-21",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_history": [
     [
      "2026-11-21",
      58998
-    ]
-   ],
-   "price_change": 0,
-   "gone": false,
-   "flags": []
-  },
-  {
-   "vin": "5YJ3E1ET3TF164422",
-   "source": "kbb",
-   "url": "https://www.kbb.com/cars-for-sale/vehicle/796001060",
-   "year": 2026,
-   "make": "Tesla",
-   "model": "Model 3",
-   "trim": "Performance",
-   "drive": "AWD4WD",
-   "price": 59995,
-   "miles": 10275,
-   "color": "Black",
-   "dealer": "J & S Autohaus",
-   "where": "Ewing, NJ",
-   "state": "NJ",
-   "distance": 41,
-   "accidents": 0,
-   "owners": null,
-   "clean_title": true,
-   "kbb_fair": 51160,
-   "image": "https://images.autotrader.com/hn/c/1d74df90a4e34e7c95db5bcc764f9aab.jpg",
-   "search": "2024-2026 Tesla Model 3",
-   "juniper": null,
-   "deal_by": "CarGurus",
-   "cg_value": 51229,
-   "sources": [
-    "kbb",
-    "cargurus"
-   ],
-   "also": [
-    {
-     "source": "cargurus",
-     "url": "https://www.cargurus.com/details/464076425",
-     "price": 59995
-    }
-   ],
-   "first_seen": "2026-11-20",
-   "last_seen": "2026-11-27",
-   "price_history": [
-    [
-     "2026-11-20",
-     59995
     ]
    ],
    "price_change": 0,
